@@ -1,12 +1,12 @@
 ﻿// Portfolio Data Configuration — Refael Robinov
-// Modern AI-Powered Senior Engineer Showcase
+// Cutting-Edge .NET 10, Agentic AI & Modern Full-Stack Showcase
 
 const PORTFOLIO_DATA = {
     profile: {
         name: "Refael Robinov",
         title: "Senior Backend & AI-Augmented Full Stack Engineer",
-        subtitle: "Architecting high-scale distributed systems, high-throughput APIs, AI agent workflows, and intelligent fintech platforms.",
-        bio: "Senior Software Engineer with 4+ years of hands-on experience building robust backend systems, microservices architectures, and modern production web applications. Expert in AI-driven development workflows (Claude Code, Codex, Antigravity Agents) and Deep Learning ML integrations.",
+        subtitle: "Architecting high-scale distributed systems, .NET 10 microservices, AI agentic workflows, and high-performance cloud platforms.",
+        bio: "Senior Software Engineer with 4+ years of production experience engineering robust backend architectures, distributed microservices, and modern web applications. Championing cutting-edge .NET 10, full-stack reactive design, and AI-augmented velocity using Claude Code, Codex, and Antigravity Agents.",
         location: "Be'er-Sheva, Israel",
         email: "rafi20080@gmail.com",
         phone: "052-7030595",
@@ -25,41 +25,40 @@ const PORTFOLIO_DATA = {
 
     skillCategories: [
         {
-            name: "Backend & Architecture",
+            name: "Backend & Distributed Systems",
             icon: "server",
             skills: [
-                { name: "C#", level: 95 },
-                { name: ".NET Core 6-9 / MVC", level: 95 },
-                { name: "ASP.NET / WCF", level: 90 },
-                { name: "Microservices & Distributed Systems", level: 90 },
-                { name: "Web API / RESTful APIs", level: 95 },
-                { name: "Natural / Mainframe Integration", level: 82 },
-                { name: "Redis Caching", level: 88 },
-                { name: "SQL & Query Optimization", level: 92 }
+                { name: "C# / C# 13", level: 96 },
+                { name: ".NET Core 6-10 / ASP.NET", level: 96 },
+                { name: "Microservices & Event-Driven Architecture", level: 92 },
+                { name: "RESTful Web APIs & WCF", level: 95 },
+                { name: "Redis Caching & Pub/Sub", level: 90 },
+                { name: "SQL Server & Query Optimization", level: 92 },
+                { name: "Natural / Mainframe Enterprise Bridges", level: 82 }
             ]
         },
         {
-            name: "AI & Modern Engineering",
+            name: "AI & Agentic Engineering",
             icon: "bot",
             skills: [
                 { name: "Claude Code & Agentic Workflows", level: 96 },
-                { name: "Antigravity & Autonomous Coding Agents", level: 95 },
-                { name: "OpenAI Codex & LLM API Integration", level: 92 },
-                { name: "Computer Vision & CNNs (PyTorch)", level: 88 },
-                { name: "Automated Workflows & Prompt Engineering", level: 94 },
-                { name: "MLOps & Algorithm Visualization", level: 88 }
+                { name: "Antigravity Autonomous Pair Programming", level: 95 },
+                { name: "OpenAI Codex & Tool Calling APIs", level: 94 },
+                { name: "Deep Learning (PyTorch CNNs & Computer Vision)", level: 88 },
+                { name: "Automated Workflows & Prompt Architecture", level: 94 },
+                { name: "MLOps & Algorithm Data Pipelines", level: 88 }
             ]
         },
         {
-            name: "Frontend, Cloud & DevOps",
+            name: "Frontend, 3D & Cloud DevOps",
             icon: "layout",
             skills: [
-                { name: "Angular (v17-19)", level: 90 },
-                { name: "Next.js & React", level: 90 },
+                { name: "Angular (v17-19+)", level: 92 },
+                { name: "Next.js 15 & React", level: 90 },
+                { name: "Three.js & WebGL 3D Visuals", level: 88 },
                 { name: "TypeScript / Modern JavaScript", level: 92 },
-                { name: "Docker & Containerization", level: 85 },
-                { name: "Cyber Security & Defensive Dev", level: 88 },
-                { name: "Git / TFS / CI-CD Pipelines", level: 92 }
+                { name: "PWA (Service Workers & Web Audio)", level: 92 },
+                { name: "Docker & CI/CD Pipelines", level: 88 }
             ]
         }
     ],
@@ -94,7 +93,7 @@ const PORTFOLIO_DATA = {
             featured: true,
             description: "Advanced investment and portfolio management platform offering market analysis, real-time portfolio tracking, risk-adjusted metrics, and automated strategy simulation.",
             longDesc: "TryInvest is an end-to-end investment ecosystem providing retail and institutional users with advanced financial modeling, real-time PnL tracking, asset allocation backtesting, and automated risk management.",
-            tech: ["C# .NET", "Angular", "Web API", "Chart.js", "SQL Server", "Financial Modeling"],
+            tech: ["C# .NET 10", "Angular", "Web API", "Chart.js", "SQL Server", "Financial Modeling"],
             github: "", // Private Repo
             demo: "https://tryinvest.co.il/",
             status: "Live in Production",
@@ -122,9 +121,9 @@ const PORTFOLIO_DATA = {
             category: "ai",
             tag: "AI & Algorithmic Trading",
             featured: true,
-            description: "Autonomous trading engine combining a C# .NET Core backend with a Python AI computer vision microservice. Detects market structures using CNNs (Cup & Handle pattern) and K-Means/GMM clustering for dynamic Support & Resistance discovery with real-time IBKR integration.",
-            longDesc: "A complete autonomous trading architecture: .NET Core manages trade orchestration and IBKR execution, while Python handles 2D chart tensor processing with Deep Learning CNN models to confirm geometric setups before execution.",
-            tech: ["C#", ".NET Core", "Python", "Computer Vision (CNN)", "SQL Server", "Angular", "WebSockets"],
+            description: "Autonomous trading engine combining a C# .NET 10 backend with a Python AI computer vision microservice. Detects market structures using CNNs (Cup & Handle pattern) and K-Means/GMM clustering for dynamic Support & Resistance discovery with real-time IBKR integration.",
+            longDesc: "A complete autonomous trading architecture: .NET 10 manages trade orchestration and IBKR execution, while Python handles 2D chart tensor processing with Deep Learning CNN models to confirm geometric setups before execution.",
+            tech: ["C#", ".NET 10", "Python", "Computer Vision (CNN)", "SQL Server", "Angular", "WebSockets"],
             github: "", // Private Repo
             demo: "https://mtalgo.duckdns.org",
             status: "Live Cloud Service",
@@ -169,7 +168,7 @@ const PORTFOLIO_DATA = {
             featured: true,
             description: "Comprehensive cloud management and engagement platform designed for community centers and synagogues, managing members, recurring pledges, event schedules, and digital aliyot.",
             longDesc: "Full-scale multi-tenant management system featuring automated donation billing, prayer time scheduling algorithms, member directory, and financial audit reports.",
-            tech: ["C# .NET Core", "Angular", "SQL Server", "REST API", "Payment Integration"],
+            tech: ["C# .NET 10", "Angular", "SQL Server", "REST API", "Payment Integration"],
             github: "", // Private Repo
             demo: "https://beiknishta.duckdns.org",
             status: "Live Cloud Platform",
@@ -184,7 +183,7 @@ const PORTFOLIO_DATA = {
             featured: true,
             description: "High-performance backend event engine and microservice gateway designed for low-latency message routing, async caching pipelines, and distributed queue handling.",
             longDesc: "Engineered to deliver high throughput, Redis cache hydration, and ultra-fast RESTful API endpoints under high concurrency.",
-            tech: [".NET Core", "Redis", "C#", "Microservices Architecture", "Docker", "REST API"],
+            tech: [".NET 10", "Redis", "C#", "Microservices Architecture", "Docker", "REST API"],
             github: "", // Private Repo
             demo: "https://pulsebe.duckdns.org",
             status: "Live Microservice",
@@ -229,7 +228,7 @@ const PORTFOLIO_DATA = {
             featured: false,
             description: "High-performance enterprise task orchestration RESTful API with tiered permission models, audit trails, dependency tracking, and pagination.",
             longDesc: "Clean Architecture implementation in ASP.NET Core with Repository pattern, Swagger documentation, and automated unit testing.",
-            tech: ["C#", ".NET Core API", "Entity Framework", "SQL Server", "Swagger"],
+            tech: ["C#", ".NET 10 API", "Entity Framework", "SQL Server", "Swagger"],
             github: "https://github.com/raful222/TaskManagementAPI",
             demo: "https://github.com/raful222/TaskManagementAPI",
             status: "Open Source",
@@ -278,11 +277,11 @@ const PORTFOLIO_DATA = {
             tag: "Government Scale",
             highlights: [
                 "Engineered robust backend systems for high-scale national traffic, focusing on micro-latency, high reliability, and data integrity.",
-                "Modernized critical business workflows by bridging .NET Core, Angular (v17–19), and Redis cache layers with core legacy mainframe frameworks.",
+                "Modernized critical business workflows by bridging .NET 10 / .NET Core, Angular (v17–19), and Redis cache layers with core legacy mainframe frameworks.",
                 "Led architecture of key service modules, optimizing data throughput and reducing processing bottlenecks.",
                 "Championed code quality, agile CI/CD practices, and strict peer code reviews."
             ],
-            tech: [".NET Core 9", "Angular 19", "Redis", "C#", "SQL", "Natural / Mainframe", "Agile"]
+            tech: [".NET 10", "Angular 19", "Redis", "C#", "SQL", "Natural / Mainframe", "Agile"]
         },
         {
             period: "Dec 2021 – Jan 2025",
@@ -316,7 +315,7 @@ const PORTFOLIO_DATA = {
             badge: "AI Certified"
         },
         {
-            degree: "Advanced Angular 19 & .NET 8 Masterclasses",
+            degree: "Advanced Angular 19 & .NET 8-10 Masterclasses",
             institution: "John Bryce",
             period: "2025",
             note: "Cutting-edge Enterprise Full Stack Patterns & Architecture"
