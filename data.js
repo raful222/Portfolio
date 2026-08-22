@@ -1,0 +1,321 @@
+// Portfolio Data Configuration — Refael Robinov
+// High-Impact Verified Showcase with Live Production Systems & AI Hub
+
+const PORTFOLIO_DATA = {
+    profile: {
+        name: "Refael Robinov",
+        title: "Senior Backend & Full Stack Engineer",
+        subtitle: "Architecting high-scale distributed systems, high-throughput APIs, fintech platforms, and interactive AI applications.",
+        bio: "Senior Software Engineer with 4+ years of hands-on experience building robust backend systems, financial analytics engines, and modern production web applications. Former IDF Paratroopers combat commander with proven leadership under pressure.",
+        location: "Be'er-Sheva, Israel",
+        email: "rafi20080@gmail.com",
+        phone: "052-7030595",
+        github: "https://github.com/raful222",
+        linkedin: "https://linkedin.com/in/refael-robinov",
+        status: "Open to Senior Roles & High-Impact Opportunities",
+        gpa: "86.7 (BSc Software Engineering)"
+    },
+    
+    stats: [
+        { value: "4+", label: "Years Experience" },
+        { value: "5+", label: "Live Cloud Platforms" },
+        { value: "10M+", label: "Daily Data Transactions" },
+        { value: "99.9%", label: "System Uptime Delivered" }
+    ],
+
+    skillCategories: [
+        {
+            name: "Backend & Architecture",
+            icon: "server",
+            skills: [
+                { name: "C#", level: 95 },
+                { name: ".NET Core 6-9 / MVC", level: 95 },
+                { name: "ASP.NET / WCF", level: 90 },
+                { name: "Microservices & Distributed Systems", level: 90 },
+                { name: "Web API / RESTful APIs", level: 95 },
+                { name: "Natural / Mainframe Integration", level: 82 },
+                { name: "Redis Caching", level: 88 },
+                { name: "SQL & Query Optimization", level: 92 }
+            ]
+        },
+        {
+            name: "Frontend & Full Stack",
+            icon: "layout",
+            skills: [
+                { name: "Angular (v17-19)", level: 90 },
+                { name: "Next.js & React", level: 90 },
+                { name: "TypeScript / Modern JavaScript", level: 92 },
+                { name: "Modern HTML5 & SCSS/CSS3", level: 90 },
+                { name: "PWA & Mobile-First Web", level: 92 },
+                { name: "Data Visualization & Charts", level: 88 }
+            ]
+        },
+        {
+            name: "DevOps, Security & Tools",
+            icon: "shield-check",
+            skills: [
+                { name: "Docker & Containerization", level: 85 },
+                { name: "Cyber Security & Defensive Dev", level: 88 },
+                { name: "Git / TFS / CI-CD", level: 92 },
+                { name: "Postman & API Automation", level: 90 },
+                { name: "Clean Architecture & Code Reviews", level: 95 }
+            ]
+        }
+    ],
+
+    projects: [
+        {
+            id: "try-invest",
+            title: "TryInvest — Professional Investment & Portfolio Platform",
+            category: "ai",
+            tag: "FinTech & Investment",
+            featured: true,
+            description: "Advanced investment and portfolio management platform offering market analysis, real-time portfolio tracking, risk-adjusted metrics, and automated strategy simulation.",
+            longDesc: "TryInvest is an end-to-end investment ecosystem providing retail and institutional users with advanced financial modeling, real-time PnL tracking, asset allocation backtesting, and automated risk management.",
+            tech: ["C# .NET", "Angular", "Web API", "Chart.js", "SQL Server", "Financial Modeling"],
+            github: "", // Private Repo
+            demo: "https://tryinvest.co.il/",
+            status: "Live in Production",
+            badge: "Flagship FinTech (tryinvest.co.il)",
+            icon: "dollar-sign"
+        },
+        {
+            id: "vbook",
+            title: "VBOOK — Smart Booking & Appointment System",
+            category: "web",
+            tag: "Live SaaS Platform",
+            featured: true,
+            description: "Production calendar and appointment reservation web application with sub-second page loads, real-time availability sync, conflict prevention, and automated reminder webhooks.",
+            longDesc: "Full-scale booking SaaS platform engineered with modern reactive architecture, high concurrency calendar synchronization, and automated notification pipelines.",
+            tech: ["Vite", "Modern JavaScript", "REST API", "Docker", "Responsive UI", "SaaS"],
+            github: "", // Private Repo
+            demo: "https://vbookapp.co.il/",
+            status: "Live in Production",
+            badge: "Live SaaS (vbookapp.co.il)",
+            icon: "calendar"
+        },
+        {
+            id: "mt-algo",
+            title: "MT-Algo — Autonomous ML Trading System",
+            category: "ai",
+            tag: "AI & Algorithmic Trading",
+            featured: true,
+            description: "Autonomous trading engine combining a C# .NET Core backend with a Python AI computer vision microservice. Detects market structures using CNNs (Cup & Handle pattern) and K-Means/GMM clustering for dynamic Support & Resistance discovery with real-time IBKR integration.",
+            longDesc: "A complete autonomous trading architecture: .NET Core manages trade orchestration and IBKR execution, while Python handles 2D chart tensor processing with Deep Learning CNN models to confirm geometric setups before execution.",
+            tech: ["C#", ".NET Core", "Python", "Computer Vision (CNN)", "SQL Server", "Angular", "WebSockets"],
+            github: "", // Private Repo
+            demo: "https://mtalgo.duckdns.org",
+            status: "Live Cloud Service",
+            badge: "Live Cloud (mtalgo.duckdns.org)",
+            icon: "trending-up"
+        },
+        {
+            id: "ai-ml-learning-hub",
+            title: "AI & Machine Learning Interactive Learning Hub",
+            category: "ai",
+            tag: "EdTech & Interactive AI",
+            featured: true,
+            description: "Full-scale interactive AI/ML learning platform in Next.js & React featuring 18 modules, interactive visualizers for KNN, GMM, CNN and GenAI, automated exams, and flashcards.",
+            longDesc: "Engineered with Next.js App Router, Tailwind CSS, and custom interactive algorithm visualizers allowing learners to experiment with clustering, convolutional filters, and neural networks in real time.",
+            tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "ML Visualizations", "Python"],
+            github: "https://github.com/raful222/ai-ml-learning",
+            demo: "https://github.com/raful222/ai-ml-learning",
+            status: "Open Source AI Learning Platform",
+            badge: "Public AI Platform",
+            icon: "brain-circuit"
+        },
+        {
+            id: "alefbet",
+            title: "הרפתקת א'-ב' (AlefBet Kids Adventure)",
+            category: "games",
+            tag: "Educational PWA & Audio",
+            featured: true,
+            description: "Production offline-first PWA for kids aged 3–6 with 193 recorded Hebrew voice tracks, interactive phonics challenges, letter tracing with canvas coverage calculation, and zero-latency performance.",
+            longDesc: "A zero-latency, offline Progressive Web App with custom synthesized Hebrew voice recognition prompts, parental analytics dashboard, and kid-friendly gamified progression.",
+            tech: ["PWA", "JavaScript", "HTML5 Canvas", "Web Audio API", "Service Workers", "CSS3 Animations"],
+            github: "", // Private Repo
+            demo: "https://alefbet-mt.duckdns.org",
+            status: "Live in Production",
+            badge: "Live App (alefbet-mt.duckdns.org)",
+            icon: "sparkles"
+        },
+        {
+            id: "beiknishta",
+            title: "Beiknishta (בי כנישתא) — Community Management SaaS",
+            category: "systems",
+            tag: "Cloud Community Platform",
+            featured: true,
+            description: "Comprehensive cloud management and engagement platform designed for community centers and synagogues, managing members, recurring pledges, event schedules, and digital aliyot.",
+            longDesc: "Full-scale multi-tenant management system featuring automated donation billing, prayer time scheduling algorithms, member directory, and financial audit reports.",
+            tech: ["C# .NET Core", "Angular", "SQL Server", "REST API", "Payment Integration"],
+            github: "", // Private Repo
+            demo: "https://beiknishta.duckdns.org",
+            status: "Live Cloud Platform",
+            badge: "Live Cloud (beiknishta.duckdns.org)",
+            icon: "building"
+        },
+        {
+            id: "pulsebe",
+            title: "PulseBE — High-Throughput Microservice Bus",
+            category: "backend",
+            tag: "High-Scale Backend",
+            featured: true,
+            description: "High-performance backend event engine and microservice gateway designed for low-latency message routing, async caching pipelines, and distributed queue handling.",
+            longDesc: "Engineered to deliver high throughput, Redis cache hydration, and ultra-fast RESTful API endpoints under high concurrency.",
+            tech: [".NET Core", "Redis", "C#", "Microservices Architecture", "Docker", "REST API"],
+            github: "", // Private Repo
+            demo: "https://pulsebe.duckdns.org",
+            status: "Live Microservice",
+            badge: "Live Backend (pulsebe.duckdns.org)",
+            icon: "zap"
+        },
+        {
+            id: "report-stock-analysis",
+            title: "ReportStockAnalysis — Financial Intelligence Engine",
+            category: "ai",
+            tag: "Financial Analytics",
+            featured: true,
+            description: "Automated equities analysis and reporting platform pulling live market feeds, computing fundamental DCF & technical momentum indicators, and generating executive investment summaries.",
+            longDesc: "Automated equities screening pipeline computing DCF estimations, valuation ratios, momentum indicators, and generating structured financial reports for institutional and private investors.",
+            tech: ["Python", "Pandas", "FastAPI", "Financial APIs", "Data Visualization"],
+            github: "", // Private Repo
+            demo: "#",
+            status: "Analytics Microservice (Offline)",
+            badge: "Equities Analytics Engine",
+            icon: "bar-chart-2"
+        },
+        {
+            id: "idle-for-you",
+            title: "IdleForYou — 3D Tower Economy Simulation Game",
+            category: "games",
+            tag: "3D Game Engine & Sim",
+            featured: true,
+            description: "Deep incremental tower economy simulation game. Features multi-tier business progression, automated worker AI, custom 3D low-poly character rendering, and mathematical economic balance modeled in Python.",
+            longDesc: "Features custom 3D WebGL scenes, procedural floor upgrades, automated offline revenue calculations, and balanced pacing modeled through Python Monte-Carlo economic simulations.",
+            tech: ["Three.js", "WebGL", "Python (Sim Engine)", "JavaScript ES6+", "HTML5 Canvas"],
+            github: "https://github.com/raful222/IdleForYou",
+            demo: "#",
+            status: "In Active Development",
+            badge: "3D Game Engine",
+            icon: "gamepad-2"
+        },
+        {
+            id: "task-management-api",
+            title: "Enterprise Task Management API",
+            category: "backend",
+            tag: "Clean Architecture",
+            featured: false,
+            description: "High-performance enterprise task orchestration RESTful API with tiered permission models, audit trails, dependency tracking, and pagination.",
+            longDesc: "Clean Architecture implementation in ASP.NET Core with Repository pattern, Swagger documentation, and automated unit testing.",
+            tech: ["C#", ".NET Core API", "Entity Framework", "SQL Server", "Swagger"],
+            github: "https://github.com/raful222/TaskManagementAPI",
+            demo: "https://github.com/raful222/TaskManagementAPI",
+            status: "Open Source",
+            badge: "Clean Architecture (Public Code)",
+            icon: "check-square"
+        },
+        {
+            id: "coffee-shop-online",
+            title: "GTR CoffeeShop Online — E-Commerce Platform",
+            category: "web",
+            tag: "E-Commerce System",
+            featured: false,
+            description: "Upgraded digital ordering and menu management system with real-time cart calculations, responsive catalog browsing, and checkout workflows.",
+            longDesc: "Complete e-commerce platform built in ASP.NET and C# featuring product catalog customization, dynamic basket pricing, and clean database persistence.",
+            tech: ["ASP.NET / C#", "JavaScript", "HTML5 / SCSS", "SQL Database"],
+            github: "https://github.com/raful222/CoffeeShopOnline",
+            demo: "https://github.com/raful222/CoffeeShopOnline",
+            status: "Open Source",
+            badge: "E-Commerce (Public Code)",
+            icon: "coffee"
+        },
+        {
+            id: "cyber-recon-game",
+            title: "Cyber Defense: Terminal Defense",
+            category: "games",
+            tag: "Playable Canvas Game",
+            featured: false,
+            description: "Interactive in-browser cybersecurity tactical game where players defend simulated server firewalls against DDoS, SQL injections, and XSS exploits.",
+            longDesc: "Play directly in the browser! Real-time collision detection, particle explosions, dynamic threat waves, and retro synth design.",
+            tech: ["JavaScript (ES6+)", "HTML5 Canvas", "WebGL 3D Background", "Web Audio API"],
+            github: "",
+            demo: "#game-modal",
+            isPlayable: true,
+            status: "Playable Right Now",
+            badge: "Interactive Mini-Game",
+            icon: "swords"
+        }
+    ],
+
+    experience: [
+        {
+            period: "2025 – Present",
+            role: "Full Stack Software Developer",
+            company: "Israel Tax Authority (Sha'am)",
+            location: "Jerusalem / Hybrid",
+            tag: "Government Scale",
+            highlights: [
+                "Engineered robust backend systems for high-scale national traffic, focusing on micro-latency, high reliability, and data integrity.",
+                "Modernized critical business workflows by bridging .NET Core, Angular (v17–19), and Redis cache layers with core legacy mainframe frameworks.",
+                "Led architecture of key service modules, optimizing data throughput and reducing processing bottlenecks.",
+                "Championed code quality, agile CI/CD practices, and strict peer code reviews."
+            ],
+            tech: [".NET Core 9", "Angular 19", "Redis", "C#", "SQL", "Natural / Mainframe", "Agile"]
+        },
+        {
+            period: "Dec 2021 – Jan 2025",
+            role: "Backend Developer",
+            company: "Qualish Ltd",
+            location: "Omer, Israel",
+            tag: "Enterprise SaaS",
+            highlights: [
+                "Architected end-to-end Web APIs, database schemas, and microservice endpoints in C# .NET Core 6.",
+                "Integrated multi-provider payment gateways, billing reconciliation, and real-time event notifications.",
+                "Engineered dynamic data visualization pipelines presenting live financial KPI charts to executive stakeholders.",
+                "Streamlined customer onboarding workflows, cutting database latency and improving UX."
+            ],
+            tech: ["C#", ".NET Core 6", "RESTful Web APIs", "SQL Server", "Payment Systems", "WebSockets"]
+        }
+    ],
+
+    leadershipAndService: [
+        {
+            title: "Combat Fighter & Commander",
+            org: "IDF Paratroopers Brigade (חטיבת הצנחנים)",
+            period: "2012 – 2015",
+            rank: "First Sergeant (סמ״ר)",
+            desc: "Full combat service and team leadership in high-risk operational environments. Developed decisive decision-making, resilience, team mentorship, and operational excellence under intense pressure.",
+            icon: "award"
+        },
+        {
+            title: "Leadership Mentor & Educator",
+            org: "Aharai! (אחריי!) — Impact Scholarships",
+            period: "2020 – 2023",
+            rank: "Youth Mentor",
+            desc: "Cultivated leadership, self-confidence, and civic responsibility among youth in socio-economic peripheral communities.",
+            icon: "heart-handshake"
+        }
+    ],
+
+    education: [
+        {
+            degree: "B.Sc. in Software Engineering",
+            institution: "SCE - Shamoon College of Engineering, Be'er-Sheva",
+            period: "2020 – 2023",
+            note: "GPA: 86.7 | Specialization in Cyber Security",
+            badge: "Honors Graduate"
+        },
+        {
+            degree: "Advanced Angular 19 & .NET 8 Masterclasses",
+            institution: "John Bryce",
+            period: "2025",
+            note: "Cutting-edge Enterprise Full Stack Patterns & Architecture"
+        },
+        {
+            degree: "Networking & Cyber Security Certification",
+            institution: "Net4U College",
+            period: "2019 – 2020",
+            note: "Deep TCP/IP, Penetration Testing & Defensive Security"
+        }
+    ]
+};

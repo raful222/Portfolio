@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refael Robinov | Senior Backend & Full Stack Engineer</title>
+    <meta name="description" content="Portfolio of Refael Robinov — Senior Backend & Full Stack Engineer specializing in high-scale .NET, Angular, Microservices, and AI Trading Systems.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Three.js for 3D Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 3D Interactive WebGL Canvas -->
+    <div id="three-canvas-container"></div>
+
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <a href="#hero" class="nav-brand">
+            <div class="nav-avatar-glow">RR</div>
+            <span>Refael Robinov</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#projects">Projects & Systems</a></li>
+            <li><a href="#skills">Skills Matrix</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#about">Leadership & Bio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <a href="https://github.com/raful222" target="_blank" rel="noopener" class="btn btn-glass btn-sm">
+                <i data-lucide="github"></i> GitHub
+            </a>
+            <a href="#contact" class="btn btn-primary btn-sm">
+                <i data-lucide="send"></i> Let's Talk
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="content-wrapper">
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                <span id="status-text">Available for Senior Roles & High-Impact Projects</span>
+            </div>
+
+            <h1 class="hero-title">
+                Hi, I'm <span id="hero-name">Refael Robinov</span><br>
+                <span class="text-gradient" id="hero-subtitle">Senior Backend & Full Stack Engineer</span>
+            </h1>
+
+            <p class="hero-lead" id="hero-bio">
+                Architecting high-scale distributed systems, high-throughput APIs, and intelligent web applications. 4+ years of production experience in mission-critical environments.
+            </p>
+
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <i data-lucide="layers"></i> Explore Projects & Games
+                </a>
+                <a href="#contact" class="btn btn-glass">
+                    <i data-lucide="mail"></i> Get In Touch
+                </a>
+                <button class="btn btn-glass" onclick="openGameModal()">
+                    <i data-lucide="gamepad-2"></i> Launch Mini-Game
+                </button>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="stats-grid" id="stats-grid">
+                <!-- Dynamically populated from data.js -->
+            </div>
+        </section>
+
+        <!-- Projects & Games Section -->
+        <section id="projects" class="section">
+            <div class="section-header">
+                <span class="section-subtitle">// PORTFOLIO ARTIFACTS & EXPERIMENTS</span>
+                <h2 class="section-title">Featured Projects, Systems & Games</h2>
+            </div>
+
+            <!-- Filter Tabs & Search -->
+            <div class="filter-bar">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Works</button>
+                    <button class="filter-btn" data-filter="ai">AI & Trading</button>
+                    <button class="filter-btn" data-filter="backend">Backend & Scale</button>
+                    <button class="filter-btn" data-filter="systems">Cyber & Systems</button>
+                    <button class="filter-btn" data-filter="games">Games & Interactive</button>
+                    <button class="filter-btn" data-filter="web">Web & Full Stack</button>
+                </div>
+                
+                <div class="search-box">
+                    <i data-lucide="search"></i>
+                    <input type="text" id="project-search" placeholder="Search tech or keyword...">
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid" id="projects-grid">
+                <!-- Dynamically populated from data.js -->
+            </div>
+        </section>
+
+        <!-- Technical Skills Matrix -->
+        <section id="skills" class="section">
+            <div class="section-header">
+                <span class="section-subtitle">// TECHNICAL EXPERTISE</span>
+                <h2 class="section-title">Core Engineering Stack</h2>
+            </div>
+
+            <div class="skills-grid" id="skills-container">
+                <!-- Dynamically populated from data.js -->
+            </div>
+        </section>
+
+        <!-- Experience & Track Record -->
+        <section id="experience" class="section">
+            <div class="section-header">
+                <span class="section-subtitle">// CAREER TIMELINE</span>
+                <h2 class="section-title">Professional Experience</h2>
+            </div>
+
+            <div class="timeline" id="experience-timeline">
+                <!-- Dynamically populated from data.js -->
+            </div>
+        </section>
+
+        <!-- Leadership & Education -->
+        <section id="about" class="section">
+            <div class="section-header">
+                <span class="section-subtitle">// MILITARY, LEADERSHIP & ACADEMIA</span>
+                <h2 class="section-title">Leadership & Education</h2>
+            </div>
+
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-main);">Military & Community Leadership</h3>
+            <div class="leadership-grid" id="leadership-grid">
+                <!-- Dynamically populated from data.js -->
+            </div>
+
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-top: 3rem; margin-bottom: 1rem; color: var(--text-main);">Education & Masterclasses</h3>
+            <div class="leadership-grid" id="education-grid">
+                <!-- Dynamically populated from data.js -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="contact-container">
+                <div>
+                    <span class="section-subtitle">// GET IN TOUCH</span>
+                    <h2 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 1rem;">Let's build something exceptional.</h2>
+                    <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 2rem;">
+                        Whether you are looking for a senior backend architect, high-throughput systems developer, or exploring innovative tech partnerships — feel free to reach out directly.
+                    </p>
+                    <div style="display:flex; gap:1rem;">
+                        <a href="mailto:rafi20080@gmail.com" class="btn btn-primary">
+                            <i data-lucide="mail"></i> Send Direct Email
+                        </a>
+                        <a href="tel:052-7030595" class="btn btn-glass">
+                            <i data-lucide="phone-call"></i> Call Directly
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-info-block" id="contact-links">
+                    <!-- Dynamically populated from data.js -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="content-wrapper">
+            <p>© 2026 Refael Robinov. Engineered with precision, modern WebGL, and clean code.</p>
+        </div>
+    </footer>
+
+    <!-- Project Details Modal -->
+    <div class="modal-overlay" id="project-modal" onclick="if(event.target === this) closeModal()">
+        <div class="modal-dialog">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <div id="modal-body-content"></div>
+        </div>
+    </div>
+
+    <!-- Playable Cyber Mini-Game Modal -->
+    <div class="modal-overlay" id="game-modal" onclick="if(event.target === this) closeModal()">
+        <div class="modal-dialog" style="max-width: 650px;">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--primary);">
+                    <i data-lucide="shield-alert" style="vertical-align: middle;"></i> Terminal Defense Protocol
+                </h3>
+                <div style="font-family: var(--font-mono); font-size: 0.9rem;">
+                    Score: <span id="game-score" style="color: var(--accent-emerald); font-weight: bold;">0</span> | 
+                    Firewall: <span id="game-health" style="color: var(--accent-rose); font-weight: bold;">100%</span>
+                </div>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+                Controls: <b>[A / D]</b> or <b>[Left / Right Arrows]</b> to move. <b>[Spacebar / Up Arrow]</b> to fire anti-malware countermeasures.
+            </p>
+            <canvas id="game-canvas"></canvas>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <button class="btn btn-primary btn-sm" onclick="startGame()">
+                    <i data-lucide="rotate-ccw"></i> Restart Game
+                </button>
+                <button class="btn btn-glass btn-sm" onclick="closeModal()">
+                    Close Terminal
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-msg" id="toast">
+        <i data-lucide="check-circle" style="color: var(--accent-emerald);"></i>
+        <span class="toast-text">Action successful!</span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="three-bg.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
