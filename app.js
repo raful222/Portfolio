@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // 3. Initialize Skills & Experience
     renderSkills();
     renderExperience();
-    renderLeadership();
+    renderAIWorkflows();
     renderEducation();
     renderContact();
 
@@ -198,18 +198,18 @@ function renderExperience() {
     `).join("");
 }
 
-// Render Leadership & Military Service
-function renderLeadership() {
-    const container = document.getElementById("leadership-grid");
+// Render AI-Augmented Engineering Workflows
+function renderAIWorkflows() {
+    const container = document.getElementById("ai-workflows-grid");
     if (!container) return;
 
-    container.innerHTML = PORTFOLIO_DATA.leadershipAndService.map(item => `
+    container.innerHTML = PORTFOLIO_DATA.aiWorkflows.map(item => `
         <div class="leadership-card">
             <div class="leadership-header">
                 <i data-lucide="${item.icon}"></i>
                 <span>${item.title}</span>
             </div>
-            <div class="leadership-sub">${item.org} • ${item.period} (${item.rank})</div>
+            <div class="leadership-sub">${item.tech}</div>
             <p class="leadership-desc">${item.desc}</p>
         </div>
     `).join("");

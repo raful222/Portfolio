@@ -1,12 +1,12 @@
-// Portfolio Data Configuration — Refael Robinov
-// High-Impact Verified Showcase with Live Production Systems & AI Hub
+﻿// Portfolio Data Configuration — Refael Robinov
+// Modern AI-Powered Senior Engineer Showcase
 
 const PORTFOLIO_DATA = {
     profile: {
         name: "Refael Robinov",
-        title: "Senior Backend & Full Stack Engineer",
-        subtitle: "Architecting high-scale distributed systems, high-throughput APIs, fintech platforms, and interactive AI applications.",
-        bio: "Senior Software Engineer with 4+ years of hands-on experience building robust backend systems, financial analytics engines, and modern production web applications. Former IDF Paratroopers combat commander with proven leadership under pressure.",
+        title: "Senior Backend & AI-Augmented Full Stack Engineer",
+        subtitle: "Architecting high-scale distributed systems, high-throughput APIs, AI agent workflows, and intelligent fintech platforms.",
+        bio: "Senior Software Engineer with 4+ years of hands-on experience building robust backend systems, microservices architectures, and modern production web applications. Expert in AI-driven development workflows (Claude Code, Codex, Antigravity Agents) and Deep Learning ML integrations.",
         location: "Be'er-Sheva, Israel",
         email: "rafi20080@gmail.com",
         phone: "052-7030595",
@@ -20,7 +20,7 @@ const PORTFOLIO_DATA = {
         { value: "4+", label: "Years Experience" },
         { value: "5+", label: "Live Cloud Platforms" },
         { value: "10M+", label: "Daily Data Transactions" },
-        { value: "99.9%", label: "System Uptime Delivered" }
+        { value: "10x", label: "AI Engineering Velocity" }
     ],
 
     skillCategories: [
@@ -39,27 +39,49 @@ const PORTFOLIO_DATA = {
             ]
         },
         {
-            name: "Frontend & Full Stack",
+            name: "AI & Modern Engineering",
+            icon: "bot",
+            skills: [
+                { name: "Claude Code & Agentic Workflows", level: 96 },
+                { name: "Antigravity & Autonomous Coding Agents", level: 95 },
+                { name: "OpenAI Codex & LLM API Integration", level: 92 },
+                { name: "Computer Vision & CNNs (PyTorch)", level: 88 },
+                { name: "Automated Workflows & Prompt Engineering", level: 94 },
+                { name: "MLOps & Algorithm Visualization", level: 88 }
+            ]
+        },
+        {
+            name: "Frontend, Cloud & DevOps",
             icon: "layout",
             skills: [
                 { name: "Angular (v17-19)", level: 90 },
                 { name: "Next.js & React", level: 90 },
                 { name: "TypeScript / Modern JavaScript", level: 92 },
-                { name: "Modern HTML5 & SCSS/CSS3", level: 90 },
-                { name: "PWA & Mobile-First Web", level: 92 },
-                { name: "Data Visualization & Charts", level: 88 }
-            ]
-        },
-        {
-            name: "DevOps, Security & Tools",
-            icon: "shield-check",
-            skills: [
                 { name: "Docker & Containerization", level: 85 },
                 { name: "Cyber Security & Defensive Dev", level: 88 },
-                { name: "Git / TFS / CI-CD", level: 92 },
-                { name: "Postman & API Automation", level: 90 },
-                { name: "Clean Architecture & Code Reviews", level: 95 }
+                { name: "Git / TFS / CI-CD Pipelines", level: 92 }
             ]
+        }
+    ],
+
+    aiWorkflows: [
+        {
+            title: "Agentic Software Engineering",
+            tech: "Claude Code, Antigravity AI, Codex",
+            desc: "Leveraging multi-agent systems and pair-programming autonomous agents for rapid prototyping, architecture refactoring, and sub-second bug triaging.",
+            icon: "sparkles"
+        },
+        {
+            title: "Deep Learning & Computer Vision",
+            tech: "PyTorch, CNN, Tensor Processing",
+            desc: "Trained convolutional neural networks for geometric chart pattern detection (Cup & Handle) and statistical extrema clustering in financial markets.",
+            icon: "brain-circuit"
+        },
+        {
+            title: "Workflow Automation & LLM APIs",
+            tech: "Tool Calling, RAG, Prompt Architecture",
+            desc: "Integrating intelligent reasoning APIs, structured function calling, and automated testing pipelines into enterprise software ecosystems.",
+            icon: "zap"
         }
     ],
 
@@ -278,32 +300,20 @@ const PORTFOLIO_DATA = {
         }
     ],
 
-    leadershipAndService: [
-        {
-            title: "Combat Fighter & Commander",
-            org: "IDF Paratroopers Brigade (חטיבת הצנחנים)",
-            period: "2012 – 2015",
-            rank: "First Sergeant (סמ״ר)",
-            desc: "Full combat service and team leadership in high-risk operational environments. Developed decisive decision-making, resilience, team mentorship, and operational excellence under intense pressure.",
-            icon: "award"
-        },
-        {
-            title: "Leadership Mentor & Educator",
-            org: "Aharai! (אחריי!) — Impact Scholarships",
-            period: "2020 – 2023",
-            rank: "Youth Mentor",
-            desc: "Cultivated leadership, self-confidence, and civic responsibility among youth in socio-economic peripheral communities.",
-            icon: "heart-handshake"
-        }
-    ],
-
     education: [
         {
             degree: "B.Sc. in Software Engineering",
             institution: "SCE - Shamoon College of Engineering, Be'er-Sheva",
             period: "2020 – 2023",
             note: "GPA: 86.7 | Specialization in Cyber Security",
-            badge: "Honors Graduate"
+            badge: "Academic Honors (86.7 GPA)"
+        },
+        {
+            degree: "Automating Success & AI Certification",
+            institution: "INT College — Institute of Innovation & Technology",
+            period: "2026",
+            note: "Industry-standard AI automation, Prompt Engineering & Intelligent Workflow Systems (40 Academic Hours)",
+            badge: "AI Certified"
         },
         {
             degree: "Advanced Angular 19 & .NET 8 Masterclasses",
