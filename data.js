@@ -1,4 +1,4 @@
-﻿// Portfolio Data Configuration — Refael Robinov
+// Portfolio Data Configuration — Refael Robinov
 // Cutting-Edge .NET 10, Agentic AI & Modern Full-Stack Showcase
 
 const PORTFOLIO_DATA = {
@@ -18,9 +18,9 @@ const PORTFOLIO_DATA = {
     
     stats: [
         { value: "4+", label: "Years Experience" },
-        { value: "5+", label: "Live Cloud Platforms" },
+        { value: "8+", label: "Live Cloud Platforms" },
         { value: "10M+", label: "Daily Data Transactions" },
-        { value: "10x", label: "AI Engineering Velocity" }
+        { value: "18+", label: "Production & AI Systems" }
     ],
 
     skillCategories: [
@@ -71,6 +71,12 @@ const PORTFOLIO_DATA = {
             icon: "sparkles"
         },
         {
+            title: "Multi-Agent Systems & Autonomous QA",
+            tech: "CrewAI, Gemini 3.1 Flash, Discord Automation",
+            desc: "Architecting autonomous multi-agent teams for self-healing software, live website diagnostic probes, automated test generation, and pull request patching.",
+            icon: "bot"
+        },
+        {
             title: "Deep Learning & Computer Vision",
             tech: "PyTorch, CNN, Tensor Processing",
             desc: "Trained convolutional neural networks for geometric chart pattern detection (Cup & Handle) and statistical extrema clustering in financial markets.",
@@ -99,6 +105,51 @@ const PORTFOLIO_DATA = {
             status: "Live in Production",
             badge: "Flagship FinTech (tryinvest.co.il)",
             icon: "dollar-sign"
+        },
+        {
+            id: "chess-td-3d",
+            title: "Chess TD 3D — Real-Time Strategy & Tower Defense",
+            category: "games",
+            tag: "3D RTS & Unity Parity",
+            featured: true,
+            description: "Full-scale 3D Chess Tower Defense game combining classical chess tactics with modern tower defense mechanics, procedural waves, animated 3D hero rigs, and real-time WebSockets multiplayer.",
+            longDesc: "Engineered with Three.js WebGL and Vite on the client, backed by a Node.js WebSocket battle server. Features automated GLTF asset optimization, LOD pipelines, attack window synchronization, economy simulation, and cross-engine Unity parity.",
+            tech: ["Three.js", "WebGL", "Node.js WebSockets", "Vite", "GLTF Rigs", "Unity Engine Parity", "Audio FX"],
+            github: "https://github.com/raful222",
+            demo: "#",
+            status: "Complete 3D RTS Game",
+            badge: "3D RTS Game Engine",
+            icon: "crown"
+        },
+        {
+            id: "chidat-hayom",
+            title: "חידת היום (Chidat HaYom) — Daily Expert Logic & Quant Riddles",
+            category: "games",
+            tag: "Logic & Quant Teasers",
+            featured: true,
+            description: "Interactive daily riddle & brain teaser platform with 25+ Expert puzzles (quant interviews, mathematical induction, spatial riddles), Wordle-style viral streak sharing, and RTL neon dark UI.",
+            longDesc: "Full-scale multi-platform puzzle application built with Flutter & Web. Features 25 curated interview and quant riddles, real-time timer with hint penalties, shake animations on error, confetti celebrations on solve, zero-spoiler WhatsApp share cards, and deep logical solution breakdowns.",
+            tech: ["Flutter", "Dart", "Web PWA", "JavaScript", "RTL / Hebrew", "Viral Sharing", "Animations"],
+            github: "https://github.com/raful222",
+            demo: "#",
+            status: "Flutter & Web App",
+            badge: "Daily Riddles & Logic",
+            icon: "help-circle"
+        },
+        {
+            id: "discord-qa-bot",
+            title: "Autonomous QA & Remediation Agent (Discord Bot)",
+            category: "ai",
+            tag: "Autonomous Multi-Agent AI",
+            featured: true,
+            description: "Multi-agent autonomous QA and code remediation bot powered by CrewAI and Google Gemini LLM. Proactively audits live production services, runs technical & UI test suites, generates remediation reports, and applies verified automated fixes with rollback safeguards.",
+            longDesc: "Integrates CrewAI multi-agent processes with Google Gemini Flash models. Provides Discord slash commands (!test-all, !test-ui, !test-tech, !apply-fixes, !revert-fixes), scraping web tools, strict safety blacklists, and automated file patch generation with timestamped backup directories.",
+            tech: ["Python", "CrewAI", "Google Gemini 3.1 Flash", "Discord.py", "Docker", "Autonomous Agents"],
+            github: "https://github.com/raful222/discord-qa-bot",
+            demo: "https://github.com/raful222/discord-qa-bot",
+            status: "Autonomous Agent System",
+            badge: "CrewAI & Gemini Autonomous Agent",
+            icon: "bot"
         },
         {
             id: "vbook",
@@ -249,6 +300,51 @@ const PORTFOLIO_DATA = {
             status: "Open Source",
             badge: "E-Commerce (Public Code)",
             icon: "coffee"
+        },
+        {
+            id: "logical-math-study-hub",
+            title: "Logical Math & Reasoning Hub — פורטל חשיבה לוגית",
+            category: "web",
+            tag: "EdTech & Logic Portal",
+            featured: false,
+            description: "Interactive mathematical reasoning and exam preparation portal for logic, set theory, graph theory, and combinatorics. Features KaTeX formula typesetting, step-by-step proofs, and diagnostic quizzes.",
+            longDesc: "Engineered with modern RTL responsive architecture, KaTeX LaTeX math typesetting, real-time quiz validation, step-by-step mathematical proofs, and categorical filter navigation.",
+            tech: ["JavaScript (ES6+)", "KaTeX (LaTeX)", "HTML5 / CSS3", "RTL Design", "Interactive Quizzes"],
+            github: "",
+            demo: "#",
+            status: "Live Study Portal",
+            badge: "Interactive Exam Portal",
+            icon: "calculator"
+        },
+        {
+            id: "lumina-jewelry-ai",
+            title: "Lumina — AI Bespoke Luxury Jewelry Studio",
+            category: "web",
+            tag: "Next.js 15 AI Studio",
+            featured: false,
+            description: "Luxury bespoke jewelry digital studio featuring an AI-assisted customization studio, transparent real-time pricing calculator based on live precious metal and diamond indices, and obsidian-luxe responsive aesthetics.",
+            longDesc: "Built on Next.js 15 App Router, React 19, Tailwind CSS, and TypeScript. Features transparent cost breakdowns, high-resolution interactive showcase gallery, and dynamic gemstone configuration.",
+            tech: ["Next.js 15", "React", "TypeScript", "Tailwind CSS", "Dynamic Pricing Model"],
+            github: "",
+            demo: "#",
+            status: "Studio Platform",
+            badge: "Next.js 15 Luxury Studio",
+            icon: "gem"
+        },
+        {
+            id: "do-not-copy",
+            title: "DoNotCopy — Exam Security & Anti-Plagiarism System",
+            category: "systems",
+            tag: "Cyber Security & Web API",
+            featured: false,
+            description: "Academic examination management and plagiarism prevention platform built as B.Sc. graduation project at SCE, leveraging C# Web API to monitor integrity and eliminate unauthorized copying.",
+            longDesc: "Engineered with ASP.NET Core Web API, entity relationship integrity checks, automated submission diffing, and audit logging to maintain exam confidentiality and prevent student collusion.",
+            tech: ["C#", "ASP.NET Core Web API", "SQL Server", "Cyber Security", "RESTful API"],
+            github: "https://github.com/raful222/DoNotCopy",
+            demo: "https://do-not-copy.vercel.app",
+            status: "B.Sc. Graduation Project",
+            badge: "Exam Security System",
+            icon: "shield-check"
         },
         {
             id: "cyber-recon-game",
