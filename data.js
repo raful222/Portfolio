@@ -6,7 +6,7 @@ const PORTFOLIO_DATA = {
         name: "Refael Robinov",
         title: "Senior Backend & AI-Augmented Full Stack Engineer",
         subtitle: "Architecting high-scale distributed systems, .NET 10 microservices, AI agentic workflows, and high-performance cloud platforms.",
-        bio: "Senior Software Engineer with 4+ years of production experience engineering robust backend architectures, distributed microservices, and modern web applications. Championing cutting-edge .NET 10, full-stack reactive design, and AI-augmented velocity using Claude Code, Codex, and Antigravity Agents.",
+        bio: "Senior Software Engineer with 5+ years of production experience engineering robust backend architectures, distributed microservices, and modern web applications. Championing cutting-edge .NET 10, full-stack reactive design, and AI-augmented velocity using Claude Code, Codex, and Antigravity Agents.",
         location: "Be'er-Sheva, Israel",
         email: "rafi20080@gmail.com",
         phone: "052-7030595",
@@ -17,7 +17,7 @@ const PORTFOLIO_DATA = {
     },
     
     stats: [
-        { value: "4+", label: "Years Experience" },
+        { value: "5+", label: "Years Experience" },
         { value: "8+", label: "Live Cloud Platforms" },
         { value: "10M+", label: "Daily Data Transactions" },
         { value: "18+", label: "Production & AI Systems" }
@@ -380,7 +380,7 @@ const PORTFOLIO_DATA = {
             tech: [".NET 10", "Angular 19", "Redis", "C#", "SQL", "Natural / Mainframe", "Agile"]
         },
         {
-            period: "Dec 2021 – Jan 2025",
+            period: "2021 – Jan 2025",
             role: "Backend Developer",
             company: "Qualish Ltd",
             location: "Omer, Israel",
