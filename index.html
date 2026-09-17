@@ -15,6 +15,8 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <!-- Three.js for 3D Background -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -310,6 +312,51 @@
                 </button>
                 <button class="btn btn-glass btn-sm" onclick="closeModal()">
                     Close Terminal
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Playable Chidat HaYom Riddle Modal -->
+    <div class="modal-overlay" id="riddle-modal" onclick="if(event.target === this) closeModal()">
+        <div class="modal-dialog" style="max-width: 600px; text-align: right;" dir="rtl">
+            <button class="modal-close" onclick="closeModal()" style="left: 1.5rem; right: auto;">✕</button>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="font-size: 1.4rem;">🧩</span>
+                    <h3 id="riddle-title" style="font-size: 1.2rem; font-weight: 700; color: var(--primary); margin: 0;">
+                        חידת היום — שאלת אקספרט
+                    </h3>
+                </div>
+                <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-emerald); background: rgba(52, 211, 153, 0.1); padding: 0.2rem 0.6rem; border-radius: 999px;">
+                    זמן: <span id="riddle-timer">00:00</span>
+                </div>
+            </div>
+
+            <div id="riddle-content-box" style="background: rgba(15, 23, 42, 0.65); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.25rem; font-size: 1rem; line-height: 1.7; color: var(--text-main);">
+                <!-- Dynamically loaded puzzle text -->
+            </div>
+
+            <div id="riddle-input-area" style="margin-bottom: 1.25rem;">
+                <div style="display: flex; gap: 0.5rem;">
+                    <input type="text" id="riddle-user-answer" placeholder="הקלד/י את התשובה שלך..." onkeydown="if(event.key === 'Enter') checkRiddleAnswer()" style="flex: 1; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 0.65rem 1rem; color: #fff; font-size: 0.95rem;">
+                    <button class="btn btn-primary btn-sm" onclick="checkRiddleAnswer()">בדוק תשובה</button>
+                </div>
+                <div id="riddle-feedback" style="margin-top: 0.5rem; font-size: 0.9rem; font-weight: 600; min-height: 24px;"></div>
+            </div>
+
+            <div id="riddle-hint-box" style="display: none; background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: var(--radius-sm); padding: 0.75rem; margin-bottom: 1rem; font-size: 0.88rem; color: #fbbf24; line-height: 1.5;">
+            </div>
+
+            <div id="riddle-solution-box" style="display: none; background: rgba(52, 211, 153, 0.1); border: 1px solid rgba(52, 211, 153, 0.3); border-radius: var(--radius-sm); padding: 0.85rem; margin-bottom: 1rem; font-size: 0.88rem; color: var(--text-main); line-height: 1.6;">
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 1rem;">
+                <button class="btn btn-glass btn-sm" onclick="showRiddleHint()">
+                    💡 רמז
+                </button>
+                <button class="btn btn-glass btn-sm" onclick="loadNextRiddle()">
+                    🔄 חידה הבאה
                 </button>
             </div>
         </div>

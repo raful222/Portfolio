@@ -87,8 +87,8 @@ function renderProjects(projectsList) {
                         <i data-lucide="external-link"></i> Live Demo
                     </a>
                 ` : project.isPlayable ? `
-                    <button class="btn btn-glass btn-sm" onclick="openGameModal()">
-                        <i data-lucide="play"></i> Play Game
+                    <button class="btn btn-glass btn-sm" onclick="${project.id === 'chidat-hayom' ? 'openRiddleModal()' : 'openGameModal()'}" style="${project.id === 'chidat-hayom' ? 'border-color: rgba(124, 58, 237, 0.5); color: #c084fc;' : ''}">
+                        <i data-lucide="${project.id === 'chidat-hayom' ? 'help-circle' : 'play'}"></i> ${project.id === 'chidat-hayom' ? 'Play Riddle' : 'Play Game'}
                     </button>
                 ` : project.github ? `
                     <a href="${project.github}" target="_blank" rel="noopener" class="btn btn-glass btn-sm">
@@ -293,9 +293,9 @@ window.openProjectModal = function(projectId) {
             ${project.tech.map(t => `<span class="tech-tag" style="padding: 0.35rem 0.8rem; font-size: 0.82rem;">${t}</span>`).join("")}
         </div>
         <div style="display:flex; flex-wrap:wrap; gap:1rem;">
-            ${project.demo && project.demo !== '#' && !project.demo.includes('github.com') ? `<a href="${project.demo}" target="_blank" class="btn btn-primary" style="background:linear-gradient(135deg, var(--accent-emerald), #059669); color:#040810;"><i data-lucide="external-link"></i> Open Live Application</a>` : ''}
-            ${project.github ? `<a href="${project.github}" target="_blank" class="btn ${project.demo && project.demo !== '#' && !project.demo.includes('github.com') ? 'btn-glass' : 'btn-primary'}"><i data-lucide="github"></i> View GitHub Repository</a>` : ''}
-            ${project.isPlayable ? `<button onclick="closeModal(); openGameModal();" class="btn btn-glass"><i data-lucide="gamepad-2"></i> Launch Mini-Game</button>` : ''}
+            ${project.demo && project.demo !== '#' && !project.demo.includes('github.com') && !project.demo.startsWith('#') ? `<a href="${project.demo}" target="_blank" class="btn btn-primary" style="background:linear-gradient(135deg, var(--accent-emerald), #059669); color:#040810;"><i data-lucide="external-link"></i> Open Live Application</a>` : ''}
+            ${project.github ? `<a href="${project.github}" target="_blank" class="btn ${project.demo && project.demo !== '#' && !project.demo.includes('github.com') && !project.demo.startsWith('#') ? 'btn-glass' : 'btn-primary'}"><i data-lucide="github"></i> View GitHub Repository</a>` : ''}
+            ${project.isPlayable ? `<button onclick="closeModal(); ${project.id === 'chidat-hayom' ? 'openRiddleModal()' : 'openGameModal()'};" class="btn btn-glass" style="${project.id === 'chidat-hayom' ? 'border-color: rgba(124, 58, 237, 0.6); color: #c084fc;' : ''}"><i data-lucide="${project.id === 'chidat-hayom' ? 'help-circle' : 'gamepad-2'}"></i> ${project.id === 'chidat-hayom' ? 'Play Riddle Online' : 'Launch Mini-Game'}</button>` : ''}
         </div>
     `;
 
@@ -306,22 +306,10 @@ window.openProjectModal = function(projectId) {
 window.closeModal = function() {
     document.querySelectorAll(".modal-overlay").forEach(m => m.classList.remove("active"));
     if (window.stopMiniGame) window.stopMiniGame();
+    if (typeof riddleTimerInterval !== "undefined" && riddleTimerInterval) {
+        clearInterval(riddleTimerInterval);
+    }
 };
-
-// Clipboard & Toast
-window.copyToClipboard = function(text, msg) {
-    navigator.clipboard.writeText(text).then(() => {
-        showToast(msg || "Copied to clipboard!");
-    });
-};
-
-function showToast(msg) {
-    const toast = document.getElementById("toast");
-    if (!toast) return;
-    toast.querySelector(".toast-text").textContent = msg;
-    toast.classList.add("show");
-    setTimeout(() => toast.classList.remove("show"), 2500);
-}
 
 // Scroll Navbar Effect
 function initScrollEffects() {
@@ -533,3 +521,152 @@ window.showToast = function(message) {
         toast.classList.remove("show");
     }, 3200);
 };
+
+// ==========================================
+// Chidat HaYom - Interactive Riddle Engine
+// ==========================================
+const RIDDLES_DATA = [
+    {
+        id: 1,
+        title: "שני חבלי בערה (45 דקות)",
+        question: "לרשותך 2 חבלים לא אחידים. כל חבל נשרף במלואו בדיוק תוך 60 דקות, אך קצב הבערה אינו קבוע (למשל, חצי חבל לאו דווקא יישרף ב-30 דקות). כיצד ניתן למדוד בדיוק 45 דקות בעזרת שני החבלים ומצית?",
+        answers: ["45", "להדליק משני הצדדים", "שני קצוות", "חבל ראשון משני צדדים", "להדליק את שני הקצוות", "מדליקים משני הקצוות", "קצה נוסף"],
+        hint: "רמז: אם תדליק חבל אחד משני קצותיו בו-זמנית, כמה זמן ייקח לו להישרף לחלוטין?",
+        explanation: "פתרון אלגנטי: מדליקים את חבל א' משני קצותיו, ובאותו רגע מדליקים את חבל ב' מקצה אחד בלבד. לאחר 30 דקות בדיוק, חבל א' יתכלה לחלוטין, ולחבל ב' יישארו בדיוק 30 דקות בערה. באותו שבריר שנייה מדליקים גם את הקצה השני של חבל ב'! הוא יישרף תוך 15 דקות נוספות. סה\"כ זמן שעבר: 30 + 15 = 45 דקות בדיוק."
+    },
+    {
+        id: 2,
+        title: "9 מטבעות ומאזניים (מטבע מזויף קל)",
+        question: "ישנם 9 מטבעות זהים לחלוטין במראם. 8 מהם בעלי משקל זהה, ואחד מהם מזויף וקל יותר. מהו מספר השקילות המינימלי במאזני כף הדרוש כדי לגלות בוודאות את המטבע המזויף?",
+        answers: ["2", "שתיים", "2 שקילות", "שתי שקילות", "two"],
+        hint: "רמז: האם חייבים לשקול את כל המטבעות בבת אחת? נסה לחלק את המטבעות ל-3 קבוצות שוות (שלישיות).",
+        explanation: "פתרון: 2 שקילות בלבד! מחלקים ל-3 קבוצות של 3 מטבעות. שקילה 1: שוקלים 3 מול 3. אם שקולים – המזויף בשלישייה הנותרת; אם נוטים – המזויף בכף הקלה. כעת נותרו 3 מטבעות. שקילה 2: שוקלים 1 מול 1. אם שקולים – השלישי שלא נשקל הוא המזויף; אם לא – הקל מביניהם הוא המזויף."
+    },
+    {
+        id: 3,
+        title: "מדידת 4 ליטרים עם 3 ו-5 ליטר",
+        question: "לרשותך ברז מים ללא הגבלה ושני דליים ללא שנתות: דלי של 3 ליטרים ודלי של 5 ליטרים. כיצד תוכל למדוד בדיוק 4 ליטרים?",
+        answers: ["4", "למלא את ה-5", "למלא את ה-3", "4 ליטר", "ארבעה ליטר", "ארבע"],
+        hint: "רמז: מלא את דלי 5 הליטרים ורוקן ממנו מים לתוך דלי 3 הליטרים, שים לב לכמות הנותרת.",
+        explanation: "פתרון: ממלאים את דלי ה-5 ליטר עד סופו. שופכים ממנו לדלי ה-3 ליטר עד שהוא מתמלא (בדלי ה-5 נשארו 2 ליטר). מרוקנים את דלי ה-3 ליטר לחלוטין, ושופכים לתוכו את 2 הליטרים מדלי ה-5. כעת ממלאים שוב את דלי ה-5 עד סופו, ומוזגים ממנו לדלי ה-3 (שמכיל 2 ליטר, ולכן ייכנס בו רק 1 ליטר נוסף). בדלי ה-5 נשארו בדיוק 4 ליטר!"
+    }
+];
+
+let currentRiddleIndex = 0;
+let riddleTimer = 0;
+let riddleTimerInterval = null;
+
+window.openRiddleModal = function(index = 0) {
+    const modal = document.getElementById("riddle-modal");
+    if (!modal) return;
+    currentRiddleIndex = index % RIDDLES_DATA.length;
+    renderCurrentRiddle();
+    modal.classList.add("active");
+    startRiddleTimer();
+};
+
+function startRiddleTimer() {
+    if (riddleTimerInterval) clearInterval(riddleTimerInterval);
+    riddleTimer = 0;
+    updateRiddleTimerDisplay();
+    riddleTimerInterval = setInterval(() => {
+        riddleTimer++;
+        updateRiddleTimerDisplay();
+    }, 1000);
+}
+
+function updateRiddleTimerDisplay() {
+    const timerEl = document.getElementById("riddle-timer");
+    if (!timerEl) return;
+    const mins = String(Math.floor(riddleTimer / 60)).padStart(2, "0");
+    const secs = String(riddleTimer % 60).padStart(2, "0");
+    timerEl.textContent = `${mins}:${secs}`;
+}
+
+function renderCurrentRiddle() {
+    const riddle = RIDDLES_DATA[currentRiddleIndex];
+    const titleEl = document.getElementById("riddle-title");
+    const contentEl = document.getElementById("riddle-content-box");
+    const inputEl = document.getElementById("riddle-user-answer");
+    const feedbackEl = document.getElementById("riddle-feedback");
+    const hintEl = document.getElementById("riddle-hint-box");
+    const solutionEl = document.getElementById("riddle-solution-box");
+
+    if (titleEl) titleEl.textContent = `חידת היום #${riddle.id} — ${riddle.title}`;
+    if (contentEl) contentEl.innerHTML = `<p style="margin: 0; font-weight: 500;">${riddle.question}</p>`;
+    if (inputEl) {
+        inputEl.value = "";
+        inputEl.focus();
+    }
+    if (feedbackEl) {
+        feedbackEl.innerHTML = "";
+        feedbackEl.style.color = "";
+    }
+    if (hintEl) {
+        hintEl.style.display = "none";
+        hintEl.textContent = "";
+    }
+    if (solutionEl) {
+        solutionEl.style.display = "none";
+        solutionEl.innerHTML = "";
+    }
+}
+
+window.checkRiddleAnswer = function() {
+    const riddle = RIDDLES_DATA[currentRiddleIndex];
+    const inputEl = document.getElementById("riddle-user-answer");
+    const feedbackEl = document.getElementById("riddle-feedback");
+    const solutionEl = document.getElementById("riddle-solution-box");
+    const modalDialog = document.querySelector("#riddle-modal .modal-dialog");
+
+    if (!inputEl || !feedbackEl) return;
+    const userVal = inputEl.value.trim().toLowerCase();
+
+    if (!userVal) {
+        feedbackEl.textContent = "אנא הקלד/י תשובה לבדיקה...";
+        feedbackEl.style.color = "var(--accent-amber)";
+        return;
+    }
+
+    const isCorrect = riddle.answers.some(ans => userVal.includes(ans.toLowerCase()));
+
+    if (isCorrect) {
+        if (riddleTimerInterval) clearInterval(riddleTimerInterval);
+        feedbackEl.innerHTML = "🎉 תשובה נכונה ומבריקה! כל הכבוד!";
+        feedbackEl.style.color = "var(--accent-emerald)";
+        if (solutionEl) {
+            solutionEl.style.display = "block";
+            solutionEl.innerHTML = `<b>הסבר לוגי מלא:</b><br>${riddle.explanation}`;
+        }
+        if (typeof confetti === "function") {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }
+    } else {
+        feedbackEl.innerHTML = "❌ לא מדויק, נסה/י שוב או היעזר/י ברמז!";
+        feedbackEl.style.color = "var(--accent-rose)";
+        if (modalDialog) {
+            modalDialog.classList.remove("shake-animation");
+            void modalDialog.offsetWidth; // trigger reflow
+            modalDialog.classList.add("shake-animation");
+        }
+    }
+};
+
+window.showRiddleHint = function() {
+    const riddle = RIDDLES_DATA[currentRiddleIndex];
+    const hintEl = document.getElementById("riddle-hint-box");
+    if (!hintEl) return;
+    hintEl.style.display = "block";
+    hintEl.textContent = riddle.hint;
+};
+
+window.loadNextRiddle = function() {
+    currentRiddleIndex = (currentRiddleIndex + 1) % RIDDLES_DATA.length;
+    renderCurrentRiddle();
+    startRiddleTimer();
+};
+

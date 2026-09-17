@@ -131,7 +131,8 @@ const PORTFOLIO_DATA = {
             longDesc: "Full-scale multi-platform puzzle application built with Flutter & Web. Features 25 curated interview and quant riddles, real-time timer with hint penalties, shake animations on error, confetti celebrations on solve, zero-spoiler WhatsApp share cards, and deep logical solution breakdowns.",
             tech: ["Flutter", "Dart", "Web PWA", "JavaScript", "RTL / Hebrew", "Viral Sharing", "Animations"],
             github: "https://github.com/raful222",
-            demo: "#",
+            demo: "#riddle-modal",
+            isPlayable: true,
             status: "Flutter & Web App",
             badge: "Daily Riddles & Logic",
             icon: "help-circle"
