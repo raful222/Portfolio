@@ -474,10 +474,18 @@ function renderContact() {
     `;
 }
 
-// Modal Control
+// ==========================================
+// Interactive Modal Gallery Controller
+// ==========================================
+let currentModalProject = null;
+let currentModalImageIndex = 0;
+
 window.openProjectModal = function(projectId) {
     const project = PORTFOLIO_DATA.projects.find(p => p.id === projectId);
     if (!project) return;
+
+    currentModalProject = project;
+    currentModalImageIndex = 0;
 
     const modal = document.getElementById("project-modal");
     const content = document.getElementById("modal-body-content");
@@ -491,13 +499,42 @@ window.openProjectModal = function(projectId) {
     const badge = (isHe && project.he?.badge) ? project.he.badge : (project.badge || project.tag);
     const status = (isHe && project.he?.status) ? project.he.status : project.status;
 
-    content.innerHTML = `
-        ${project.image ? `
-            <div style="margin: -2.25rem -2.25rem 1.5rem -2.25rem; border-radius: var(--radius-lg) var(--radius-lg) 0 0; overflow: hidden; position: relative; max-height: 240px; background: #0b0f19;">
-                <img src="${project.image}" alt="${title}" style="width: 100%; height: 240px; object-fit: cover; display: block;">
-                <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, #0f172a 100%);"></div>
+    // Check if project has multi-image gallery or single banner
+    const hasGallery = project.images && project.images.length > 0;
+    const imagesList = hasGallery ? project.images : (project.image ? [{ url: project.image, caption: title, captionHe: title }] : []);
+
+    let galleryMarkup = '';
+    if (imagesList.length > 0) {
+        const firstImg = imagesList[0];
+        const caption = isHe ? (firstImg.captionHe || firstImg.caption || title) : (firstImg.caption || title);
+
+        galleryMarkup = `
+            <div class="modal-gallery">
+                <div class="modal-gallery-stage" id="modal-gallery-stage">
+                    <img id="modal-gallery-active-img" src="${firstImg.url}" alt="${title}">
+                    <div class="modal-gallery-overlay"></div>
+                    <div class="modal-gallery-caption" id="modal-gallery-caption">${caption}</div>
+                    ${imagesList.length > 1 ? `
+                        <div class="modal-gallery-counter" id="modal-gallery-counter">1 / ${imagesList.length}</div>
+                        <button class="gallery-arrow prev" onclick="navigateModalGallery(-1)" aria-label="Previous image">‹</button>
+                        <button class="gallery-arrow next" onclick="navigateModalGallery(1)" aria-label="Next image">›</button>
+                    ` : ''}
+                </div>
+                ${imagesList.length > 1 ? `
+                    <div class="modal-gallery-thumbs" id="modal-gallery-thumbs">
+                        ${imagesList.map((img, idx) => `
+                            <div class="gallery-thumb ${idx === 0 ? 'active' : ''}" onclick="setModalGalleryImage(${idx})">
+                                <img src="${img.url}" alt="Thumbnail ${idx + 1}" loading="lazy">
+                            </div>
+                        `).join("")}
+                    </div>
+                ` : ''}
             </div>
-        ` : ''}
+        `;
+    }
+
+    content.innerHTML = `
+        ${galleryMarkup}
         <div style="margin-bottom: 1.5rem; text-align: ${isHe ? 'right' : 'left'};" dir="${isHe ? 'rtl' : 'ltr'}">
             <span class="card-badge" style="margin-bottom:0.75rem; display:inline-block;">${badge}</span>
             <h2 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 0.5rem;">${title}</h2>
@@ -521,13 +558,81 @@ window.openProjectModal = function(projectId) {
     if (window.lucide) lucide.createIcons();
 };
 
+window.navigateModalGallery = function(direction) {
+    if (!currentModalProject) return;
+    const imagesList = currentModalProject.images || [];
+    if (imagesList.length <= 1) return;
+
+    currentModalImageIndex = (currentModalImageIndex + direction + imagesList.length) % imagesList.length;
+    updateModalGalleryDisplay();
+};
+
+window.setModalGalleryImage = function(index) {
+    if (!currentModalProject) return;
+    const imagesList = currentModalProject.images || [];
+    if (index < 0 || index >= imagesList.length) return;
+
+    currentModalImageIndex = index;
+    updateModalGalleryDisplay();
+};
+
+function updateModalGalleryDisplay() {
+    if (!currentModalProject) return;
+    const imagesList = currentModalProject.images || [];
+    if (imagesList.length === 0) return;
+
+    const isHe = currentLang === "he";
+    const imgData = imagesList[currentModalImageIndex];
+    const caption = isHe ? (imgData.captionHe || imgData.caption || "") : (imgData.caption || "");
+
+    const activeImg = document.getElementById("modal-gallery-active-img");
+    const captionEl = document.getElementById("modal-gallery-caption");
+    const counterEl = document.getElementById("modal-gallery-counter");
+
+    if (activeImg && imgData) {
+        activeImg.style.opacity = "0.35";
+        activeImg.src = imgData.url;
+        setTimeout(() => {
+            activeImg.style.opacity = "1";
+        }, 80);
+    }
+    if (captionEl) captionEl.textContent = caption;
+    if (counterEl) counterEl.textContent = `${currentModalImageIndex + 1} / ${imagesList.length}`;
+
+    // Update active thumb
+    const thumbs = document.querySelectorAll(".gallery-thumb");
+    thumbs.forEach((th, idx) => {
+        if (idx === currentModalImageIndex) {
+            th.classList.add("active");
+            th.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+        } else {
+            th.classList.remove("active");
+        }
+    });
+}
+
 window.closeModal = function() {
     document.querySelectorAll(".modal-overlay").forEach(m => m.classList.remove("active"));
     if (window.stopMiniGame) window.stopMiniGame();
     if (typeof riddleTimerInterval !== "undefined" && riddleTimerInterval) {
         clearInterval(riddleTimerInterval);
     }
+    currentModalProject = null;
 };
+
+// Keyboard Gallery Navigation & Modal Shortcuts
+window.addEventListener("keydown", (e) => {
+    const projectModal = document.getElementById("project-modal");
+    if (projectModal && projectModal.classList.contains("active")) {
+        if (e.key === "ArrowRight") {
+            navigateModalGallery(currentLang === "he" ? -1 : 1);
+        } else if (e.key === "ArrowLeft") {
+            navigateModalGallery(currentLang === "he" ? 1 : -1);
+        } else if (e.key === "Escape") {
+            closeModal();
+        }
+    }
+});
 
 // Scroll Navbar Effect
 function initScrollEffects() {

@@ -448,7 +448,24 @@ const PORTFOLIO_DATA = {
                 "badge": "ספינת דגל בפינטק (tryinvest.co.il)",
                 "tag": "פינטק והשקעות"
             },
-            "image": "assets/projects/tryinvest.jpg"
+            "image": "assets/projects/tryinvest/dashboard.png",
+            "images": [
+                {
+                    "url": "assets/projects/tryinvest/dashboard.png",
+                    "caption": "Live FinTech Trading & Portfolio Dashboard",
+                    "captionHe": "דשבורד מסחר, מעקב תיק וביצועים בזמן אמת"
+                },
+                {
+                    "url": "assets/projects/tryinvest/portfolio.png",
+                    "caption": "Asset Allocation, Risk Metrics & PnL Curve",
+                    "captionHe": "הקצאת נכסים, מדדי תשואה/סיכון וגרף רווח והפסד"
+                },
+                {
+                    "url": "assets/projects/tryinvest/analysis.png",
+                    "caption": "Equities Screening, DCF Valuation & Technical Momentum",
+                    "captionHe": "סריקת מניות, מודל הערכת שווי DCF ומומנטום טכני"
+                }
+            ]
         },
         {
             "id": "chess-td-3d",
@@ -543,7 +560,29 @@ const PORTFOLIO_DATA = {
                 "badge": "אסטרטגיה רבת-משתתפים",
                 "tag": "MMO אסטרטגיה בזמן אמת"
             },
-            "image": "assets/projects/valdoria.jpg"
+            "image": "assets/projects/valdoria/hero.jpg",
+            "images": [
+                {
+                    "url": "assets/projects/valdoria/hero.jpg",
+                    "caption": "Valdoria Realm — Strategic World Map & March Vectors",
+                    "captionHe": "ממלכת ולדוריה — מפת עולם אסטרטגית ומסלולי תנועת גייסות"
+                },
+                {
+                    "url": "assets/projects/valdoria/starter_village.jpg",
+                    "caption": "Starter Medieval Village & Timber Resource Hub",
+                    "captionHe": "התיישבות ימי-ביניימית ראשונית ומרכז ייצור משאבים"
+                },
+                {
+                    "url": "assets/projects/valdoria/advanced_village.jpg",
+                    "caption": "Advanced Stone Citadel & Settlement Evolution",
+                    "captionHe": "מבצר אבן מבוצר והתפתחות עיר מתקדמת"
+                },
+                {
+                    "url": "assets/projects/valdoria/village_bg.jpg",
+                    "caption": "Atmospheric Settlement Landscape & Garrison Defense",
+                    "captionHe": "פנורמת נוף הכפר והגנת חיל המצב"
+                }
+            ]
         },
         {
             "id": "discord-qa-bot",
