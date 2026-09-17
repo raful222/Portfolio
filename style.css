@@ -532,6 +532,79 @@ body {
     box-shadow: var(--shadow-glow);
 }
 
+/* Project Card Image Banners */
+.project-banner {
+    position: relative;
+    width: calc(100% + 3.5rem);
+    height: 180px;
+    margin: -1.75rem -1.75rem 0 -1.75rem;
+    overflow: hidden;
+    background: #090e17;
+}
+
+.project-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover .project-banner-img {
+    transform: scale(1.05);
+}
+
+.project-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.1) 0%, rgba(15, 23, 42, 0.8) 85%, var(--bg-card) 100%);
+}
+
+.banner-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 2;
+    backdrop-filter: blur(8px);
+    background: rgba(15, 23, 42, 0.88) !important;
+    border: 1px solid var(--border-accent) !important;
+}
+
+html[dir="rtl"] .banner-badge {
+    left: auto;
+    right: 1rem;
+}
+
+.card-meta-inline {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 0.85rem;
+}
+
+.card-icon-box-sm {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+}
+
+.card-icon-box-sm svg {
+    width: 16px;
+    height: 16px;
+}
+
+.project-category-tag {
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    color: var(--text-dim);
+}
+
 .card-top {
     margin-bottom: 1.25rem;
 }

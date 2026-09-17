@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="shieldBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#shieldBg)" />
+  <!-- Shield Outline -->
+  <path d="M 400,80 L 520,130 L 520,240 Q 520,330 400,370 Q 280,330 280,240 L 280,130 Z" fill="rgba(56, 189, 248, 0.1)" stroke="#38bdf8" stroke-width="4" />
+  <path d="M 360,230 L 390,260 L 450,190" fill="none" stroke="#34d399" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <text x="400" y="410" fill="#38bdf8" font-family="'Outfit', sans-serif" font-size="20" font-weight="bold" text-anchor="middle">DoNotCopy — Exam Security & Anti-Plagiarism</text>
+  <text x="400" y="435" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">B.Sc. Graduation Project • SCE Shamoon College of Engineering</text>
+</svg>

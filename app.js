@@ -212,13 +212,29 @@ function renderProjects(projectsList) {
 
         return `
             <div class="project-card" data-category="${project.category}">
-                <div class="card-top">
-                    <div class="card-meta">
-                        <span class="card-badge">${badge}</span>
-                        <div class="card-icon-box">
-                            <i data-lucide="${project.icon || 'code-2'}"></i>
-                        </div>
+                ${project.image ? `
+                    <div class="project-banner">
+                        <img src="${project.image}" alt="${title}" class="project-banner-img" loading="lazy">
+                        <div class="project-banner-overlay"></div>
+                        <span class="card-badge banner-badge">${badge}</span>
                     </div>
+                ` : ''}
+                <div class="card-top" style="${project.image ? 'padding-top: 1rem;' : ''}">
+                    ${!project.image ? `
+                        <div class="card-meta">
+                            <span class="card-badge">${badge}</span>
+                            <div class="card-icon-box">
+                                <i data-lucide="${project.icon || 'code-2'}"></i>
+                            </div>
+                        </div>
+                    ` : `
+                        <div class="card-meta-inline">
+                            <div class="card-icon-box-sm">
+                                <i data-lucide="${project.icon || 'code-2'}"></i>
+                            </div>
+                            <span class="project-category-tag">${project.tag || project.category}</span>
+                        </div>
+                    `}
                     <h3 class="project-title">${title}</h3>
                     <p class="project-desc">${desc}</p>
                     <div class="tech-tags">
@@ -476,6 +492,12 @@ window.openProjectModal = function(projectId) {
     const status = (isHe && project.he?.status) ? project.he.status : project.status;
 
     content.innerHTML = `
+        ${project.image ? `
+            <div style="margin: -2.25rem -2.25rem 1.5rem -2.25rem; border-radius: var(--radius-lg) var(--radius-lg) 0 0; overflow: hidden; position: relative; max-height: 240px; background: #0b0f19;">
+                <img src="${project.image}" alt="${title}" style="width: 100%; height: 240px; object-fit: cover; display: block;">
+                <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, #0f172a 100%);"></div>
+            </div>
+        ` : ''}
         <div style="margin-bottom: 1.5rem; text-align: ${isHe ? 'right' : 'left'};" dir="${isHe ? 'rtl' : 'ltr'}">
             <span class="card-badge" style="margin-bottom:0.75rem; display:inline-block;">${badge}</span>
             <h2 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 0.5rem;">${title}</h2>

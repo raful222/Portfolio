@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mathBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#172554" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#mathBg)" />
+  <g fill="rgba(255,255,255,0.06)" font-family="'JetBrains Mono', monospace" font-size="30">
+    <text x="80" y="100">∀x ∈ S (P(x) ⟹ Q(x))</text>
+    <text x="480" y="120">∑ (1/2ⁿ) = 1</text>
+    <text x="120" y="260">A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)</text>
+    <text x="450" y="320">f: X → Y ⟺ |X| ≤ |Y|</text>
+  </g>
+  <rect x="200" y="150" width="400" height="150" rx="16" fill="rgba(15, 23, 42, 0.9)" stroke="#818cf8" stroke-width="2" />
+  <text x="400" y="210" fill="#c7d2fe" font-family="'Outfit', sans-serif" font-size="22" font-weight="bold" text-anchor="middle">LOGICAL MATH STUDY HUB</text>
+  <text x="400" y="245" fill="#818cf8" font-family="'JetBrains Mono', monospace" font-size="14" text-anchor="middle">KaTeX LaTeX Proofs & Diagnostic Quizzes</text>
+  <text x="400" y="275" fill="#34d399" font-family="'Outfit', sans-serif" font-size="13" text-anchor="middle">פורטל חשיבה לוגית והכנה לבחינות</text>
+</svg>

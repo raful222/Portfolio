@@ -1,202 +1,246 @@
 // Portfolio Data Configuration — Refael Robinov
 // Cutting-Edge .NET 10, Agentic AI & Modern Full-Stack Showcase
 
-
-// Bilingual Localization Dictionary (English & Hebrew)
 const TRANSLATIONS = {
-    en: {
-        nav: {
-            projects: "Projects & Systems",
-            skills: "Skills Matrix",
-            architecture: "Architecture & Scale",
-            experience: "Experience",
-            about: "AI & Education",
-            contact: "Contact",
-            cvBtn: "CV (PDF)",
-            cvEn: "English Resume (PDF)",
-            cvHe: "Hebrew Resume (PDF)",
-            letsTalk: "Let's Talk",
-            langBtn: "עברית"
+    "en": {
+        "nav": {
+            "projects": "Projects & Systems",
+            "skills": "Skills Matrix",
+            "architecture": "Architecture & Scale",
+            "experience": "Experience",
+            "about": "AI & Education",
+            "contact": "Contact",
+            "cvBtn": "CV (PDF)",
+            "cvEn": "English Resume (PDF)",
+            "cvHe": "Hebrew Resume (PDF)",
+            "letsTalk": "Let's Talk",
+            "langBtn": "עברית"
         },
-        hero: {
-            status: "Available for Senior Roles & High-Impact Projects",
-            greeting: "Hi, I'm",
-            name: "Refael Robinov",
-            subtitle: "Senior Backend & Full Stack Engineer",
-            bio: "Architecting high-scale distributed systems, high-throughput APIs, and intelligent web applications. 5+ years of production experience in mission-critical environments.",
-            btnExplore: "Explore Projects & Games",
-            btnCv: "Download CV (PDF)",
-            btnContact: "Get In Touch",
-            btnMiniGame: "Launch Mini-Game"
+        "hero": {
+            "status": "Available for Senior Roles & High-Impact Projects",
+            "greeting": "Hi, I'm",
+            "name": "Refael Robinov",
+            "subtitle": "Senior Backend & Full Stack Engineer",
+            "bio": "Architecting high-scale distributed systems, high-throughput APIs, and intelligent web applications. 5+ years of production experience in mission-critical environments.",
+            "btnExplore": "Explore Projects & Games",
+            "btnCv": "Download CV (PDF)",
+            "btnContact": "Get In Touch",
+            "btnMiniGame": "Launch Mini-Game"
         },
-        stats: [
-            { value: "5+", label: "Years Experience" },
-            { value: "8+", label: "Live Cloud Platforms" },
-            { value: "10M+", label: "Daily Data Transactions" },
-            { value: "18+", label: "Production & AI Systems" }
-        ],
-        projectsHeader: {
-            subtitle: "// PORTFOLIO ARTIFACTS & EXPERIMENTS",
-            title: "Featured Projects, Systems & Games",
-            filters: {
-                all: "All Works",
-                ai: "AI & Trading",
-                backend: "Backend & Scale",
-                systems: "Cyber & Systems",
-                games: "Games & Interactive",
-                web: "Web & Full Stack"
+        "stats": [
+            {
+                "value": "5+",
+                "label": "Years Experience"
             },
-            searchPlaceholder: "Search tech or keyword...",
-            details: "Details",
-            liveDemo: "Live Demo",
-            playRiddle: "Play Riddle",
-            playGame: "Play Game",
-            code: "Code",
-            privateSystem: "Private System"
+            {
+                "value": "8+",
+                "label": "Live Cloud Platforms"
+            },
+            {
+                "value": "10M+",
+                "label": "Daily Data Transactions"
+            },
+            {
+                "value": "18+",
+                "label": "Production & AI Systems"
+            }
+        ],
+        "projectsHeader": {
+            "subtitle": "// PORTFOLIO ARTIFACTS & EXPERIMENTS",
+            "title": "Featured Projects, Systems & Games",
+            "filters": {
+                "all": "All Works",
+                "ai": "AI & Trading",
+                "backend": "Backend & Scale",
+                "systems": "Cyber & Systems",
+                "games": "Games & Interactive",
+                "web": "Web & Full Stack"
+            },
+            "searchPlaceholder": "Search tech or keyword...",
+            "details": "Details",
+            "liveDemo": "Live Demo",
+            "playRiddle": "Play Riddle",
+            "playGame": "Play Game",
+            "code": "Code",
+            "privateSystem": "Private System"
         },
-        skillsHeader: {
-            subtitle: "// TECHNICAL EXPERTISE",
-            title: "Core Engineering Stack"
+        "skillsHeader": {
+            "subtitle": "// TECHNICAL EXPERTISE",
+            "title": "Core Engineering Stack"
         },
-        architecture: {
-            subtitle: "// DISTRIBUTED SYSTEMS & SYSTEM DESIGN",
-            title: "High-Throughput Architecture & Production Scale",
-            layer1Title: "Client & Edge Presentation",
-            layer1Desc: "Angular 19, Next.js 15, PWA offline-first, Three.js WebGL rendering, and sub-second reactive views.",
-            layer1Pill: "Client Tier",
-            layer2Title: "High-Scale API Gateway",
-            layer2Desc: "ASP.NET Core & .NET 10 microservices, JWT authentication, rate limiting, and RESTful routing.",
-            layer2Pill: "Gateway & Ingestion",
-            layer3Title: "Distributed Cache & Events",
-            layer3Desc: "Redis In-Memory caching, Pub/Sub event streaming, WebSockets broadcast, and sub-5ms latency pipelines.",
-            layer3Pill: "Low-Latency Memory",
-            layer4Title: "Enterprise Persistence & Bridges",
-            layer4Desc: "SQL Server with optimized indexed queries, Mainframe / Natural legacy connectors, and background AI workers.",
-            layer4Pill: "Persistence & Bridges",
-            metrics: [
-                { val: "<50ms", label: "Mean API Response Latency" },
-                { val: "99.99%", label: "Production System Uptime" },
-                { val: "10M+", label: "Daily Data Records Processed" },
-                { val: "Zero-Loss", label: "Fault-Tolerant Failover & Audits" }
+        "architecture": {
+            "subtitle": "// DISTRIBUTED SYSTEMS & SYSTEM DESIGN",
+            "title": "High-Throughput Architecture & Production Scale",
+            "layer1Title": "Client & Edge Presentation",
+            "layer1Desc": "Angular 19, Next.js 15, PWA offline-first, Three.js WebGL rendering, and sub-second reactive views.",
+            "layer1Pill": "Client Tier",
+            "layer2Title": "High-Scale API Gateway",
+            "layer2Desc": "ASP.NET Core & .NET 10 microservices, JWT authentication, rate limiting, and RESTful routing.",
+            "layer2Pill": "Gateway & Ingestion",
+            "layer3Title": "Distributed Cache & Events",
+            "layer3Desc": "Redis In-Memory caching, Pub/Sub event streaming, WebSockets broadcast, and sub-5ms latency pipelines.",
+            "layer3Pill": "Low-Latency Memory",
+            "layer4Title": "Enterprise Persistence & Bridges",
+            "layer4Desc": "SQL Server with optimized indexed queries, Mainframe / Natural legacy connectors, and background AI workers.",
+            "layer4Pill": "Persistence & Bridges",
+            "metrics": [
+                {
+                    "val": "<50ms",
+                    "label": "Mean API Response Latency"
+                },
+                {
+                    "val": "99.99%",
+                    "label": "Production System Uptime"
+                },
+                {
+                    "val": "10M+",
+                    "label": "Daily Data Records Processed"
+                },
+                {
+                    "val": "Zero-Loss",
+                    "label": "Fault-Tolerant Failover & Audits"
+                }
             ]
         },
-        experienceHeader: {
-            subtitle: "// CAREER TIMELINE",
-            title: "Professional Experience"
+        "experienceHeader": {
+            "subtitle": "// CAREER TIMELINE",
+            "title": "Professional Experience"
         },
-        aiHeader: {
-            subtitle: "// INTELLIGENT AGENTS & ACADEMIA",
-            title: "AI Workflows & Education",
-            workflowsTitle: "AI-Augmented Engineering Paradigms",
-            educationTitle: "Education & Certifications"
+        "aiHeader": {
+            "subtitle": "// INTELLIGENT AGENTS & ACADEMIA",
+            "title": "AI Workflows & Education",
+            "workflowsTitle": "AI-Augmented Engineering Paradigms",
+            "educationTitle": "Education & Certifications"
         },
-        contactHeader: {
-            subtitle: "// GET IN TOUCH",
-            title: "Let's build something exceptional.",
-            desc: "Whether you are looking for a senior backend architect, high-throughput systems developer, or exploring innovative tech partnerships — feel free to reach out directly.",
-            sendEmail: "Send Direct Email",
-            callPhone: "Call Directly"
+        "contactHeader": {
+            "subtitle": "// GET IN TOUCH",
+            "title": "Let's build something exceptional.",
+            "desc": "Whether you are looking for a senior backend architect, high-throughput systems developer, or exploring innovative tech partnerships — feel free to reach out directly.",
+            "sendEmail": "Send Direct Email",
+            "callPhone": "Call Directly"
         },
-        footer: "© 2026 Refael Robinov. Engineered with precision, modern WebGL, and clean code."
+        "footer": "© 2026 Refael Robinov. Engineered with precision, modern WebGL, and clean code."
     },
-    he: {
-        nav: {
-            projects: "פרויקטים ומערכות",
-            skills: "מיומנויות",
-            architecture: "ארכיטקטורה ו-Scale",
-            experience: "ניסיון תעסוקתי",
-            about: "AI והשכלה",
-            contact: "צור קשר",
-            cvBtn: 'קו"ח (PDF)',
-            cvEn: "קורות חיים באנגלית (PDF)",
-            cvHe: "קורות חיים בעברית (PDF)",
-            letsTalk: "בואו נדבר",
-            langBtn: "English"
+    "he": {
+        "nav": {
+            "projects": "פרויקטים ומערכות",
+            "skills": "מיומנויות",
+            "architecture": "ארכיטקטורה ו-Scale",
+            "experience": "ניסיון תעסוקתי",
+            "about": "AI והשכלה",
+            "contact": "צור קשר",
+            "cvBtn": "קו\"ח (PDF)",
+            "cvEn": "קורות חיים באנגלית (PDF)",
+            "cvHe": "קורות חיים בעברית (PDF)",
+            "letsTalk": "בואו נדבר",
+            "langBtn": "English"
         },
-        hero: {
-            status: "פתוח להזדמנויות Senior / Staff ופרויקטים בעלי אימפקט",
-            greeting: "שלום, אני",
-            name: "רפאל רובינוב",
-            subtitle: "מהנדס תוכנה בכיר — Backend & Full-Stack מועצם AI",
-            bio: "מומחה בארכיטקטורת מערכות מבוזרות ב-Scale גבוה, ממשקי API מהירים ויישומי Web ו-AI מתקדמים. 5+ שנות ניסיון מעשי בפיתוח סביבות ייצור קריטיות (Mission-Critical).",
-            btnExplore: "צפה בפרויקטים ובמשחקים",
-            btnCv: "הורד קורות חיים (PDF)",
-            btnContact: "יצירת קשר ישירה",
-            btnMiniGame: "שחק במיני-גיים"
+        "hero": {
+            "status": "פתוח להזדמנויות Senior / Staff ופרויקטים בעלי אימפקט",
+            "greeting": "שלום, אני",
+            "name": "רפאל רובינוב",
+            "subtitle": "מהנדס תוכנה בכיר — Backend & Full-Stack מועצם AI",
+            "bio": "מומחה בארכיטקטורת מערכות מבוזרות ב-Scale גבוה, ממשקי API מהירים ויישומי Web ו-AI מתקדמים. 5+ שנות ניסיון מעשי בפיתוח סביבות ייצור קריטיות (Mission-Critical).",
+            "btnExplore": "צפה בפרויקטים ובמשחקים",
+            "btnCv": "הורד קורות חיים (PDF)",
+            "btnContact": "יצירת קשר ישירה",
+            "btnMiniGame": "שחק במיני-גיים"
         },
-        stats: [
-            { value: "+5", label: "שנות ניסיון מעשי בהייטק" },
-            { value: "+8", label: "פלטפורמות ענן פעילות" },
-            { value: "10M+", label: "טרנזקציות יומיות מעובדות" },
-            { value: "+18", label: "מערכות פרודקשן ו-AI" }
-        ],
-        projectsHeader: {
-            subtitle: "// פרויקטים, מערכות וארכיטקטורה",
-            title: "פרויקטים נבחרים, מערכות ומשחקים",
-            filters: {
-                all: "הכל",
-                ai: "AI ופינטק",
-                backend: "בקאנד ו-Scale",
-                systems: "סייבר ומערכות",
-                games: "משחקים ותלת-ממד",
-                web: "ווב ו-Full Stack"
+        "stats": [
+            {
+                "value": "+5",
+                "label": "שנות ניסיון מעשי בהייטק"
             },
-            searchPlaceholder: "חיפוש לפי טכנולוגיה או מילת מפתח...",
-            details: "פרטים נוספים",
-            liveDemo: "דמו חי",
-            playRiddle: "שחק בחידה",
-            playGame: "שחק במשחק",
-            code: "קוד ב-GitHub",
-            privateSystem: "מערכת פנימית"
+            {
+                "value": "+8",
+                "label": "פלטפורמות ענן פעילות"
+            },
+            {
+                "value": "10M+",
+                "label": "טרנזקציות יומיות מעובדות"
+            },
+            {
+                "value": "+18",
+                "label": "מערכות פרודקשן ו-AI"
+            }
+        ],
+        "projectsHeader": {
+            "subtitle": "// פרויקטים, מערכות וארכיטקטורה",
+            "title": "פרויקטים נבחרים, מערכות ומשחקים",
+            "filters": {
+                "all": "הכל",
+                "ai": "AI ופינטק",
+                "backend": "בקאנד ו-Scale",
+                "systems": "סייבר ומערכות",
+                "games": "משחקים ותלת-ממד",
+                "web": "ווב ו-Full Stack"
+            },
+            "searchPlaceholder": "חיפוש לפי טכנולוגיה או מילת מפתח...",
+            "details": "פרטים נוספים",
+            "liveDemo": "דמו חי",
+            "playRiddle": "שחק בחידה",
+            "playGame": "שחק במשחק",
+            "code": "קוד ב-GitHub",
+            "privateSystem": "מערכת פנימית"
         },
-        skillsHeader: {
-            subtitle: "// מומחיות טכנולוגית",
-            title: "סטאק הנדסי וליבת הפיתוח"
+        "skillsHeader": {
+            "subtitle": "// מומחיות טכנולוגית",
+            "title": "סטאק הנדסי וליבת הפיתוח"
         },
-        architecture: {
-            subtitle: "// מערכות מבוזרות ו-SYSTEM DESIGN",
-            title: "ארכיטקטורה ב-High-Throughput וסביבות ייצור",
-            layer1Title: "שכבת לקוח ותצוגת קצה",
-            layer1Desc: "Angular 19, Next.js 15, PWA offline-first, רינדור WebGL תלת-ממדי ב-Three.js ותגובתיות מיידית.",
-            layer1Pill: "שכבת לקוח (Client Tier)",
-            layer2Title: "API Gateway ב-Scale גבוה",
-            layer2Desc: "מיקרו-סרוויסים ב-ASP.NET Core ו-.NET 10, אימות JWT מאובטח, Rate Limiting וניתוב RESTful מהיר.",
-            layer2Pill: "שער כניסה וניתוב",
-            layer3Title: "זיכרון מטמון מבוזר ואירועים",
-            layer3Desc: "שכבת In-Memory ב-Redis, הזרמת אירועי Pub/Sub, שידור חי ב-WebSockets וצנרות ב-Latency של פחות מ-5ms.",
-            layer3Pill: "זיכרון מהיר ואירועים",
-            layer4Title: "שכבת נתונים וגשרים ארגוניים",
-            layer4Desc: "SQL Server עם אינדוקס ושאילתות מותאמות, מחברי Mainframe / Natural מדור קודם וסוכני AI ברקע.",
-            layer4Pill: "שמירת נתונים ואינטגרציות",
-            metrics: [
-                { val: "<50ms", label: "זמן תגובה ממוצע ב-API" },
-                { val: "99.99%", label: "זמינות מערכת בייצור (Uptime)" },
-                { val: "10M+", label: "רשומות מעובדות מדי יום" },
-                { val: "Zero-Loss", label: "התאוששות חסינת תקלות וגיבוי" }
+        "architecture": {
+            "subtitle": "// מערכות מבוזרות ו-SYSTEM DESIGN",
+            "title": "ארכיטקטורה ב-High-Throughput וסביבות ייצור",
+            "layer1Title": "שכבת לקוח ותצוגת קצה",
+            "layer1Desc": "Angular 19, Next.js 15, PWA offline-first, רינדור WebGL תלת-ממדי ב-Three.js ותגובתיות מיידית.",
+            "layer1Pill": "שכבת לקוח (Client Tier)",
+            "layer2Title": "API Gateway ב-Scale גבוה",
+            "layer2Desc": "מיקרו-סרוויסים ב-ASP.NET Core ו-.NET 10, אימות JWT מאובטח, Rate Limiting וניתוב RESTful מהיר.",
+            "layer2Pill": "שער כניסה וניתוב",
+            "layer3Title": "זיכרון מטמון מבוזר ואירועים",
+            "layer3Desc": "שכבת In-Memory ב-Redis, הזרמת אירועי Pub/Sub, שידור חי ב-WebSockets וצנרות ב-Latency של פחות מ-5ms.",
+            "layer3Pill": "זיכרון מהיר ואירועים",
+            "layer4Title": "שכבת נתונים וגשרים ארגוניים",
+            "layer4Desc": "SQL Server עם אינדוקס ושאילתות מותאמות, מחברי Mainframe / Natural מדור קודם וסוכני AI ברקע.",
+            "layer4Pill": "שמירת נתונים ואינטגרציות",
+            "metrics": [
+                {
+                    "val": "<50ms",
+                    "label": "זמן תגובה ממוצע ב-API"
+                },
+                {
+                    "val": "99.99%",
+                    "label": "זמינות מערכת בייצור (Uptime)"
+                },
+                {
+                    "val": "10M+",
+                    "label": "רשומות מעובדות מדי יום"
+                },
+                {
+                    "val": "Zero-Loss",
+                    "label": "התאוששות חסינת תקלות וגיבוי"
+                }
             ]
         },
-        experienceHeader: {
-            subtitle: "// מסלול מקצועי",
-            title: "ניסיון תעסוקתי מוכח"
+        "experienceHeader": {
+            "subtitle": "// מסלול מקצועי",
+            "title": "ניסיון תעסוקתי מוכח"
         },
-        aiHeader: {
-            subtitle: "// סוכנים אוטונומיים ואקדמיה",
-            title: "מתודולוגיות AI והשכלה",
-            workflowsTitle: "פרדיגמות פיתוח מועצמות AI",
-            educationTitle: "השכלה והסמכות"
+        "aiHeader": {
+            "subtitle": "// סוכנים אוטונומיים ואקדמיה",
+            "title": "מתודולוגיות AI והשכלה",
+            "workflowsTitle": "פרדיגמות פיתוח מועצמות AI",
+            "educationTitle": "השכלה והסמכות"
         },
-        contactHeader: {
-            subtitle: "// צור קשר",
-            title: "בואו נבנה משהו יוצא דופן ביחד.",
-            desc: "בין אם אתם מחפשים ארכיטקט בקאנד בכיר, מפתח מערכות בעומסים גבוהים, או פתוחים לשיתופי פעולה טכנולוגיים — אשמח לשוחח.",
-            sendEmail: "שליחת מייל ישיר",
-            callPhone: "חיוג טלפוני ישיר"
+        "contactHeader": {
+            "subtitle": "// צור קשר",
+            "title": "בואו נבנה משהו יוצא דופן ביחד.",
+            "desc": "בין אם אתם מחפשים ארכיטקט בקאנד בכיר, מפתח מערכות בעומסים גבוהים, או פתוחים לשיתופי פעולה טכנולוגיים — אשמח לשוחח.",
+            "sendEmail": "שליחת מייל ישיר",
+            "callPhone": "חיוג טלפוני ישיר"
         },
-        footer: "© 2026 רפאל רובינוב. פותח בדיוק הנדסי, WebGL מודרני וקוד נקי."
+        "footer": "© 2026 רפאל רובינוב. פותח בדיוק הנדסי, WebGL מודרני וקוד נקי."
     }
 };
-
-
 
 const PORTFOLIO_DATA = {
     "profile": {
@@ -403,7 +447,8 @@ const PORTFOLIO_DATA = {
                 "longDesc": "מערכת השקעות וניהול תיקים מקצועית מקצה לקצה. מספקת למשקיעים ניתוח מעמיק של ביצועים, מעקב PnL חי, בדיקות עבר (Backtesting) של הקצאת נכסים וניהול סיכונים אוטומטי.",
                 "badge": "ספינת דגל בפינטק (tryinvest.co.il)",
                 "tag": "פינטק והשקעות"
-            }
+            },
+            "image": "assets/projects/tryinvest.jpg"
         },
         {
             "id": "chess-td-3d",
@@ -433,7 +478,8 @@ const PORTFOLIO_DATA = {
                 "longDesc": "פותח עם מנוע Three.js WebGL ו-Vite בצד הלקוח, עם שרת שחמט מהיר ב-Node.js. כולל אופטימיזציית מודלים (GLTF/LOD), סנכרון תקיפות, הדמיית כלכלה ותאימות מלאה למנוע Unity.",
                 "badge": "מנוע משחק 3D RTS",
                 "tag": "RTS תלת-ממדי"
-            }
+            },
+            "image": "assets/projects/chess-td-3d.jpg"
         },
         {
             "id": "chidat-hayom",
@@ -464,7 +510,8 @@ const PORTFOLIO_DATA = {
                 "longDesc": "אפליקציית חידות חוצת-פלטפורמות מלאה שנבנתה ב-Flutter ו-Web. כוללת 25 חידות אקספרט מובחרות, טיימר זמן אמת עם קנסות רמז, אנימציות ניעור בשגיאה, חגיגות קונפטי בפתרון, כרטיסי שיתוף ללא ספוילרים לוואטסאפ והסברים לוגיים עמוקים.",
                 "badge": "חידות היגיון יומיות",
                 "tag": "לוגיקה וקוואנט"
-            }
+            },
+            "image": "assets/projects/chidat-hayom.jpg"
         },
         {
             "id": "valdoria-iron-fiefs",
@@ -495,7 +542,8 @@ const PORTFOLIO_DATA = {
                 "longDesc": "חוויית אסטרטגיה מרובת משתתפים עמוקה. פותח עם React, TypeScript ו-Vite בצד הלקוח, יחד עם Node.js ו-Prisma ORM. כולל שיידרים של שטח בסגנון AoE2, צעידת צבאות וקטורית, כיבוש כפרים מבוסס נאמנות, בריתות שבטים ומסחר נודד.",
                 "badge": "אסטרטגיה רבת-משתתפים",
                 "tag": "MMO אסטרטגיה בזמן אמת"
-            }
+            },
+            "image": "assets/projects/valdoria.jpg"
         },
         {
             "id": "discord-qa-bot",
@@ -524,7 +572,8 @@ const PORTFOLIO_DATA = {
                 "longDesc": "ארכיטקטורת Multi-Agent שנבנתה באמצעות CrewAI ומודל Gemini 3.1 Flash. מתחברת לדיסקורד, סורקת אתרי יעד, מזהה שגיאות פרודקשן, מנתחת לוגים ומציעה תיקוני קוד ו-Pull Requests באופן אוטונומי.",
                 "badge": "סוכני AI אוטונומיים",
                 "tag": "סוכני AI אוטונומיים"
-            }
+            },
+            "image": "assets/projects/discord-qa-bot.svg"
         },
         {
             "id": "vbook",
@@ -576,7 +625,8 @@ const PORTFOLIO_DATA = {
                 "longDesc": "אלגוריתמי מסחר מונחי סטטיסטיקה ו-Machine Learning. מספקת מודלי נזילות, התראות קוליות/ויזואליות בזמן אמת, וחישוב מומנטום עבור סוחרי אופציות ומניות.",
                 "badge": "מנוע מסחר כמותי",
                 "tag": "מסחר אלגוריתמי"
-            }
+            },
+            "image": "assets/projects/mt-algo.svg"
         },
         {
             "id": "ai-ml-learning-hub",
@@ -670,7 +720,8 @@ const PORTFOLIO_DATA = {
                 "longDesc": "נבנה לעמידה בעומסים כבדים, עדכון מהיר של שכבת Redis ותגובתיות מיידית בממשקי REST תחת תעבורה בו-זמנית גבוהה.",
                 "badge": "מיקרו-סרוויס בייצור",
                 "tag": "תשתיות בקאנד ו-Scale"
-            }
+            },
+            "image": "assets/projects/pulsebe.svg"
         },
         {
             "id": "report-stock-analysis",
@@ -726,7 +777,8 @@ const PORTFOLIO_DATA = {
                 "longDesc": "סצנות WebGL תלת-ממדיות ייחודיות, שדרוג קומות פרוצדורלי, חישוב רווחים במצב לא מקוון ומודל כלכלי מבוסס סימולציות מונטה-קרלו.",
                 "badge": "מנוע משחק תלת-ממד",
                 "tag": "מנוע משחק תלת-ממדי"
-            }
+            },
+            "image": "assets/projects/idle-for-you.svg"
         },
         {
             "id": "task-management-api",
@@ -809,7 +861,8 @@ const PORTFOLIO_DATA = {
                 "longDesc": "ארכיטקטורה רספונסיבית מותאמת עברית (RTL), רינדור נוסחאות KaTeX LaTeX, בדיקת תשובות מיידית והוכחות מתמטיות מפורטות.",
                 "badge": "פורטל לימודי אינטראקטיבי",
                 "tag": "פורטל לוגיקה ואקדמיה"
-            }
+            },
+            "image": "assets/projects/logical-math-study-hub.svg"
         },
         {
             "id": "lumina-jewelry-ai",
@@ -837,7 +890,8 @@ const PORTFOLIO_DATA = {
                 "longDesc": "נבנה על Next.js 15 App Router, React 19, Tailwind CSS ו-TypeScript. פירוט עלויות שקוף, גלריית תצוגה ברזולוציה גבוהה והגדרת אבני חן דינמית.",
                 "badge": "סטודיו Next.js 15 יוקרתי",
                 "tag": "סטודיו Next.js 15 & AI"
-            }
+            },
+            "image": "assets/projects/lumina-jewelry-ai.svg"
         },
         {
             "id": "do-not-copy",
@@ -865,7 +919,8 @@ const PORTFOLIO_DATA = {
                 "longDesc": "פותח ב-ASP.NET Core Web API, בדיקת שלמות ישויות, השוואת הגשות אוטומטית ויומני ביקורת לשמירה על טוהר הבחינות.",
                 "badge": "פרויקט גמר הנדסה",
                 "tag": "סייבר ו-Web API"
-            }
+            },
+            "image": "assets/projects/do-not-copy.svg"
         },
         {
             "id": "cyber-recon-game",
