@@ -1275,6 +1275,104 @@ html[dir="rtl"] .gallery-arrow.next:hover {
     transform: scale(1);
 }
 
+/* Project Modal Custom Dialog — Fixed Action Bar & Scrollable Body */
+.modal-project-dialog {
+    max-width: 740px;
+    height: 88vh;
+    max-height: 860px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 !important;
+    overflow: hidden !important;
+    position: relative;
+    background: #0a0f1d;
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(14, 165, 233, 0.12);
+}
+
+.modal-project-dialog .modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 50;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+}
+
+.modal-project-dialog .modal-close:hover {
+    background: var(--accent-rose);
+    border-color: var(--accent-rose);
+    color: #fff;
+    transform: scale(1.08);
+}
+
+html[dir="rtl"] .modal-project-dialog .modal-close {
+    right: auto;
+    left: 1rem;
+}
+
+.modal-scroll-body {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 2rem 2.25rem 1.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(56, 189, 248, 0.35) rgba(15, 23, 42, 0.5);
+}
+
+.modal-scroll-body.has-gallery {
+    padding-top: 0;
+}
+
+.modal-scroll-body::-webkit-scrollbar {
+    width: 6px;
+}
+.modal-scroll-body::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.5);
+}
+.modal-scroll-body::-webkit-scrollbar-thumb {
+    background: rgba(56, 189, 248, 0.35);
+    border-radius: 4px;
+}
+.modal-scroll-body::-webkit-scrollbar-thumb:hover {
+    background: rgba(56, 189, 248, 0.7);
+}
+
+.modal-project-dialog .modal-gallery {
+    margin: 0 -2.25rem 1.75rem -2.25rem;
+    border-radius: 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-footer-actions {
+    flex-shrink: 0;
+    padding: 1.1rem 2rem;
+    background: rgba(8, 13, 24, 0.98);
+    backdrop-filter: blur(14px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.85rem;
+    z-index: 30;
+}
+
+html[dir="rtl"] .modal-footer-actions {
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+}
+
 .modal-close {
     position: absolute;
     top: 1.25rem;

@@ -496,7 +496,29 @@ const PORTFOLIO_DATA = {
                 "badge": "מנוע משחק 3D RTS",
                 "tag": "RTS תלת-ממדי"
             },
-            "image": "assets/projects/chess-td-3d.jpg"
+            "image": "assets/projects/chess-td-3d/battle_live.png",
+            "images": [
+                {
+                    "url": "assets/projects/chess-td-3d/battle_live.png",
+                    "caption": "Real-Time 3D Chess RTS Battle & Wave Defense",
+                    "captionHe": "קרב אסטרטגיה 3D בזמן אמת והגנת גלי אויבים"
+                },
+                {
+                    "url": "assets/projects/chess-td-3d/arena.png",
+                    "caption": "Isometric Tactical Arena & Unit Deployments",
+                    "captionHe": "זירת לחימה איזומטרית ופריסת כוחות שחמט"
+                },
+                {
+                    "url": "assets/projects/chess-td-3d/lobby.png",
+                    "caption": "Multiplayer Matchmaking Lobby & Armory",
+                    "captionHe": "לובי מרובה משתתפים, התאמת משחק ונשקייה"
+                },
+                {
+                    "url": "assets/projects/chess-td-3d/campaign_map.png",
+                    "caption": "Strategic Campaign Progression Map & Tier Rewards",
+                    "captionHe": "מפת קמפיין אסטרטגית ופרסי התקדמות שלבים"
+                }
+            ]
         },
         {
             "id": "chidat-hayom",

@@ -488,8 +488,9 @@ window.openProjectModal = function(projectId) {
     currentModalImageIndex = 0;
 
     const modal = document.getElementById("project-modal");
-    const content = document.getElementById("modal-body-content");
-    if (!modal || !content) return;
+    const scrollBody = document.getElementById("modal-scroll-body");
+    const footerActions = document.getElementById("modal-footer-actions");
+    if (!modal || !scrollBody || !footerActions) return;
 
     const isHe = currentLang === "he";
     const t = TRANSLATIONS[currentLang].projectsHeader;
@@ -533,26 +534,45 @@ window.openProjectModal = function(projectId) {
         `;
     }
 
-    content.innerHTML = `
+    if (imagesList.length > 0) {
+        scrollBody.classList.add("has-gallery");
+    } else {
+        scrollBody.classList.remove("has-gallery");
+    }
+
+    scrollBody.scrollTop = 0;
+
+    scrollBody.innerHTML = `
         ${galleryMarkup}
-        <div style="margin-bottom: 1.5rem; text-align: ${isHe ? 'right' : 'left'};" dir="${isHe ? 'rtl' : 'ltr'}">
+        <div style="margin-bottom: 1.25rem; text-align: ${isHe ? 'right' : 'left'};" dir="${isHe ? 'rtl' : 'ltr'}">
             <span class="card-badge" style="margin-bottom:0.75rem; display:inline-block;">${badge}</span>
-            <h2 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 0.5rem;">${title}</h2>
-            <div style="color: var(--primary); font-family: var(--font-mono); font-size: 0.85rem; margin-bottom: 1rem;">${isHe ? 'סטטוס:' : 'Status:'} ${status}</div>
+            <h2 style="font-size: 1.65rem; font-weight: 800; margin-bottom: 0.5rem; line-height: 1.3;">${title}</h2>
+            <div style="color: var(--primary); font-family: var(--font-mono); font-size: 0.85rem; margin-bottom: 0.75rem;">${isHe ? 'סטטוס:' : 'Status:'} ${status}</div>
         </div>
-        <div style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem; text-align: ${isHe ? 'right' : 'left'};" dir="${isHe ? 'rtl' : 'ltr'}">
+        <div style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.75; margin-bottom: 1.5rem; text-align: ${isHe ? 'right' : 'left'};" dir="${isHe ? 'rtl' : 'ltr'}">
             ${desc}
         </div>
-        <h4 style="font-size: 0.95rem; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dim); text-align: ${isHe ? 'right' : 'left'};">${isHe ? 'ארכיטקטורה וסטאק טכנולוגי' : 'Tech Stack Architecture'}</h4>
-        <div class="tech-tags" style="margin-bottom: 2rem;">
+        <h4 style="font-size: 0.92rem; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dim); text-align: ${isHe ? 'right' : 'left'};">${isHe ? 'ארכיטקטורה וסטאק טכנולוגי' : 'Tech Stack Architecture'}</h4>
+        <div class="tech-tags" style="margin-bottom: 1rem;">
             ${project.tech.map(tch => `<span class="tech-tag" style="padding: 0.35rem 0.8rem; font-size: 0.82rem;">${tch}</span>`).join("")}
         </div>
-        <div style="display:flex; flex-wrap:wrap; gap:1rem; ${isHe ? 'flex-direction:row-reverse; justify-content:flex-start;' : ''}">
-            ${project.demo && project.demo !== '#' && !project.demo.includes('github.com') && !project.demo.startsWith('#') ? `<a href="${project.demo}" target="_blank" class="btn btn-primary" style="background:linear-gradient(135deg, var(--accent-emerald), #059669); color:#040810;"><i data-lucide="external-link"></i> ${isHe ? 'פתח מערכת חיה' : 'Open Live Application'}</a>` : ''}
-            ${project.github ? `<a href="${project.github}" target="_blank" class="btn ${project.demo && project.demo !== '#' && !project.demo.includes('github.com') && !project.demo.startsWith('#') ? 'btn-glass' : 'btn-primary'}"><i data-lucide="github"></i> ${isHe ? 'צפה בקוד ב-GitHub' : 'View GitHub Repository'}</a>` : ''}
-            ${project.isPlayable ? `<button onclick="closeModal(); ${project.id === 'chidat-hayom' ? 'openRiddleModal()' : 'openGameModal()'};" class="btn btn-glass" style="${project.id === 'chidat-hayom' ? 'border-color: rgba(124, 58, 237, 0.6); color: #c084fc;' : ''}"><i data-lucide="${project.id === 'chidat-hayom' ? 'help-circle' : 'gamepad-2'}"></i> ${project.id === 'chidat-hayom' ? (isHe ? 'שחק בחידה' : 'Play Riddle Online') : (isHe ? 'הפעל מיני-משחק' : 'Launch Mini-Game')}</button>` : ''}
-        </div>
     `;
+
+    // Action buttons pinned to fixed bottom footer
+    const hasLive = project.demo && project.demo !== '#' && !project.demo.includes('github.com') && !project.demo.startsWith('#');
+    const hasGithub = Boolean(project.github);
+    const hasPlayable = Boolean(project.isPlayable);
+
+    let actionsMarkup = `
+        <button class="btn btn-glass btn-sm" onclick="closeModal()" style="padding: 0.55rem 1.25rem;">
+            ${isHe ? 'סגור' : 'Close'}
+        </button>
+        ${hasGithub ? `<a href="${project.github}" target="_blank" class="btn ${hasLive ? 'btn-glass' : 'btn-primary'} btn-sm" style="padding: 0.55rem 1.25rem;"><i data-lucide="github"></i> ${isHe ? 'צפה בקוד ב-GitHub' : 'View GitHub Repository'}</a>` : ''}
+        ${hasLive ? `<a href="${project.demo}" target="_blank" class="btn btn-primary btn-sm" style="background:linear-gradient(135deg, var(--accent-emerald), #059669); color:#040810; padding: 0.55rem 1.25rem;"><i data-lucide="external-link"></i> ${isHe ? 'פתח מערכת חיה' : 'Open Live Application'}</a>` : ''}
+        ${hasPlayable ? `<button onclick="closeModal(); ${project.id === 'chidat-hayom' ? 'openRiddleModal()' : 'openGameModal()'};" class="btn btn-glass btn-sm" style="${project.id === 'chidat-hayom' ? 'border-color: rgba(124, 58, 237, 0.6); color: #c084fc;' : ''} padding: 0.55rem 1.25rem;"><i data-lucide="${project.id === 'chidat-hayom' ? 'help-circle' : 'gamepad-2'}"></i> ${project.id === 'chidat-hayom' ? (isHe ? 'שחק בחידה' : 'Play Riddle Online') : (isHe ? 'הפעל מיני-משחק' : 'Launch Mini-Game')}</button>` : ''}
+    `;
+
+    footerActions.innerHTML = actionsMarkup;
 
     modal.classList.add("active");
     if (window.lucide) lucide.createIcons();
