@@ -1,50 +1,190 @@
 // Main Application Controller & Interactions
+let currentLang = localStorage.getItem("portfolio_lang") || "en";
+
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Initialize Profile & Stats
-    renderProfile();
-    renderStats();
+    // 1. Initialize Localization & Full App Render
+    applyLanguage(currentLang);
     
-    // 2. Initialize Projects & Filters
-    renderProjects(PORTFOLIO_DATA.projects);
+    // 2. Initialize Interaction Handlers
     initFilterTabs();
     initSearch();
+    initScrollEffects();
+});
 
-    // 3. Initialize Skills & Experience
+// Switch Language Toggle
+window.toggleLanguage = function() {
+    currentLang = currentLang === "en" ? "he" : "en";
+    localStorage.setItem("portfolio_lang", currentLang);
+    applyLanguage(currentLang);
+};
+
+// Apply Active Language across the entire Portfolio
+window.applyLanguage = function(lang) {
+    currentLang = lang;
+    const isHe = lang === "he";
+    const t = TRANSLATIONS[lang];
+
+    // HTML Attributes & Document Meta
+    document.documentElement.lang = lang;
+    document.documentElement.dir = isHe ? "rtl" : "ltr";
+    document.title = isHe
+        ? "רפאל רובינוב | מהנדס תוכנה בכיר — Backend & Full-Stack מועצם AI"
+        : "Refael Robinov | Senior Backend & Full Stack Engineer";
+
+    // Language Toggle Button Label
+    const langLabel = document.getElementById("lang-label");
+    if (langLabel) langLabel.textContent = isHe ? "English" : "עברית";
+
+    // Text Helper
+    const setTxt = (id, txt) => {
+        const el = document.getElementById(id);
+        if (el && txt !== undefined) el.textContent = txt;
+    };
+
+    // Navigation Links
+    setTxt("nav-link-projects", t.nav.projects);
+    setTxt("nav-link-skills", t.nav.skills);
+    setTxt("nav-link-architecture", t.nav.architecture);
+    setTxt("nav-link-experience", t.nav.experience);
+    setTxt("nav-link-about", t.nav.about);
+    setTxt("nav-link-contact", t.nav.contact);
+    setTxt("nav-cv-text", t.nav.cvBtn);
+    setTxt("cv-text-en", t.nav.cvEn);
+    setTxt("cv-text-he", t.nav.cvHe);
+    setTxt("nav-text-talk", t.nav.letsTalk);
+
+    // Hero Section
+    renderProfile();
+    setTxt("hero-text-explore", t.hero.btnExplore);
+    setTxt("hero-text-cv", t.hero.btnCv);
+    setTxt("hero-text-contact", t.hero.btnContact);
+    setTxt("hero-text-game", t.hero.btnMiniGame);
+
+    const heroCvBtn = document.getElementById("hero-cta-cv");
+    if (heroCvBtn) {
+        heroCvBtn.href = isHe ? "cv/Refael_Robinov_CV_HE.pdf" : "cv/Refael_Robinov_CV_EN.pdf";
+    }
+
+    // Projects Header & Search
+    setTxt("projects-subtitle", t.projectsHeader.subtitle);
+    setTxt("projects-title", t.projectsHeader.title);
+    const searchInput = document.getElementById("project-search");
+    if (searchInput) searchInput.placeholder = t.projectsHeader.searchPlaceholder;
+
+    // Filter Buttons
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    filterButtons.forEach(btn => {
+        const cat = btn.getAttribute("data-filter");
+        if (t.projectsHeader.filters && t.projectsHeader.filters[cat]) {
+            btn.textContent = t.projectsHeader.filters[cat];
+        }
+    });
+
+    // Skills Header
+    setTxt("skills-subtitle", t.skillsHeader.subtitle);
+    setTxt("skills-title", t.skillsHeader.title);
+
+    // Architecture Section
+    setTxt("arch-subtitle", t.architecture.subtitle);
+    setTxt("arch-title", t.architecture.title);
+    setTxt("arch-layer1-title", t.architecture.layer1Title);
+    setTxt("arch-layer1-desc", t.architecture.layer1Desc);
+    setTxt("arch-layer1-pill", t.architecture.layer1Pill);
+    setTxt("arch-layer2-title", t.architecture.layer2Title);
+    setTxt("arch-layer2-desc", t.architecture.layer2Desc);
+    setTxt("arch-layer2-pill", t.architecture.layer2Pill);
+    setTxt("arch-layer3-title", t.architecture.layer3Title);
+    setTxt("arch-layer3-desc", t.architecture.layer3Desc);
+    setTxt("arch-layer3-pill", t.architecture.layer3Pill);
+    setTxt("arch-layer4-title", t.architecture.layer4Title);
+    setTxt("arch-layer4-desc", t.architecture.layer4Desc);
+    setTxt("arch-layer4-pill", t.architecture.layer4Pill);
+
+    if (t.architecture.metrics && t.architecture.metrics.length >= 4) {
+        setTxt("arch-metric1-val", t.architecture.metrics[0].val);
+        setTxt("arch-metric1-label", t.architecture.metrics[0].label);
+        setTxt("arch-metric2-val", t.architecture.metrics[1].val);
+        setTxt("arch-metric2-label", t.architecture.metrics[1].label);
+        setTxt("arch-metric3-val", t.architecture.metrics[2].val);
+        setTxt("arch-metric3-label", t.architecture.metrics[2].label);
+        setTxt("arch-metric4-val", t.architecture.metrics[3].val);
+        setTxt("arch-metric4-label", t.architecture.metrics[3].label);
+    }
+
+    // Experience Header
+    setTxt("exp-subtitle", t.experienceHeader.subtitle);
+    setTxt("exp-title", t.experienceHeader.title);
+
+    // AI & Education Header
+    setTxt("ai-subtitle", t.aiHeader.subtitle);
+    setTxt("ai-title", t.aiHeader.title);
+    setTxt("ai-workflows-title", t.aiHeader.workflowsTitle);
+    setTxt("education-title", t.aiHeader.educationTitle);
+
+    // Contact Header
+    setTxt("contact-subtitle", t.contactHeader.subtitle);
+    setTxt("contact-title", t.contactHeader.title);
+    setTxt("contact-desc", t.contactHeader.desc);
+    setTxt("contact-text-email", t.contactHeader.sendEmail);
+    setTxt("contact-text-phone", t.contactHeader.callPhone);
+
+    // Footer
+    setTxt("footer-text", t.footer);
+
+    // Re-render Dynamic Data
+    renderStats();
+
+    // Respect active filter and search query
+    const activeTab = document.querySelector(".filter-btn.active")?.getAttribute("data-filter") || "all";
+    const query = searchInput ? searchInput.value.toLowerCase().trim() : "";
+
+    const filtered = PORTFOLIO_DATA.projects.filter(p => {
+        const matchesCategory = activeTab === "all" || p.category === activeTab;
+        const pTitle = (isHe && p.he?.title) ? p.he.title : p.title;
+        const pDesc = (isHe && p.he?.description) ? p.he.description : p.description;
+        const matchesQuery = !query || 
+            pTitle.toLowerCase().includes(query) ||
+            pDesc.toLowerCase().includes(query) ||
+            p.tech.some(tch => tch.toLowerCase().includes(query));
+        return matchesCategory && matchesQuery;
+    });
+
+    renderProjects(filtered);
     renderSkills();
     renderExperience();
     renderAIWorkflows();
     renderEducation();
     renderContact();
 
-    // 4. Lucide Icons render
     if (window.lucide) {
         lucide.createIcons();
     }
-
-    // 5. Scroll effects
-    initScrollEffects();
-});
+};
 
 // Render Profile Header & Hero
 function renderProfile() {
-    const p = PORTFOLIO_DATA.profile;
+    const isHe = currentLang === "he";
+    const t = TRANSLATIONS[currentLang].hero;
+    const heroGreeting = document.getElementById("hero-greeting");
     const heroName = document.getElementById("hero-name");
     const heroSubtitle = document.getElementById("hero-subtitle");
     const heroBio = document.getElementById("hero-bio");
     const statusText = document.getElementById("status-text");
 
-    if (heroName) heroName.textContent = p.name;
-    if (heroSubtitle) heroSubtitle.textContent = p.title;
-    if (heroBio) heroBio.textContent = p.bio;
-    if (statusText) statusText.textContent = p.status;
+    if (heroGreeting) heroGreeting.textContent = t.greeting;
+    if (heroName) heroName.textContent = t.name;
+    if (heroSubtitle) heroSubtitle.textContent = t.subtitle;
+    if (heroBio) heroBio.textContent = t.bio;
+    if (statusText) statusText.textContent = t.status;
 }
 
 // Render Stats Cards
 function renderStats() {
     const container = document.getElementById("stats-grid");
     if (!container) return;
+    const statsList = TRANSLATIONS[currentLang].stats || PORTFOLIO_DATA.stats;
 
-    container.innerHTML = PORTFOLIO_DATA.stats.map(s => `
+    container.innerHTML = statsList.map(s => `
         <div class="stat-card">
             <div class="stat-val">${s.value}</div>
             <div class="stat-label">${s.label}</div>
@@ -57,51 +197,60 @@ function renderProjects(projectsList) {
     const grid = document.getElementById("projects-grid");
     if (!grid) return;
 
+    const isHe = currentLang === "he";
+    const t = TRANSLATIONS[currentLang].projectsHeader;
+
     if (projectsList.length === 0) {
-        grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-dim);">No matching projects found.</div>`;
+        grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-dim);">${isHe ? 'לא נמצאו פרויקטים תואמים.' : 'No matching projects found.'}</div>`;
         return;
     }
 
-    grid.innerHTML = projectsList.map(project => `
-        <div class="project-card" data-category="${project.category}">
-            <div class="card-top">
-                <div class="card-meta">
-                    <span class="card-badge">${project.badge || project.tag}</span>
-                    <div class="card-icon-box">
-                        <i data-lucide="${project.icon || 'code-2'}"></i>
+    grid.innerHTML = projectsList.map(project => {
+        const title = (isHe && project.he?.title) ? project.he.title : project.title;
+        const desc = (isHe && project.he?.description) ? project.he.description : project.description;
+        const badge = (isHe && project.he?.badge) ? project.he.badge : (project.badge || project.tag);
+
+        return `
+            <div class="project-card" data-category="${project.category}">
+                <div class="card-top">
+                    <div class="card-meta">
+                        <span class="card-badge">${badge}</span>
+                        <div class="card-icon-box">
+                            <i data-lucide="${project.icon || 'code-2'}"></i>
+                        </div>
+                    </div>
+                    <h3 class="project-title">${title}</h3>
+                    <p class="project-desc">${desc}</p>
+                    <div class="tech-tags">
+                        ${project.tech.map(tch => `<span class="tech-tag">${tch}</span>`).join("")}
                     </div>
                 </div>
-                <h3 class="project-title">${project.title}</h3>
-                <p class="project-desc">${project.description}</p>
-                <div class="tech-tags">
-                    ${project.tech.map(t => `<span class="tech-tag">${t}</span>`).join("")}
+                
+                <div class="card-actions">
+                    <button class="btn btn-primary btn-sm" onclick="openProjectModal('${project.id}')">
+                        <i data-lucide="info"></i> ${t.details}
+                    </button>
+                    ${project.demo && project.demo !== '#' && !project.demo.includes('github.com') && !project.demo.startsWith('#') ? `
+                        <a href="${project.demo}" target="_blank" rel="noopener" class="btn btn-glass btn-sm" style="color:var(--accent-emerald); border-color:rgba(52,211,153,0.3);">
+                            <i data-lucide="external-link"></i> ${t.liveDemo}
+                        </a>
+                    ` : project.isPlayable ? `
+                        <button class="btn btn-glass btn-sm" onclick="${project.id === 'chidat-hayom' ? 'openRiddleModal()' : 'openGameModal()'}" style="${project.id === 'chidat-hayom' ? 'border-color: rgba(124, 58, 237, 0.5); color: #c084fc;' : ''}">
+                            <i data-lucide="${project.id === 'chidat-hayom' ? 'help-circle' : 'play'}"></i> ${project.id === 'chidat-hayom' ? t.playRiddle : t.playGame}
+                        </button>
+                    ` : project.github ? `
+                        <a href="${project.github}" target="_blank" rel="noopener" class="btn btn-glass btn-sm">
+                            <i data-lucide="github"></i> ${t.code}
+                        </a>
+                    ` : `
+                        <span class="btn btn-glass btn-sm" style="opacity:0.6; cursor:default;">
+                            <i data-lucide="lock"></i> ${t.privateSystem}
+                        </span>
+                    `}
                 </div>
             </div>
-            
-            <div class="card-actions">
-                <button class="btn btn-primary btn-sm" onclick="openProjectModal('${project.id}')">
-                    <i data-lucide="info"></i> Details
-                </button>
-                ${project.demo && project.demo !== '#' && !project.demo.includes('github.com') ? `
-                    <a href="${project.demo}" target="_blank" rel="noopener" class="btn btn-glass btn-sm" style="color:var(--accent-emerald); border-color:rgba(52,211,153,0.3);">
-                        <i data-lucide="external-link"></i> Live Demo
-                    </a>
-                ` : project.isPlayable ? `
-                    <button class="btn btn-glass btn-sm" onclick="${project.id === 'chidat-hayom' ? 'openRiddleModal()' : 'openGameModal()'}" style="${project.id === 'chidat-hayom' ? 'border-color: rgba(124, 58, 237, 0.5); color: #c084fc;' : ''}">
-                        <i data-lucide="${project.id === 'chidat-hayom' ? 'help-circle' : 'play'}"></i> ${project.id === 'chidat-hayom' ? 'Play Riddle' : 'Play Game'}
-                    </button>
-                ` : project.github ? `
-                    <a href="${project.github}" target="_blank" rel="noopener" class="btn btn-glass btn-sm">
-                        <i data-lucide="github"></i> Code
-                    </a>
-                ` : `
-                    <span class="btn btn-glass btn-sm" style="opacity:0.6; cursor:default;">
-                        <i data-lucide="lock"></i> Private System
-                    </span>
-                `}
-            </div>
-        </div>
-    `).join("");
+        `;
+    }).join("");
 
     if (window.lucide) lucide.createIcons();
 }
@@ -115,12 +264,21 @@ function initFilterTabs() {
             btn.classList.add("active");
 
             const filter = btn.getAttribute("data-filter");
-            if (filter === "all") {
-                renderProjects(PORTFOLIO_DATA.projects);
-            } else {
-                const filtered = PORTFOLIO_DATA.projects.filter(p => p.category === filter);
-                renderProjects(filtered);
-            }
+            const searchInput = document.getElementById("project-search");
+            const query = searchInput ? searchInput.value.toLowerCase().trim() : "";
+            const isHe = currentLang === "he";
+
+            const filtered = PORTFOLIO_DATA.projects.filter(p => {
+                const matchesCategory = filter === "all" || p.category === filter;
+                const pTitle = (isHe && p.he?.title) ? p.he.title : p.title;
+                const pDesc = (isHe && p.he?.description) ? p.he.description : p.description;
+                const matchesQuery = !query ||
+                    pTitle.toLowerCase().includes(query) ||
+                    pDesc.toLowerCase().includes(query) ||
+                    p.tech.some(tch => tch.toLowerCase().includes(query));
+                return matchesCategory && matchesQuery;
+            });
+            renderProjects(filtered);
         });
     });
 }
@@ -133,12 +291,16 @@ function initSearch() {
     searchInput.addEventListener("input", (e) => {
         const query = e.target.value.toLowerCase().trim();
         const activeTab = document.querySelector(".filter-btn.active")?.getAttribute("data-filter") || "all";
-        
+        const isHe = currentLang === "he";
+
         const filtered = PORTFOLIO_DATA.projects.filter(p => {
             const matchesCategory = activeTab === "all" || p.category === activeTab;
-            const matchesQuery = p.title.toLowerCase().includes(query) ||
-                                 p.description.toLowerCase().includes(query) ||
-                                 p.tech.some(t => t.toLowerCase().includes(query));
+            const pTitle = (isHe && p.he?.title) ? p.he.title : p.title;
+            const pDesc = (isHe && p.he?.description) ? p.he.description : p.description;
+            const matchesQuery = !query ||
+                pTitle.toLowerCase().includes(query) ||
+                pDesc.toLowerCase().includes(query) ||
+                p.tech.some(tch => tch.toLowerCase().includes(query));
             return matchesCategory && matchesQuery;
         });
 
@@ -177,59 +339,84 @@ function renderSkills() {
 function renderExperience() {
     const container = document.getElementById("experience-timeline");
     if (!container) return;
+    const isHe = currentLang === "he";
 
-    container.innerHTML = PORTFOLIO_DATA.experience.map(exp => `
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h4 class="timeline-role">${exp.role}</h4>
-                <div>
-                    <span class="timeline-company">${exp.company}</span>
-                    <span class="timeline-period">• ${exp.period} (${exp.location})</span>
-                </div>
-                <ul class="timeline-bullets">
-                    ${exp.highlights.map(h => `<li>${h}</li>`).join("")}
-                </ul>
-                <div class="tech-tags" style="margin-top: 1rem; margin-bottom: 0;">
-                    ${exp.tech.map(t => `<span class="tech-tag">${t}</span>`).join("")}
+    container.innerHTML = PORTFOLIO_DATA.experience.map(exp => {
+        const role = (isHe && exp.he?.role) ? exp.he.role : exp.role;
+        const company = (isHe && exp.he?.company) ? exp.he.company : exp.company;
+        const location = (isHe && exp.he?.location) ? exp.he.location : exp.location;
+        const tag = (isHe && exp.he?.tag) ? exp.he.tag : exp.tag;
+        const highlights = (isHe && exp.he?.highlights) ? exp.he.highlights : exp.highlights;
+
+        return `
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
+                        <div>
+                            <h4 class="timeline-role">${role}</h4>
+                            <span class="timeline-company">${company}</span>
+                            <span class="timeline-period">• ${exp.period} (${location})</span>
+                        </div>
+                        <span class="card-badge" style="background: rgba(99, 102, 241, 0.1); color: var(--accent-indigo); border-color: rgba(99, 102, 241, 0.25);">${tag}</span>
+                    </div>
+                    <ul class="timeline-bullets">
+                        ${highlights.map(h => `<li>${h}</li>`).join("")}
+                    </ul>
+                    <div class="tech-tags" style="margin-top: 1rem; margin-bottom: 0;">
+                        ${exp.tech.map(tch => `<span class="tech-tag">${tch}</span>`).join("")}
+                    </div>
                 </div>
             </div>
-        </div>
-    `).join("");
+        `;
+    }).join("");
 }
 
 // Render AI-Augmented Engineering Workflows
 function renderAIWorkflows() {
     const container = document.getElementById("ai-workflows-grid");
     if (!container) return;
+    const isHe = currentLang === "he";
 
-    container.innerHTML = PORTFOLIO_DATA.aiWorkflows.map(item => `
-        <div class="leadership-card">
-            <div class="leadership-header">
-                <i data-lucide="${item.icon}"></i>
-                <span>${item.title}</span>
+    container.innerHTML = PORTFOLIO_DATA.aiWorkflows.map(item => {
+        const title = (isHe && item.he?.title) ? item.he.title : item.title;
+        const desc = (isHe && item.he?.desc) ? item.he.desc : item.desc;
+
+        return `
+            <div class="leadership-card">
+                <div class="leadership-header">
+                    <i data-lucide="${item.icon}"></i>
+                    <span>${title}</span>
+                </div>
+                <div class="leadership-sub">${item.tech}</div>
+                <p class="leadership-desc">${desc}</p>
             </div>
-            <div class="leadership-sub">${item.tech}</div>
-            <p class="leadership-desc">${item.desc}</p>
-        </div>
-    `).join("");
+        `;
+    }).join("");
 }
 
 // Render Education
 function renderEducation() {
     const container = document.getElementById("education-grid");
     if (!container) return;
+    const isHe = currentLang === "he";
 
-    container.innerHTML = PORTFOLIO_DATA.education.map(edu => `
-        <div class="leadership-card">
-            <div class="leadership-header">
-                <i data-lucide="graduation-cap"></i>
-                <span>${edu.degree}</span>
+    container.innerHTML = PORTFOLIO_DATA.education.map(edu => {
+        const degree = (isHe && edu.he?.degree) ? edu.he.degree : edu.degree;
+        const institution = (isHe && edu.he?.institution) ? edu.he.institution : edu.institution;
+        const note = (isHe && edu.he?.note) ? edu.he.note : edu.note;
+
+        return `
+            <div class="leadership-card">
+                <div class="leadership-header">
+                    <i data-lucide="graduation-cap"></i>
+                    <span>${degree}</span>
+                </div>
+                <div class="leadership-sub">${institution} • ${edu.period}</div>
+                <p class="leadership-desc">${note}</p>
             </div>
-            <div class="leadership-sub">${edu.institution} • ${edu.period}</div>
-            <p class="leadership-desc">${edu.note}</p>
-        </div>
-    `).join("");
+        `;
+    }).join("");
 }
 
 // Render Contact Pills
@@ -237,6 +424,7 @@ function renderContact() {
     const container = document.getElementById("contact-links");
     if (!container) return;
     const p = PORTFOLIO_DATA.profile;
+    const isHe = currentLang === "he";
 
     container.innerHTML = `
         <div class="contact-pill-item">
@@ -244,26 +432,26 @@ function renderContact() {
                 <i data-lucide="mail"></i>
                 <span>${p.email}</span>
             </div>
-            <button class="copy-btn" onclick="copyToClipboard('${p.email}', 'Email copied!')">Copy</button>
+            <button class="copy-btn" onclick="copyToClipboard('${p.email}', '${isHe ? 'המייל הועתק ללוח!' : 'Email copied!'}')">${isHe ? 'העתק' : 'Copy'}</button>
         </div>
         <div class="contact-pill-item">
             <div class="contact-pill-label">
                 <i data-lucide="phone"></i>
                 <span>${p.phone}</span>
             </div>
-            <button class="copy-btn" onclick="copyToClipboard('${p.phone}', 'Phone copied!')">Copy</button>
+            <button class="copy-btn" onclick="copyToClipboard('${p.phone}', '${isHe ? 'מספר הטלפון הועתק ללוח!' : 'Phone copied!'}')">${isHe ? 'העתק' : 'Copy'}</button>
         </div>
         <a href="${p.linkedin}" target="_blank" rel="noopener" class="contact-pill-item">
             <div class="contact-pill-label">
                 <i data-lucide="linkedin"></i>
-                <span>LinkedIn Profile</span>
+                <span>${isHe ? 'פרופיל לינקדאין (LinkedIn)' : 'LinkedIn Profile'}</span>
             </div>
             <i data-lucide="external-link" style="width:16px;height:16px;"></i>
         </a>
         <a href="${p.github}" target="_blank" rel="noopener" class="contact-pill-item">
             <div class="contact-pill-label">
                 <i data-lucide="github"></i>
-                <span>GitHub Repositories</span>
+                <span>${isHe ? 'פרופיל GitHub ציבורי' : 'GitHub Repositories'}</span>
             </div>
             <i data-lucide="external-link" style="width:16px;height:16px;"></i>
         </a>
@@ -279,23 +467,31 @@ window.openProjectModal = function(projectId) {
     const content = document.getElementById("modal-body-content");
     if (!modal || !content) return;
 
+    const isHe = currentLang === "he";
+    const t = TRANSLATIONS[currentLang].projectsHeader;
+
+    const title = (isHe && project.he?.title) ? project.he.title : project.title;
+    const desc = (isHe && project.he?.longDesc) ? project.he.longDesc : (project.longDesc || project.description);
+    const badge = (isHe && project.he?.badge) ? project.he.badge : (project.badge || project.tag);
+    const status = (isHe && project.he?.status) ? project.he.status : project.status;
+
     content.innerHTML = `
-        <div style="margin-bottom: 1.5rem;">
-            <span class="card-badge" style="margin-bottom:0.75rem; display:inline-block;">${project.badge || project.tag}</span>
-            <h2 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 0.5rem;">${project.title}</h2>
-            <div style="color: var(--primary); font-family: var(--font-mono); font-size: 0.85rem; margin-bottom: 1rem;">Status: ${project.status}</div>
+        <div style="margin-bottom: 1.5rem; text-align: ${isHe ? 'right' : 'left'};" dir="${isHe ? 'rtl' : 'ltr'}">
+            <span class="card-badge" style="margin-bottom:0.75rem; display:inline-block;">${badge}</span>
+            <h2 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 0.5rem;">${title}</h2>
+            <div style="color: var(--primary); font-family: var(--font-mono); font-size: 0.85rem; margin-bottom: 1rem;">${isHe ? 'סטטוס:' : 'Status:'} ${status}</div>
         </div>
-        <div style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem;">
-            ${project.longDesc || project.description}
+        <div style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem; text-align: ${isHe ? 'right' : 'left'};" dir="${isHe ? 'rtl' : 'ltr'}">
+            ${desc}
         </div>
-        <h4 style="font-size: 0.95rem; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dim);">Tech Stack Architecture</h4>
+        <h4 style="font-size: 0.95rem; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dim); text-align: ${isHe ? 'right' : 'left'};">${isHe ? 'ארכיטקטורה וסטאק טכנולוגי' : 'Tech Stack Architecture'}</h4>
         <div class="tech-tags" style="margin-bottom: 2rem;">
-            ${project.tech.map(t => `<span class="tech-tag" style="padding: 0.35rem 0.8rem; font-size: 0.82rem;">${t}</span>`).join("")}
+            ${project.tech.map(tch => `<span class="tech-tag" style="padding: 0.35rem 0.8rem; font-size: 0.82rem;">${tch}</span>`).join("")}
         </div>
-        <div style="display:flex; flex-wrap:wrap; gap:1rem;">
-            ${project.demo && project.demo !== '#' && !project.demo.includes('github.com') && !project.demo.startsWith('#') ? `<a href="${project.demo}" target="_blank" class="btn btn-primary" style="background:linear-gradient(135deg, var(--accent-emerald), #059669); color:#040810;"><i data-lucide="external-link"></i> Open Live Application</a>` : ''}
-            ${project.github ? `<a href="${project.github}" target="_blank" class="btn ${project.demo && project.demo !== '#' && !project.demo.includes('github.com') && !project.demo.startsWith('#') ? 'btn-glass' : 'btn-primary'}"><i data-lucide="github"></i> View GitHub Repository</a>` : ''}
-            ${project.isPlayable ? `<button onclick="closeModal(); ${project.id === 'chidat-hayom' ? 'openRiddleModal()' : 'openGameModal()'};" class="btn btn-glass" style="${project.id === 'chidat-hayom' ? 'border-color: rgba(124, 58, 237, 0.6); color: #c084fc;' : ''}"><i data-lucide="${project.id === 'chidat-hayom' ? 'help-circle' : 'gamepad-2'}"></i> ${project.id === 'chidat-hayom' ? 'Play Riddle Online' : 'Launch Mini-Game'}</button>` : ''}
+        <div style="display:flex; flex-wrap:wrap; gap:1rem; ${isHe ? 'flex-direction:row-reverse; justify-content:flex-start;' : ''}">
+            ${project.demo && project.demo !== '#' && !project.demo.includes('github.com') && !project.demo.startsWith('#') ? `<a href="${project.demo}" target="_blank" class="btn btn-primary" style="background:linear-gradient(135deg, var(--accent-emerald), #059669); color:#040810;"><i data-lucide="external-link"></i> ${isHe ? 'פתח מערכת חיה' : 'Open Live Application'}</a>` : ''}
+            ${project.github ? `<a href="${project.github}" target="_blank" class="btn ${project.demo && project.demo !== '#' && !project.demo.includes('github.com') && !project.demo.startsWith('#') ? 'btn-glass' : 'btn-primary'}"><i data-lucide="github"></i> ${isHe ? 'צפה בקוד ב-GitHub' : 'View GitHub Repository'}</a>` : ''}
+            ${project.isPlayable ? `<button onclick="closeModal(); ${project.id === 'chidat-hayom' ? 'openRiddleModal()' : 'openGameModal()'};" class="btn btn-glass" style="${project.id === 'chidat-hayom' ? 'border-color: rgba(124, 58, 237, 0.6); color: #c084fc;' : ''}"><i data-lucide="${project.id === 'chidat-hayom' ? 'help-circle' : 'gamepad-2'}"></i> ${project.id === 'chidat-hayom' ? (isHe ? 'שחק בחידה' : 'Play Riddle Online') : (isHe ? 'הפעל מיני-משחק' : 'Launch Mini-Game')}</button>` : ''}
         </div>
     `;
 

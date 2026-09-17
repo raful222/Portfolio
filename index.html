@@ -9,7 +9,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&family=Heebo:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -33,26 +33,31 @@
         </a>
 
         <ul class="nav-links">
-            <li><a href="#projects">Projects & Systems</a></li>
-            <li><a href="#skills">Skills Matrix</a></li>
-            <li><a href="#architecture">Architecture & Scale</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#about">AI & Education</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#projects" id="nav-link-projects">Projects & Systems</a></li>
+            <li><a href="#skills" id="nav-link-skills">Skills Matrix</a></li>
+            <li><a href="#architecture" id="nav-link-architecture">Architecture & Scale</a></li>
+            <li><a href="#experience" id="nav-link-experience">Experience</a></li>
+            <li><a href="#about" id="nav-link-about">AI & Education</a></li>
+            <li><a href="#contact" id="nav-link-contact">Contact</a></li>
         </ul>
 
         <div class="nav-actions">
+            <!-- Language Switcher -->
+            <button class="btn btn-glass btn-sm lang-toggle-btn" id="lang-toggle-btn" onclick="toggleLanguage()" title="Switch Language / החלף שפה">
+                <i data-lucide="globe"></i> <span id="lang-label">עברית</span>
+            </button>
+
             <!-- CV Download Dropdown -->
             <div class="cv-dropdown">
                 <button class="btn btn-glass btn-sm cv-trigger" id="cv-dropdown-btn">
-                    <i data-lucide="file-down"></i> <span>CV (PDF)</span> <i data-lucide="chevron-down" style="width:14px;height:14px;"></i>
+                    <i data-lucide="file-down"></i> <span id="nav-cv-text">CV (PDF)</span> <i data-lucide="chevron-down" style="width:14px;height:14px;"></i>
                 </button>
                 <div class="cv-menu" id="cv-dropdown-menu">
-                    <a href="cv/Refael_Robinov_CV_EN.pdf" download="Refael_Robinov_CV_EN.pdf" class="cv-menu-item">
-                        <i data-lucide="file-text"></i> English Resume (PDF)
+                    <a href="cv/Refael_Robinov_CV_EN.pdf" download="Refael_Robinov_CV_EN.pdf" class="cv-menu-item" id="cv-menu-en">
+                        <i data-lucide="file-text"></i> <span id="cv-text-en">English Resume (PDF)</span>
                     </a>
-                    <a href="cv/Refael_Robinov_CV_HE.pdf" download="Refael_Robinov_CV_HE.pdf" class="cv-menu-item">
-                        <i data-lucide="file-text"></i> קורות חיים בעברית (PDF)
+                    <a href="cv/Refael_Robinov_CV_HE.pdf" download="Refael_Robinov_CV_HE.pdf" class="cv-menu-item" id="cv-menu-he">
+                        <i data-lucide="file-text"></i> <span id="cv-text-he">קורות חיים בעברית (PDF)</span>
                     </a>
                 </div>
             </div>
@@ -60,8 +65,8 @@
             <a href="https://github.com/raful222" target="_blank" rel="noopener" class="btn btn-glass btn-sm">
                 <i data-lucide="github"></i> GitHub
             </a>
-            <a href="#contact" class="btn btn-primary btn-sm">
-                <i data-lucide="send"></i> Let's Talk
+            <a href="#contact" class="btn btn-primary btn-sm" id="nav-btn-talk">
+                <i data-lucide="send"></i> <span id="nav-text-talk">Let's Talk</span>
             </a>
         </div>
     </nav>
@@ -77,7 +82,7 @@
             </div>
 
             <h1 class="hero-title">
-                Hi, I'm <span id="hero-name">Refael Robinov</span><br>
+                <span id="hero-greeting">Hi, I'm</span> <span id="hero-name">Refael Robinov</span><br>
                 <span class="text-gradient" id="hero-subtitle">Senior Backend & Full Stack Engineer</span>
             </h1>
 
@@ -86,17 +91,17 @@
             </p>
 
             <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary">
-                    <i data-lucide="layers"></i> Explore Projects & Games
+                <a href="#projects" class="btn btn-primary" id="hero-cta-explore">
+                    <i data-lucide="layers"></i> <span id="hero-text-explore">Explore Projects & Games</span>
                 </a>
-                <a href="cv/Refael_Robinov_CV_EN.pdf" target="_blank" class="btn btn-glass" style="border-color: rgba(99, 102, 241, 0.45); color: var(--text-main);">
-                    <i data-lucide="file-down"></i> Download CV (PDF)
+                <a href="cv/Refael_Robinov_CV_EN.pdf" id="hero-cta-cv" target="_blank" class="btn btn-glass" style="border-color: rgba(99, 102, 241, 0.45); color: var(--text-main);">
+                    <i data-lucide="file-down"></i> <span id="hero-text-cv">Download CV (PDF)</span>
                 </a>
-                <a href="#contact" class="btn btn-glass">
-                    <i data-lucide="mail"></i> Get In Touch
+                <a href="#contact" class="btn btn-glass" id="hero-cta-contact">
+                    <i data-lucide="mail"></i> <span id="hero-text-contact">Get In Touch</span>
                 </a>
-                <button class="btn btn-glass" onclick="openGameModal()">
-                    <i data-lucide="gamepad-2"></i> Launch Mini-Game
+                <button class="btn btn-glass" onclick="openGameModal()" id="hero-cta-game">
+                    <i data-lucide="gamepad-2"></i> <span id="hero-text-game">Launch Mini-Game</span>
                 </button>
             </div>
 
@@ -109,8 +114,8 @@
         <!-- Projects & Games Section -->
         <section id="projects" class="section">
             <div class="section-header">
-                <span class="section-subtitle">// PORTFOLIO ARTIFACTS & EXPERIMENTS</span>
-                <h2 class="section-title">Featured Projects, Systems & Games</h2>
+                <span class="section-subtitle" id="projects-subtitle">// PORTFOLIO ARTIFACTS & EXPERIMENTS</span>
+                <h2 class="section-title" id="projects-title">Featured Projects, Systems & Games</h2>
             </div>
 
             <!-- Filter Tabs & Search -->
@@ -139,8 +144,8 @@
         <!-- Technical Skills Matrix -->
         <section id="skills" class="section">
             <div class="section-header">
-                <span class="section-subtitle">// TECHNICAL EXPERTISE</span>
-                <h2 class="section-title">Core Engineering Stack</h2>
+                <span class="section-subtitle" id="skills-subtitle">// TECHNICAL EXPERTISE</span>
+                <h2 class="section-title" id="skills-title">Core Engineering Stack</h2>
             </div>
 
             <div class="skills-grid" id="skills-container">
@@ -151,18 +156,18 @@
         <!-- System Architecture & Production Scale -->
         <section id="architecture" class="section">
             <div class="section-header">
-                <span class="section-subtitle">// DISTRIBUTED SYSTEMS & SYSTEM DESIGN</span>
-                <h2 class="section-title">High-Throughput Architecture & Production Scale</h2>
+                <span class="section-subtitle" id="arch-subtitle">// DISTRIBUTED SYSTEMS & SYSTEM DESIGN</span>
+                <h2 class="section-title" id="arch-title">High-Throughput Architecture & Production Scale</h2>
             </div>
 
             <!-- Architecture Pipeline Grid -->
-            <div class="arch-flow-container">
+            <div class="arch-flow-container" id="arch-flow-container">
                 <div class="arch-step-card">
                     <div class="arch-step-badge">LAYER 01</div>
                     <div class="arch-step-icon"><i data-lucide="monitor"></i></div>
-                    <h4>Client & Edge Presentation</h4>
-                    <p>Angular 19, Next.js 15, PWA offline-first, Three.js WebGL rendering, and sub-second reactive views.</p>
-                    <div class="arch-tech-pill">Client Tier</div>
+                    <h4 id="arch-layer1-title">Client & Edge Presentation</h4>
+                    <p id="arch-layer1-desc">Angular 19, Next.js 15, PWA offline-first, Three.js WebGL rendering, and sub-second reactive views.</p>
+                    <div class="arch-tech-pill" id="arch-layer1-pill">Client Tier</div>
                 </div>
 
                 <div class="arch-flow-arrow"><i data-lucide="arrow-right"></i></div>
@@ -170,9 +175,9 @@
                 <div class="arch-step-card">
                     <div class="arch-step-badge">LAYER 02</div>
                     <div class="arch-step-icon"><i data-lucide="shield-check"></i></div>
-                    <h4>High-Scale API Gateway</h4>
-                    <p>ASP.NET Core & .NET 10 microservices, JWT authentication, rate limiting, and RESTful routing.</p>
-                    <div class="arch-tech-pill">Gateway & Ingestion</div>
+                    <h4 id="arch-layer2-title">High-Scale API Gateway</h4>
+                    <p id="arch-layer2-desc">ASP.NET Core & .NET 10 microservices, JWT authentication, rate limiting, and RESTful routing.</p>
+                    <div class="arch-tech-pill" id="arch-layer2-pill">Gateway & Ingestion</div>
                 </div>
 
                 <div class="arch-flow-arrow"><i data-lucide="arrow-right"></i></div>
@@ -180,9 +185,9 @@
                 <div class="arch-step-card">
                     <div class="arch-step-badge">LAYER 03</div>
                     <div class="arch-step-icon"><i data-lucide="zap"></i></div>
-                    <h4>Distributed Cache & Events</h4>
-                    <p>Redis In-Memory caching, Pub/Sub event streaming, WebSockets broadcast, and sub-5ms latency pipelines.</p>
-                    <div class="arch-tech-pill">Low-Latency Memory</div>
+                    <h4 id="arch-layer3-title">Distributed Cache & Events</h4>
+                    <p id="arch-layer3-desc">Redis In-Memory caching, Pub/Sub event streaming, WebSockets broadcast, and sub-5ms latency pipelines.</p>
+                    <div class="arch-tech-pill" id="arch-layer3-pill">Low-Latency Memory</div>
                 </div>
 
                 <div class="arch-flow-arrow"><i data-lucide="arrow-right"></i></div>
@@ -190,29 +195,29 @@
                 <div class="arch-step-card">
                     <div class="arch-step-badge">LAYER 04</div>
                     <div class="arch-step-icon"><i data-lucide="database"></i></div>
-                    <h4>Enterprise Persistence & Bridges</h4>
-                    <p>SQL Server with optimized indexed queries, Mainframe / Natural legacy connectors, and background AI workers.</p>
-                    <div class="arch-tech-pill">Persistence & Bridges</div>
+                    <h4 id="arch-layer4-title">Enterprise Persistence & Bridges</h4>
+                    <p id="arch-layer4-desc">SQL Server with optimized indexed queries, Mainframe / Natural legacy connectors, and background AI workers.</p>
+                    <div class="arch-tech-pill" id="arch-layer4-pill">Persistence & Bridges</div>
                 </div>
             </div>
 
             <!-- Impact Metrics Bar -->
-            <div class="arch-metrics-grid">
+            <div class="arch-metrics-grid" id="arch-metrics-grid">
                 <div class="arch-metric-card">
-                    <div class="arch-metric-val">&lt;50ms</div>
-                    <div class="arch-metric-label">Mean API Response Latency</div>
+                    <div class="arch-metric-val" id="arch-metric1-val">&lt;50ms</div>
+                    <div class="arch-metric-label" id="arch-metric1-label">Mean API Response Latency</div>
                 </div>
                 <div class="arch-metric-card">
-                    <div class="arch-metric-val">99.99%</div>
-                    <div class="arch-metric-label">Production System Uptime</div>
+                    <div class="arch-metric-val" id="arch-metric2-val">99.99%</div>
+                    <div class="arch-metric-label" id="arch-metric2-label">Production System Uptime</div>
                 </div>
                 <div class="arch-metric-card">
-                    <div class="arch-metric-val">10M+</div>
-                    <div class="arch-metric-label">Daily Data Records Processed</div>
+                    <div class="arch-metric-val" id="arch-metric3-val">10M+</div>
+                    <div class="arch-metric-label" id="arch-metric3-label">Daily Data Records Processed</div>
                 </div>
                 <div class="arch-metric-card">
-                    <div class="arch-metric-val">Zero-Loss</div>
-                    <div class="arch-metric-label">Fault-Tolerant Failover & Audits</div>
+                    <div class="arch-metric-val" id="arch-metric4-val">Zero-Loss</div>
+                    <div class="arch-metric-label" id="arch-metric4-label">Fault-Tolerant Failover & Audits</div>
                 </div>
             </div>
         </section>
@@ -220,8 +225,8 @@
         <!-- Experience & Track Record -->
         <section id="experience" class="section">
             <div class="section-header">
-                <span class="section-subtitle">// CAREER TIMELINE</span>
-                <h2 class="section-title">Professional Experience</h2>
+                <span class="section-subtitle" id="exp-subtitle">// CAREER TIMELINE</span>
+                <h2 class="section-title" id="exp-title">Professional Experience</h2>
             </div>
 
             <div class="timeline" id="experience-timeline">
@@ -232,16 +237,16 @@
         <!-- AI Workflows & Education -->
         <section id="about" class="section">
             <div class="section-header">
-                <span class="section-subtitle">// INTELLIGENT AGENTS & ACADEMIA</span>
-                <h2 class="section-title">AI Workflows & Education</h2>
+                <span class="section-subtitle" id="ai-subtitle">// INTELLIGENT AGENTS & ACADEMIA</span>
+                <h2 class="section-title" id="ai-title">AI Workflows & Education</h2>
             </div>
 
-            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-main);">AI-Augmented Engineering Paradigms</h3>
+            <h3 id="ai-workflows-title" style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-main);">AI-Augmented Engineering Paradigms</h3>
             <div class="leadership-grid" id="ai-workflows-grid">
                 <!-- Dynamically populated from data.js -->
             </div>
 
-            <h3 style="font-size: 1.25rem; font-weight: 700; margin-top: 3rem; margin-bottom: 1rem; color: var(--text-main);">Education & Certifications</h3>
+            <h3 id="education-title" style="font-size: 1.25rem; font-weight: 700; margin-top: 3rem; margin-bottom: 1rem; color: var(--text-main);">Education & Certifications</h3>
             <div class="leadership-grid" id="education-grid">
                 <!-- Dynamically populated from data.js -->
             </div>
@@ -251,17 +256,17 @@
         <section id="contact" class="section">
             <div class="contact-container">
                 <div>
-                    <span class="section-subtitle">// GET IN TOUCH</span>
-                    <h2 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 1rem;">Let's build something exceptional.</h2>
-                    <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 2rem;">
+                    <span class="section-subtitle" id="contact-subtitle">// GET IN TOUCH</span>
+                    <h2 id="contact-title" style="font-size: 2.2rem; font-weight: 800; margin-bottom: 1rem;">Let's build something exceptional.</h2>
+                    <p id="contact-desc" style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 2rem;">
                         Whether you are looking for a senior backend architect, high-throughput systems developer, or exploring innovative tech partnerships — feel free to reach out directly.
                     </p>
-                    <div style="display:flex; gap:1rem;">
-                        <a href="mailto:rafi20080@gmail.com" class="btn btn-primary">
-                            <i data-lucide="mail"></i> Send Direct Email
+                    <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+                        <a href="mailto:rafi20080@gmail.com" class="btn btn-primary" id="contact-btn-email">
+                            <i data-lucide="mail"></i> <span id="contact-text-email">Send Direct Email</span>
                         </a>
-                        <a href="tel:052-7030595" class="btn btn-glass">
-                            <i data-lucide="phone-call"></i> Call Directly
+                        <a href="tel:052-7030595" class="btn btn-glass" id="contact-btn-phone">
+                            <i data-lucide="phone-call"></i> <span id="contact-text-phone">Call Directly</span>
                         </a>
                     </div>
                 </div>
@@ -277,7 +282,7 @@
     <!-- Footer -->
     <footer>
         <div class="content-wrapper">
-            <p>© 2026 Refael Robinov. Engineered with precision, modern WebGL, and clean code.</p>
+            <p id="footer-text">© 2026 Refael Robinov. Engineered with precision, modern WebGL, and clean code.</p>
         </div>
     </footer>
 

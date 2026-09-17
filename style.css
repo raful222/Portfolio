@@ -1118,3 +1118,108 @@ footer {
         display: none; /* Can be toggled on mobile */
     }
 }
+
+/* ==========================================
+   Hebrew & RTL Layout Overrides
+   ========================================== */
+html[dir="rtl"] {
+    font-family: 'Heebo', 'Assistant', 'Outfit', 'Inter', -apple-system, sans-serif;
+}
+
+html[dir="rtl"] body {
+    font-family: 'Heebo', 'Assistant', 'Outfit', 'Inter', -apple-system, sans-serif;
+    text-align: right;
+}
+
+html[dir="rtl"] .hero-title,
+html[dir="rtl"] .hero-lead,
+html[dir="rtl"] .section-header,
+html[dir="rtl"] .leadership-card,
+html[dir="rtl"] .project-card,
+html[dir="rtl"] .timeline-content {
+    text-align: right;
+}
+
+html[dir="rtl"] .hero-cta {
+    justify-content: flex-start;
+}
+
+html[dir="rtl"] .status-badge {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+html[dir="rtl"] .search-box input {
+    padding: 0.45rem 2.25rem 0.45rem 1rem;
+    text-align: right;
+}
+
+html[dir="rtl"] .search-box svg {
+    left: auto;
+    right: 0.8rem;
+}
+
+html[dir="rtl"] .arch-flow-arrow {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 960px) {
+    html[dir="rtl"] .arch-flow-arrow {
+        transform: rotate(90deg);
+    }
+}
+
+html[dir="rtl"] .timeline {
+    padding-right: 2rem;
+    padding-left: 0;
+}
+
+html[dir="rtl"] .timeline::before {
+    right: 7px;
+    left: auto;
+}
+
+html[dir="rtl"] .timeline-dot {
+    right: -2rem;
+    left: auto;
+}
+
+html[dir="rtl"] .timeline-bullets {
+    padding-right: 1.25rem;
+    padding-left: 0;
+}
+
+html[dir="rtl"] .cv-menu {
+    right: auto;
+    left: 0;
+}
+
+html[dir="rtl"] .contact-pill-item {
+    direction: ltr;
+    text-align: left;
+}
+
+html[dir="rtl"] .card-meta {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .card-actions {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
+
+.lang-toggle-btn {
+    border-color: rgba(56, 189, 248, 0.35);
+    color: var(--primary);
+    transition: var(--transition);
+}
+
+.lang-toggle-btn:hover {
+    background: rgba(56, 189, 248, 0.15);
+    border-color: var(--primary);
+}
+
+html[dir="rtl"] .lang-toggle-btn {
+    background: rgba(56, 189, 248, 0.1);
+}
+
