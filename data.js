@@ -137,6 +137,21 @@ const PORTFOLIO_DATA = {
             icon: "help-circle"
         },
         {
+            id: "valdoria-iron-fiefs",
+            title: "Valdoria: Iron Fiefs (ולדוריה: נחלות הברזל)",
+            category: "games",
+            tag: "Real-Time Medieval MMO Strategy",
+            featured: true,
+            description: "Full-scale Real-Time Medieval MMO Strategy game inspired by Age of Empires 2. Features tactical procedural world maps, 2.5D village evolution, animated troop march vectors, noble conquest mechanics, alliance diplomacy, and multi-language support (6 languages).",
+            longDesc: "A deep medieval multiplayer strategy experience. Engineered with React, TypeScript, and Vite on the client, backed by a Node.js API with Prisma ORM. Includes AoE2-style terrain shaders, real-time troop march trajectories, village loyalty conquest system, tribe alliances with territorial map glowing, wandering merchant exchange, and multi-language RTL support.",
+            tech: ["React", "TypeScript", "Vite", "Node.js", "Prisma ORM", "Tailwind CSS", "WebSockets", "RTL / i18n (6 Languages)"],
+            github: "https://github.com/raful222",
+            demo: "#",
+            status: "Complete MMO Strategy Game",
+            badge: "Medieval MMO Strategy",
+            icon: "shield"
+        },
+        {
             id: "discord-qa-bot",
             title: "Autonomous QA & Remediation Agent (Discord Bot)",
             category: "ai",
