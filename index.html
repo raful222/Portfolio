@@ -39,6 +39,21 @@
         </ul>
 
         <div class="nav-actions">
+            <!-- CV Download Dropdown -->
+            <div class="cv-dropdown">
+                <button class="btn btn-glass btn-sm cv-trigger" id="cv-dropdown-btn">
+                    <i data-lucide="file-down"></i> <span>CV (PDF)</span> <i data-lucide="chevron-down" style="width:14px;height:14px;"></i>
+                </button>
+                <div class="cv-menu" id="cv-dropdown-menu">
+                    <a href="cv/Refael_Robinov_CV_EN.pdf" download="Refael_Robinov_CV_EN.pdf" class="cv-menu-item">
+                        <i data-lucide="file-text"></i> English Resume (PDF)
+                    </a>
+                    <a href="cv/Refael_Robinov_CV_HE.pdf" download="Refael_Robinov_CV_HE.pdf" class="cv-menu-item">
+                        <i data-lucide="file-text"></i> קורות חיים בעברית (PDF)
+                    </a>
+                </div>
+            </div>
+
             <a href="https://github.com/raful222" target="_blank" rel="noopener" class="btn btn-glass btn-sm">
                 <i data-lucide="github"></i> GitHub
             </a>
@@ -70,6 +85,9 @@
             <div class="hero-cta">
                 <a href="#projects" class="btn btn-primary">
                     <i data-lucide="layers"></i> Explore Projects & Games
+                </a>
+                <a href="cv/Refael_Robinov_CV_EN.pdf" target="_blank" class="btn btn-glass" style="border-color: rgba(99, 102, 241, 0.45); color: var(--text-main);">
+                    <i data-lucide="file-down"></i> Download CV (PDF)
                 </a>
                 <a href="#contact" class="btn btn-glass">
                     <i data-lucide="mail"></i> Get In Touch

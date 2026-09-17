@@ -495,3 +495,41 @@ function startGame() {
 window.stopMiniGame = function() {
     if (gameLoopId) cancelAnimationFrame(gameLoopId);
 };
+
+// Clipboard & Toast Helper
+window.copyToClipboard = function(text, successMsg = "Copied to clipboard!") {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+            showToast(successMsg);
+        }).catch(() => {
+            fallbackCopy(text, successMsg);
+        });
+    } else {
+        fallbackCopy(text, successMsg);
+    }
+};
+
+function fallbackCopy(text, successMsg) {
+    const input = document.createElement("textarea");
+    input.value = text;
+    document.body.appendChild(input);
+    input.select();
+    try {
+        document.execCommand("copy");
+        showToast(successMsg);
+    } catch (err) {
+        showToast("Error copying text");
+    }
+    document.body.removeChild(input);
+}
+
+window.showToast = function(message) {
+    const toast = document.getElementById("toast");
+    if (!toast) return;
+    const textSpan = toast.querySelector(".toast-text");
+    if (textSpan) textSpan.textContent = message;
+    toast.classList.add("show");
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 3200);
+};
