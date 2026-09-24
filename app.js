@@ -654,16 +654,77 @@ window.addEventListener("keydown", (e) => {
     }
 });
 
-// Scroll Navbar Effect
+// Mobile Menu Controller
+window.toggleMobileMenu = function() {
+    const hamburger = document.getElementById("nav-hamburger");
+    const links = document.getElementById("nav-links");
+    if (!hamburger || !links) return;
+
+    hamburger.classList.toggle("active");
+    links.classList.toggle("mobile-open");
+};
+
+function closeMobileMenu() {
+    const hamburger = document.getElementById("nav-hamburger");
+    const links = document.getElementById("nav-links");
+    if (hamburger) hamburger.classList.remove("active");
+    if (links) links.classList.remove("mobile-open");
+}
+
+// Scroll Navbar Effect & Active Link ScrollSpy
 function initScrollEffects() {
     const nav = document.querySelector(".navbar");
+    const navLinks = document.querySelectorAll(".nav-links a");
+    const sections = Array.from(document.querySelectorAll("section[id]"));
+
+    // Close mobile menu on link click
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            closeMobileMenu();
+        });
+    });
+
+    // Close mobile menu when clicking outside navbar
+    document.addEventListener("click", (e) => {
+        if (!e.target.closest("#main-navbar")) {
+            closeMobileMenu();
+        }
+    });
+
+    // Scroll listener for navbar elevation and active section
     window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
+        const scrollY = window.scrollY;
+
+        // Navbar elevation
+        if (scrollY > 40) {
             nav.classList.add("scrolled");
         } else {
             nav.classList.remove("scrolled");
         }
-    });
+
+        // Active Section ScrollSpy
+        let currentSectionId = "";
+        const scrollPosition = scrollY + 160;
+
+        for (let i = sections.length - 1; i >= 0; i--) {
+            const sec = sections[i];
+            if (sec.offsetTop <= scrollPosition) {
+                currentSectionId = sec.id;
+                break;
+            }
+        }
+
+        if (currentSectionId) {
+            navLinks.forEach(link => {
+                const href = link.getAttribute("href");
+                if (href === `#${currentSectionId}`) {
+                    link.classList.add("active");
+                } else {
+                    link.classList.remove("active");
+                }
+            });
+        }
+    }, { passive: true });
 }
 
 // ==========================================

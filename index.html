@@ -26,16 +26,16 @@
     <div id="three-canvas-container"></div>
 
     <!-- Navigation Header -->
-    <nav class="navbar">
+    <nav class="navbar" id="main-navbar">
         <a href="#hero" class="nav-brand">
             <div class="nav-avatar-glow">RR</div>
             <span>Refael Robinov</span>
         </a>
 
-        <ul class="nav-links">
-            <li><a href="#projects" id="nav-link-projects">Projects & Systems</a></li>
-            <li><a href="#skills" id="nav-link-skills">Skills Matrix</a></li>
-            <li><a href="#architecture" id="nav-link-architecture">Architecture & Scale</a></li>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#projects" id="nav-link-projects">Projects</a></li>
+            <li><a href="#skills" id="nav-link-skills">Skills</a></li>
+            <li><a href="#architecture" id="nav-link-architecture">Architecture</a></li>
             <li><a href="#experience" id="nav-link-experience">Experience</a></li>
             <li><a href="#about" id="nav-link-about">AI & Education</a></li>
             <li><a href="#contact" id="nav-link-contact">Contact</a></li>
@@ -50,7 +50,7 @@
             <!-- CV Download Dropdown -->
             <div class="cv-dropdown">
                 <button class="btn btn-glass btn-sm cv-trigger" id="cv-dropdown-btn">
-                    <i data-lucide="file-down"></i> <span id="nav-cv-text">CV (PDF)</span> <i data-lucide="chevron-down" style="width:14px;height:14px;"></i>
+                    <i data-lucide="file-down"></i> <span id="nav-cv-text">CV (PDF)</span> <i data-lucide="chevron-down" style="width:13px;height:13px;"></i>
                 </button>
                 <div class="cv-menu" id="cv-dropdown-menu">
                     <a href="cv/Refael_Robinov_CV_EN.pdf" download="Refael_Robinov_CV_EN.pdf" class="cv-menu-item" id="cv-menu-en">
@@ -62,12 +62,22 @@
                 </div>
             </div>
 
-            <a href="https://github.com/raful222" target="_blank" rel="noopener" class="btn btn-glass btn-sm">
-                <i data-lucide="github"></i> GitHub
+            <!-- GitHub -->
+            <a href="https://github.com/raful222" target="_blank" rel="noopener" class="btn btn-glass btn-sm nav-btn-github" title="GitHub Profile">
+                <i data-lucide="github"></i> <span class="nav-btn-text">GitHub</span>
             </a>
-            <a href="#contact" class="btn btn-primary btn-sm" id="nav-btn-talk">
+
+            <!-- Let's Talk CTA -->
+            <a href="#contact" class="btn btn-primary btn-sm nav-btn-talk" id="nav-btn-talk">
                 <i data-lucide="send"></i> <span id="nav-text-talk">Let's Talk</span>
             </a>
+
+            <!-- Mobile Hamburger Toggle Button -->
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 

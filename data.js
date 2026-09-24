@@ -4,9 +4,9 @@
 const TRANSLATIONS = {
     "en": {
         "nav": {
-            "projects": "Projects & Systems",
-            "skills": "Skills Matrix",
-            "architecture": "Architecture & Scale",
+            "projects": "Projects",
+            "skills": "Skills",
+            "architecture": "Architecture",
             "experience": "Experience",
             "about": "AI & Education",
             "contact": "Contact",
@@ -123,10 +123,10 @@ const TRANSLATIONS = {
     },
     "he": {
         "nav": {
-            "projects": "פרויקטים ומערכות",
+            "projects": "פרויקטים",
             "skills": "מיומנויות",
-            "architecture": "ארכיטקטורה ו-Scale",
-            "experience": "ניסיון תעסוקתי",
+            "architecture": "ארכיטקטורה",
+            "experience": "ניסיון",
             "about": "AI והשכלה",
             "contact": "צור קשר",
             "cvBtn": "קו\"ח (PDF)",
