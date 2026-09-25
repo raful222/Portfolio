@@ -142,6 +142,23 @@ body {
     letter-spacing: -0.01em;
 }
 
+.nav-brand-logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1.5px solid rgba(56, 189, 248, 0.45);
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
+    flex-shrink: 0;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-brand:hover .nav-brand-logo {
+    transform: scale(1.08) rotate(2deg);
+    border-color: var(--primary);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.55);
+}
+
 .nav-avatar-glow {
     width: 34px;
     height: 34px;

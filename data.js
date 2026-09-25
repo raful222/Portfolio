@@ -634,7 +634,7 @@ const PORTFOLIO_DATA = {
                 "badge": "סוכני AI אוטונומיים",
                 "tag": "סוכני AI אוטונומיים"
             },
-            "image": "assets/projects/discord-qa-bot.svg"
+            "image": "assets/projects/discord-qa-bot.jpg"
         },
         {
             "id": "vbook",
@@ -656,7 +656,8 @@ const PORTFOLIO_DATA = {
             "demo": "https://vbookapp.co.il/",
             "status": "Live in Production",
             "badge": "Live SaaS (vbookapp.co.il)",
-            "icon": "calendar"
+            "icon": "calendar",
+            "image": "assets/projects/vbook.jpg"
         },
         {
             "id": "mt-algo",
@@ -687,7 +688,7 @@ const PORTFOLIO_DATA = {
                 "badge": "מנוע מסחר כמותי",
                 "tag": "מסחר אלגוריתמי"
             },
-            "image": "assets/projects/mt-algo.svg"
+            "image": "assets/projects/mt-algo.jpg"
         },
         {
             "id": "ai-ml-learning-hub",
@@ -709,7 +710,8 @@ const PORTFOLIO_DATA = {
             "demo": "https://github.com/raful222/ai-ml-learning",
             "status": "Open Source AI Learning Platform",
             "badge": "Public AI Platform",
-            "icon": "brain-circuit"
+            "icon": "brain-circuit",
+            "image": "assets/projects/ai-ml-learning-hub.jpg"
         },
         {
             "id": "alefbet",
@@ -731,7 +733,8 @@ const PORTFOLIO_DATA = {
             "demo": "https://alefbet-mt.duckdns.org",
             "status": "Live in Production",
             "badge": "Live App (alefbet-mt.duckdns.org)",
-            "icon": "sparkles"
+            "icon": "sparkles",
+            "image": "assets/projects/alefbet.jpg"
         },
         {
             "id": "beiknishta",
@@ -752,7 +755,8 @@ const PORTFOLIO_DATA = {
             "demo": "https://beiknishta.duckdns.org",
             "status": "Live Cloud Platform",
             "badge": "Live Cloud (beiknishta.duckdns.org)",
-            "icon": "building"
+            "icon": "building",
+            "image": "assets/projects/beiknishta.jpg"
         },
         {
             "id": "pulsebe",
@@ -782,7 +786,7 @@ const PORTFOLIO_DATA = {
                 "badge": "מיקרו-סרוויס בייצור",
                 "tag": "תשתיות בקאנד ו-Scale"
             },
-            "image": "assets/projects/pulsebe.svg"
+            "image": "assets/projects/pulsebe.jpg"
         },
         {
             "id": "report-stock-analysis",
@@ -804,6 +808,7 @@ const PORTFOLIO_DATA = {
             "status": "Analytics Microservice (Offline)",
             "badge": "Equities Analytics Engine",
             "icon": "bar-chart-2",
+            "image": "assets/projects/report-stock-analysis.jpg",
             "he": {
                 "title": "ReportStockAnalysis — מנוע מודיעין פיננסי ואנליטיקה",
                 "description": "פלטפורמת סריקה וניתוח מניות אוטומטית המושכת נתוני שוק חיים, מחשבת מודלי DCF ומדדי מומנטום טכניים, ומפיקה דוחות השקעה למנהלים.",
@@ -839,7 +844,7 @@ const PORTFOLIO_DATA = {
                 "badge": "מנוע משחק תלת-ממד",
                 "tag": "מנוע משחק תלת-ממדי"
             },
-            "image": "assets/projects/idle-for-you.svg"
+            "image": "assets/projects/idle-for-you.jpg"
         },
         {
             "id": "task-management-api",
@@ -861,6 +866,7 @@ const PORTFOLIO_DATA = {
             "status": "Open Source",
             "badge": "Clean Architecture (Public Code)",
             "icon": "check-square",
+            "image": "assets/projects/task-management-api.jpg",
             "he": {
                 "title": "Enterprise Task Management API",
                 "description": "ממשק RESTful לניהול משימות ארגוניות עם מודל הרשאות מתקדם, מעקב תלויות, יומני ביקורת ועימוד יעיל.",
@@ -888,6 +894,7 @@ const PORTFOLIO_DATA = {
             "status": "Open Source",
             "badge": "E-Commerce (Public Code)",
             "icon": "coffee",
+            "image": "assets/projects/coffee-shop-online.jpg",
             "he": {
                 "title": "GTR CoffeeShop Online — מערכת מסחר דיגיטלית",
                 "description": "מערכת הזמנות דיגיטלית וניהול תפריטים עם חישוב עגלה בזמן אמת, קטלוג מוצרים רספונסיבי ותהליך תשלום מאובטח.",
@@ -916,14 +923,14 @@ const PORTFOLIO_DATA = {
             "status": "Live Study Portal",
             "badge": "Interactive Exam Portal",
             "icon": "calculator",
+            "image": "assets/projects/logical-math-study-hub.jpg",
             "he": {
                 "title": "Logical Math & Reasoning Hub — פורטל חשיבה לוגית",
                 "description": "פורטל אינטראקטיבי לתרגול מתמטי והכנה לבחינות בלוגיקה, תורת הקבוצות, גרפים וקומבינטוריקה. נוסחאות KaTeX, הוכחות שלב-אחר-שלב ושאלונים דיאגנוסטיים.",
                 "longDesc": "ארכיטקטורה רספונסיבית מותאמת עברית (RTL), רינדור נוסחאות KaTeX LaTeX, בדיקת תשובות מיידית והוכחות מתמטיות מפורטות.",
                 "badge": "פורטל לימודי אינטראקטיבי",
                 "tag": "פורטל לוגיקה ואקדמיה"
-            },
-            "image": "assets/projects/logical-math-study-hub.svg"
+            }
         },
         {
             "id": "lumina-jewelry-ai",
@@ -945,14 +952,14 @@ const PORTFOLIO_DATA = {
             "status": "Studio Platform",
             "badge": "Next.js 15 Luxury Studio",
             "icon": "gem",
+            "image": "assets/projects/lumina-jewelry-ai.jpg",
             "he": {
                 "title": "Lumina — סטודיו יוקרה מותאם אישית מבוסס AI",
                 "description": "סטודיו דיגיטלי לתכשיטי יוקרה עם מודול התאמה אישית בסיוע AI, מחשבון תמחור שקוף בזמן אמת לפי מדדי מתכות יקרות ויהלומים, ועיצוב יוקרתי.",
                 "longDesc": "נבנה על Next.js 15 App Router, React 19, Tailwind CSS ו-TypeScript. פירוט עלויות שקוף, גלריית תצוגה ברזולוציה גבוהה והגדרת אבני חן דינמית.",
                 "badge": "סטודיו Next.js 15 יוקרתי",
                 "tag": "סטודיו Next.js 15 & AI"
-            },
-            "image": "assets/projects/lumina-jewelry-ai.svg"
+            }
         },
         {
             "id": "do-not-copy",
@@ -974,14 +981,14 @@ const PORTFOLIO_DATA = {
             "status": "B.Sc. Graduation Project",
             "badge": "Exam Security System",
             "icon": "shield-check",
+            "image": "assets/projects/do-not-copy.jpg",
             "he": {
                 "title": "DoNotCopy — מערכת אבטחת בחינות ומניעת העתקות",
                 "description": "פרויקט הגמר לתואר ראשון בהנדסת תוכנה ב-SCE. פלטפורמה לניהול בחינות ואבטחת יושרה אקדמית באמצעות C# Web API למניעת העתקות ושמירה על סודיות המבחנים.",
                 "longDesc": "פותח ב-ASP.NET Core Web API, בדיקת שלמות ישויות, השוואת הגשות אוטומטית ויומני ביקורת לשמירה על טוהר הבחינות.",
                 "badge": "פרויקט גמר הנדסה",
                 "tag": "סייבר ו-Web API"
-            },
-            "image": "assets/projects/do-not-copy.svg"
+            }
         },
         {
             "id": "cyber-recon-game",
