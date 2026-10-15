@@ -734,46 +734,52 @@ html[dir="rtl"] .banner-badge {
 .modal-gallery-stage {
     position: relative;
     width: 100%;
-    height: 310px;
+    height: 380px;
+    max-height: 52vh;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: #030712;
+    background: #020409;
 }
 
 .modal-gallery-stage img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
     display: block;
-    transition: opacity 0.25s ease, transform 0.35s ease;
+    margin: auto;
+    transition: opacity 0.25s ease;
 }
 
 .modal-gallery-overlay {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background: linear-gradient(180deg, rgba(3, 7, 18, 0.25) 0%, transparent 45%, rgba(15, 23, 42, 0.95) 100%);
+    display: none;
+}
+
+.modal-gallery-caption-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.65rem 1.25rem;
+    background: rgba(13, 20, 36, 0.98);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: #e2e8f0;
+    font-size: 0.88rem;
+    font-weight: 500;
 }
 
 .modal-gallery-caption {
-    position: absolute;
-    bottom: 0.75rem;
-    left: 1.25rem;
-    right: 5rem;
+    margin: 0;
     color: #f1f5f9;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     font-weight: 600;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
-    z-index: 2;
-    pointer-events: none;
 }
 
-html[dir="rtl"] .modal-gallery-caption {
-    left: 5rem;
-    right: 1.25rem;
+html[dir="rtl"] .modal-gallery-caption-bar {
     text-align: right;
+    direction: rtl;
 }
 
 .modal-gallery-counter {
@@ -1391,9 +1397,9 @@ html[dir="rtl"] .gallery-arrow.next:hover {
 
 /* Project Modal Custom Dialog — Fixed Action Bar & Scrollable Body */
 .modal-project-dialog {
-    max-width: 740px;
-    height: 88vh;
-    max-height: 860px;
+    max-width: 860px;
+    height: 90vh;
+    max-height: 880px;
     display: flex;
     flex-direction: column;
     padding: 0 !important;

@@ -247,8 +247,8 @@ function renderProjects(projectsList) {
                         <i data-lucide="info"></i> ${t.details}
                     </button>
                     ${project.demo && project.demo !== '#' && !project.demo.includes('github.com') && !project.demo.startsWith('#') ? `
-                        <a href="${project.demo}" target="_blank" rel="noopener" class="btn btn-glass btn-sm" style="color:var(--accent-emerald); border-color:rgba(52,211,153,0.3);">
-                            <i data-lucide="external-link"></i> ${t.liveDemo}
+                        <a href="${project.demo}" target="_blank" rel="noopener" class="btn btn-glass btn-sm" style="color:var(--accent-emerald); border-color:rgba(52,211,153,0.45); font-weight:600;">
+                            <i data-lucide="external-link"></i> ${project.id === 'stocks-battle' ? (isHe ? 'שחק בלייב (Live)' : 'Play Live') : t.liveDemo}
                         </a>
                     ` : project.isPlayable ? `
                         <button class="btn btn-glass btn-sm" onclick="${project.id === 'chidat-hayom' ? 'openRiddleModal()' : 'openGameModal()'}" style="${project.id === 'chidat-hayom' ? 'border-color: rgba(124, 58, 237, 0.5); color: #c084fc;' : ''}">
@@ -513,13 +513,15 @@ window.openProjectModal = function(projectId) {
             <div class="modal-gallery">
                 <div class="modal-gallery-stage" id="modal-gallery-stage">
                     <img id="modal-gallery-active-img" src="${firstImg.url}" alt="${title}">
-                    <div class="modal-gallery-overlay"></div>
-                    <div class="modal-gallery-caption" id="modal-gallery-caption">${caption}</div>
                     ${imagesList.length > 1 ? `
                         <div class="modal-gallery-counter" id="modal-gallery-counter">1 / ${imagesList.length}</div>
                         <button class="gallery-arrow prev" onclick="navigateModalGallery(-1)" aria-label="Previous image">‹</button>
                         <button class="gallery-arrow next" onclick="navigateModalGallery(1)" aria-label="Next image">›</button>
                     ` : ''}
+                </div>
+                <div class="modal-gallery-caption-bar">
+                    <i data-lucide="image" style="width:16px;height:16px;opacity:0.75;flex-shrink:0;"></i>
+                    <span id="modal-gallery-caption">${caption}</span>
                 </div>
                 ${imagesList.length > 1 ? `
                     <div class="modal-gallery-thumbs" id="modal-gallery-thumbs">
@@ -568,7 +570,7 @@ window.openProjectModal = function(projectId) {
             ${isHe ? 'סגור' : 'Close'}
         </button>
         ${hasGithub ? `<a href="${project.github}" target="_blank" class="btn ${hasLive ? 'btn-glass' : 'btn-primary'} btn-sm" style="padding: 0.55rem 1.25rem;"><i data-lucide="github"></i> ${isHe ? 'צפה בקוד ב-GitHub' : 'View GitHub Repository'}</a>` : ''}
-        ${hasLive ? `<a href="${project.demo}" target="_blank" class="btn btn-primary btn-sm" style="background:linear-gradient(135deg, var(--accent-emerald), #059669); color:#040810; padding: 0.55rem 1.25rem;"><i data-lucide="external-link"></i> ${isHe ? 'פתח מערכת חיה' : 'Open Live Application'}</a>` : ''}
+        ${hasLive ? `<a href="${project.demo}" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="background:linear-gradient(135deg, var(--accent-emerald), #059669); color:#040810; padding: 0.55rem 1.25rem; font-weight:700;"><i data-lucide="external-link"></i> ${isHe ? (project.id === 'stocks-battle' ? 'שחק עכשיו בלייב (stocksbattle.com)' : 'פתח מערכת חיה') : (project.id === 'stocks-battle' ? 'Play Live (stocksbattle.com)' : 'Open Live Application')}</a>` : ''}
         ${hasPlayable ? `<button onclick="closeModal(); ${project.id === 'chidat-hayom' ? 'openRiddleModal()' : 'openGameModal()'};" class="btn btn-glass btn-sm" style="${project.id === 'chidat-hayom' ? 'border-color: rgba(124, 58, 237, 0.6); color: #c084fc;' : ''} padding: 0.55rem 1.25rem;"><i data-lucide="${project.id === 'chidat-hayom' ? 'help-circle' : 'gamepad-2'}"></i> ${project.id === 'chidat-hayom' ? (isHe ? 'שחק בחידה' : 'Play Riddle Online') : (isHe ? 'הפעל מיני-משחק' : 'Launch Mini-Game')}</button>` : ''}
     `;
 
