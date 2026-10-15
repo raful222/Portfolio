@@ -512,6 +512,8 @@ body {
     font-family: var(--font-mono);
     line-height: 1;
     margin-bottom: 0.35rem;
+    direction: ltr;
+    display: inline-block;
 }
 
 .stat-label {

@@ -148,11 +148,11 @@ const TRANSLATIONS = {
         },
         "stats": [
             {
-                "value": "+5",
+                "value": "5+",
                 "label": "שנות ניסיון מעשי בהייטק"
             },
             {
-                "value": "+8",
+                "value": "8+",
                 "label": "פלטפורמות ענן פעילות"
             },
             {
@@ -160,7 +160,7 @@ const TRANSLATIONS = {
                 "label": "טרנזקציות יומיות מעובדות"
             },
             {
-                "value": "+19",
+                "value": "19+",
                 "label": "מערכות פרודקשן ו-AI"
             }
         ],
