@@ -277,7 +277,7 @@ const PORTFOLIO_DATA = {
             "label": "Daily Data Transactions"
         },
         {
-            "value": "18+",
+            "value": "19+",
             "label": "Production & AI Systems"
         }
     ],
