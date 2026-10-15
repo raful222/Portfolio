@@ -41,7 +41,7 @@ const TRANSLATIONS = {
                 "label": "Daily Data Transactions"
             },
             {
-                "value": "18+",
+                "value": "19+",
                 "label": "Production & AI Systems"
             }
         ],
@@ -160,7 +160,7 @@ const TRANSLATIONS = {
                 "label": "טרנזקציות יומיות מעובדות"
             },
             {
-                "value": "+18",
+                "value": "+19",
                 "label": "מערכות פרודקשן ו-AI"
             }
         ],
@@ -420,6 +420,66 @@ const PORTFOLIO_DATA = {
         }
     ],
     "projects": [
+        {
+            "id": "stocks-battle",
+            "title": "StocksBattle — Real-Time Multiplayer PvP Trading Arena",
+            "category": ["games", "ai"],
+            "tag": "Real-Time PvP Trading Arena",
+            "featured": true,
+            "description": "Next-generation real-time PvP stock & crypto trading arena. Features live market feeds, dynamic leverage (x1-x25), real-time leaderboards, Clan Wars, and sub-50ms execution latency.",
+            "longDesc": "StocksBattle transforms financial markets into an adrenaline-fueled competitive multiplayer arena. Built on Next.js 16 App Router, React 19, TypeScript, and Tailwind CSS v4, the platform integrates live market feeds (Yahoo Finance & live providers), high-leverage dynamic risk engines (x1 to x25), real-time WebSockets / SSE game tick loops, Clan Wars territory diplomacy, interactive podium settlement ceremonies with XP/trophy economies, and sound effects.",
+            "tech": [
+                "Next.js 16",
+                "React 19",
+                "TypeScript",
+                "Tailwind CSS v4",
+                "WebSockets / SSE",
+                "Real-Time Orderbook",
+                "Dynamic Leverage (x1-x25)",
+                "Clan Wars Engine",
+                "Live Financial APIs"
+            ],
+            "github": "https://github.com/raful222",
+            "demo": "#",
+            "status": "Production PvP Trading Game",
+            "badge": "Premier Flagship (StocksBattle)",
+            "icon": "swords",
+            "he": {
+                "title": "StocksBattle — זירת מסחר PvP מרובת משתתפים בזמן אמת",
+                "description": "זירת מסחר תחרותית (PvP) בזמן אמת במניות וקריפטו. מנוע מינוף דינמי (x1 עד x25), נתוני שוק חיים, לוחות תוצאות חיים, מלחמת שבטים (Clan Wars) וביצועים מהירים במיוחד.",
+                "longDesc": "פלטפורמת הדגל StocksBattle הופכת את שוק ההון לזירת קרבות מרובת משתתפים מהירה וממכרת. המערכת מבוססת Next.js 16, React 19, TypeScript ו-Tailwind CSS v4, ומשלבת נתוני שוק פיננסיים חיים (מניות וקריפטו), מנוע מינוף דינמי של עד פי 25, תקשורת WebSockets / SSE בזמן אמת, מערכת מלחמת שבטים (Clans), טקסי הכרזת מנצחים על פודיום מונפש עם חלוקת XP וגביעים, ואפקטים קוליים עשירים.",
+                "badge": "פרויקט הדגל המוביל (StocksBattle)",
+                "tag": "זירת מסחר תחרותית PvP"
+            },
+            "image": "assets/projects/stocksbattle/arena.jpg",
+            "images": [
+                {
+                    "url": "assets/projects/stocksbattle/arena.jpg",
+                    "caption": "Live PvP Trading Arena & Order Execution",
+                    "captionHe": "זירת קרבות מסחר חיה (PvP) וביצוע פקודות בזמן אמת"
+                },
+                {
+                    "url": "assets/projects/stocksbattle/hero.jpg",
+                    "caption": "StocksBattle Brand & Next-Gen Trading Hub",
+                    "captionHe": "ממשק המותג של StocksBattle וזירת המסחר החדשה"
+                },
+                {
+                    "url": "assets/projects/stocksbattle/leverage.jpg",
+                    "caption": "Dynamic Leverage Trading (x1-x25) & Real-Time PnL",
+                    "captionHe": "מנגנון מינוף דינמי (פי 1 עד פי 25) ומעקב רווח/הפסד בזמן אמת"
+                },
+                {
+                    "url": "assets/projects/stocksbattle/podium.jpg",
+                    "caption": "Battle Podium, Winner Standings & XP Leveling",
+                    "captionHe": "פודיום סיום קרב, דירוג מנצחים וחלוקת XP ותגים"
+                },
+                {
+                    "url": "assets/projects/stocksbattle/clans.jpg",
+                    "caption": "Clan Wars Hub, Territory Diplomacy & Leaderboards",
+                    "captionHe": "לוח שבטים (Clan Wars), דיפלומטיה וטבלת מובילים עולמית"
+                }
+            ]
+        },
         {
             "id": "try-invest",
             "title": "TryInvest — Professional Investment & Portfolio Platform",

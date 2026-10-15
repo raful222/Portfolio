@@ -139,7 +139,7 @@ window.applyLanguage = function(lang) {
     const query = searchInput ? searchInput.value.toLowerCase().trim() : "";
 
     const filtered = PORTFOLIO_DATA.projects.filter(p => {
-        const matchesCategory = activeTab === "all" || p.category === activeTab;
+        const matchesCategory = activeTab === "all" || (Array.isArray(p.category) ? p.category.includes(activeTab) : p.category === activeTab);
         const pTitle = (isHe && p.he?.title) ? p.he.title : p.title;
         const pDesc = (isHe && p.he?.description) ? p.he.description : p.description;
         const matchesQuery = !query || 
@@ -211,7 +211,7 @@ function renderProjects(projectsList) {
         const badge = (isHe && project.he?.badge) ? project.he.badge : (project.badge || project.tag);
 
         return `
-            <div class="project-card" data-category="${project.category}">
+            <div class="project-card" data-category="${Array.isArray(project.category) ? project.category.join(' ') : project.category}">
                 ${project.image ? `
                     <div class="project-banner">
                         <img src="${project.image}" alt="${title}" class="project-banner-img" loading="lazy">
@@ -232,7 +232,7 @@ function renderProjects(projectsList) {
                             <div class="card-icon-box-sm">
                                 <i data-lucide="${project.icon || 'code-2'}"></i>
                             </div>
-                            <span class="project-category-tag">${project.tag || project.category}</span>
+                            <span class="project-category-tag">${project.tag || (Array.isArray(project.category) ? project.category[0] : project.category)}</span>
                         </div>
                     `}
                     <h3 class="project-title">${title}</h3>
@@ -285,7 +285,7 @@ function initFilterTabs() {
             const isHe = currentLang === "he";
 
             const filtered = PORTFOLIO_DATA.projects.filter(p => {
-                const matchesCategory = filter === "all" || p.category === filter;
+                const matchesCategory = filter === "all" || (Array.isArray(p.category) ? p.category.includes(filter) : p.category === filter);
                 const pTitle = (isHe && p.he?.title) ? p.he.title : p.title;
                 const pDesc = (isHe && p.he?.description) ? p.he.description : p.description;
                 const matchesQuery = !query ||
@@ -310,7 +310,7 @@ function initSearch() {
         const isHe = currentLang === "he";
 
         const filtered = PORTFOLIO_DATA.projects.filter(p => {
-            const matchesCategory = activeTab === "all" || p.category === activeTab;
+            const matchesCategory = activeTab === "all" || (Array.isArray(p.category) ? p.category.includes(activeTab) : p.category === activeTab);
             const pTitle = (isHe && p.he?.title) ? p.he.title : p.title;
             const pDesc = (isHe && p.he?.description) ? p.he.description : p.description;
             const matchesQuery = !query ||
