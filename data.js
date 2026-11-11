@@ -259,7 +259,7 @@ const PORTFOLIO_DATA = {
             "name": "רפאל רובינוב",
             "title": "מהנדס תוכנה בכיר — Backend & Full-Stack מועצם AI",
             "subtitle": "מומחה בארכיטקטורת מערכות מבוזרות, מיקרו-סרוויסים ב-.NET 10, סוכני AI ופלטפורמות ענן בעלות ביצועים גבוהים.",
-            "bio": "מהנדס תוכנה בכיר עם 5+ שנות ניסיון מעשי בפיתוח ארכיטקטורות Backend עמידות, מיקרו-סרוויסים מבוזרים ויישומי Web מתקדמים. מוביל אימוץ טכנולוגיות חדשניות (.NET 10, Angular 19) ופרדיגמות פיתוח מועצמות AI בעזרת Claude Code, Codex וסוכני Antigravity.",
+            "bio": "מהנדס תוכנה בכיר עם 5+ שנות ניסיון מעשי בפיתוח ארכיטקטורות Backend עמידות, מיקרו-סרוויסים מבוזרים ויישומי Web מתקדמים. מוביל אימוץ טכנולוגיות חדשניות (.NET 8–10, Angular 17–21) ופרדיגמות פיתוח מועצמות AI בעזרת Claude Code, Codex וסוכני Antigravity.",
             "status": "פתוח להזדמנויות Senior / Staff ופרויקטים בעלי אימפקט גבוה"
         }
     },
@@ -1083,35 +1083,43 @@ const PORTFOLIO_DATA = {
     "experience": [
         {
             "period": "2025 – Present",
-            "role": "Full Stack Software Developer",
+            "role": "Senior Backend & Full Stack Engineer",
             "company": "Israel Tax Authority (Sha'am)",
             "location": "Jerusalem / Hybrid",
             "tag": "Government Scale",
             "highlights": [
-                "Engineered robust backend systems for high-scale national traffic, focusing on micro-latency, high reliability, and data integrity.",
-                "Modernized critical business workflows by bridging .NET 10 / .NET Core, Angular (v17–19), and Redis cache layers with core legacy mainframe frameworks.",
-                "Led architecture of key service modules, optimizing data throughput and reducing processing bottlenecks.",
-                "Championed code quality, agile CI/CD practices, and strict peer code reviews."
+                "Architected and deployed end-to-end enterprise microservices and high-throughput RESTful Web APIs using C#, .NET 8–10, and ASP.NET Core under national-scale workloads.",
+                "Authored and optimized core Mainframe (MF / Natural) programs and data routines, establishing full end-to-end data pipelines that seamlessly stream national tax data into modern .NET services and Angular client apps.",
+                "Engineered robust integration middleware bridging modern .NET microservices, Redis distributed caching, and legacy Mainframe layers with zero-loss data integrity.",
+                "Spearheaded server-side performance tuning, query optimization, and Redis caching strategies to eliminate latency bottlenecks and handle mission-critical transactions.",
+                "Developed rich, reactive client-side interfaces and management dashboards using Angular (versions 17–21) and TypeScript, integrating directly with backend APIs.",
+                "Enforced enterprise-grade code quality, comprehensive automated testing, and agile CI/CD release cycles utilizing TFS and Git."
             ],
             "tech": [
-                ".NET 10",
-                "Angular 19",
-                "Redis",
                 "C#",
-                "SQL",
-                "Natural / Mainframe",
-                "Agile"
+                ".NET 8–10",
+                "Mainframe (MF)",
+                "Natural",
+                "ASP.NET Core",
+                "Microservices",
+                "Redis",
+                "Angular 17–21",
+                "SQL Server",
+                "TFS / Git",
+                "E2E Architecture"
             ],
             "he": {
-                "role": "מפתח תוכנה Full Stack",
+                "role": "מהנדס תוכנה בכיר — Backend & Full Stack",
                 "company": "רשות המסים בישראל (שע\"מ)",
                 "location": "ירושלים / היברידי",
                 "tag": "מערכות לאומיות",
                 "highlights": [
-                    "פיתוח והנדסת מערכות Backend מתקדמות לעומסי תעבורה לאומיים בהיקף נרחב, תוך שמירה על Latency מיקרוסקופי, אמינות גבוהה ושלמות נתונים מרבית.",
-                    "מודרניזציה של תהליכים עסקיים קריטיים על ידי גישור בין .NET 10 / .NET Core, Angular (v17–19), ושכבות מטמון Redis לבין מערכות Mainframe ליבתיות.",
-                    "הובלת ארכיטקטורה של מודולי שירות מרכזיים, אופטימיזציה של תפוקת נתונים (Throughput) ומניעת צווארי בקבוק בעיבוד.",
-                    "הובלת סטנדרטים של איכות קוד, תהליכי CI/CD וביקורות קוד קפדניות (Code Reviews)."
+                    "הובלת ארכיטקטורה ופיתוח שירותי Microservices ו-Web APIs מקצה לקצה (End-to-End) ב-C# ו-.NET 8–10 לעומסי תעבורה לאומיים בהיקף נרחב.",
+                    "כתיבה ותחזוקה של תוכניות Mainframe (MF / Natural) ליבתיות לשליפה, עיבוד והזרמת נתונים מקצה לקצה — החל משכבת הליבה במיינפריים ועד למיקרו-סרוויסים ב-.NET וממשקי המשתמש.",
+                    "פיתוח מודולי גישור ואינטגרציה עתירי ביצועים בין מיקרו-סרוויסים מודרניים ושכבות מטמון Redis לבין מערכות Mainframe ליבתיות, תוך הבטחת שלמות נתונים מקסימלית.",
+                    "הטמעת שכבות In-Memory Caching ב-Redis ואופטימיזציית ביצועי שרת ומסדי נתונים לצמצום Latency ומניעת צווארי בקבוק בזמני עומס שיא.",
+                    "פיתוח ממשקי משתמש ומודולי ניהול דינמיים ורספונסיביים בצד לקוח ב-Angular (גרסאות 17–21) ו-TypeScript בחיבור ישיר לשירותי ה-Backend.",
+                    "הובלת סטנדרטים גבוהים של איכות קוד, סקירות קוד (Code Reviews) ותהליכי CI/CD וניהול גרסאות ב-TFS ו-Git."
                 ]
             }
         },

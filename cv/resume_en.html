@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+@page {
+    size: A4 portrait;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    color: #1e293b;
+    background: #ffffff;
+    display: flex;
+    overflow: hidden;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+.sidebar {
+    width: 68mm;
+    height: 297mm;
+    background: #e2e8f0;
+    padding: 24px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    border-right: 1px solid #cbd5e1;
+}
+
+.sidebar-section {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.sidebar-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f172a;
+    border-bottom: 2px solid #94a3b8;
+    padding-bottom: 3px;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.76rem;
+    line-height: 1.25;
+}
+
+.contact-label {
+    font-weight: 700;
+    color: #0f172a;
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.contact-val {
+    color: #334155;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5px;
+}
+
+.skills-list li {
+    font-size: 0.74rem;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+}
+
+.skills-list li::before {
+    content: "•";
+    color: #2563eb;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.lang-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.77rem;
+    color: #1e293b;
+    font-weight: 500;
+}
+
+.lang-level {
+    color: #64748b;
+    font-weight: 400;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    width: 142mm;
+    height: 297mm;
+    padding: 22px 22px 16px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.header-box {
+    margin-bottom: 2px;
+}
+
+.candidate-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.95rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #1e293b;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.candidate-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #2563eb;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+
+.summary-text {
+    font-size: 0.74rem;
+    line-height: 1.35;
+    color: #475569;
+    text-align: justify;
+}
+
+.section-block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+    border-bottom: 1.5px solid #cbd5e1;
+    padding-bottom: 2px;
+    margin-bottom: 3px;
+}
+
+.section-icon {
+    font-size: 1rem;
+}
+
+.entry {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 3px;
+}
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.entry-role {
+    font-size: 0.83rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.entry-company {
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.entry-period {
+    font-size: 0.73rem;
+    color: #64748b;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+}
+
+.entry-bullets {
+    list-style: disc;
+    padding-left: 14px;
+    margin-top: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.entry-bullets li {
+    font-size: 0.71rem;
+    line-height: 1.32;
+    color: #334155;
+}
+
+.entry-bullets li strong {
+    color: #0f172a;
+    font-weight: 600;
+}
+
+.edu-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.edu-item {
+    font-size: 0.72rem;
+    line-height: 1.3;
+    color: #334155;
+}
+
+.edu-item-title {
+    font-weight: 700;
+    color: #0f172a;
+    font-size: 0.76rem;
+}
+
+.edu-item-meta {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.edu-badge {
+    color: #059669;
+    font-weight: 700;
+    font-size: 0.72rem;
+}
+
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+    <div class="sidebar-section">
+        <h3 class="sidebar-title">Contact</h3>
+        <div class="contact-item">
+            <span class="contact-label">Phone</span>
+            <span class="contact-val">052-7030595</span>
+        </div>
+        <div class="contact-item">
+            <span class="contact-label">Email</span>
+            <span class="contact-val">rafi20080@gmail.com</span>
+        </div>
+        <div class="contact-item">
+            <span class="contact-label">Location</span>
+            <span class="contact-val">Be'er-Sheva, Israel</span>
+        </div>
+        <div class="contact-item">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-val">linkedin.com/in/refael-robinov</span>
+        </div>
+        <div class="contact-item">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-val">github.com/raful222</span>
+        </div>
+    </div>
+
+    <div class="sidebar-section">
+        <h3 class="sidebar-title">Core Skills</h3>
+        <ul class="skills-list">
+            <li>C# & .NET 8–10</li>
+            <li>ASP.NET Core / Web APIs</li>
+            <li>Microservices Architecture</li>
+            <li>Mainframe (MF) & Natural</li>
+            <li>Redis In-Memory Caching</li>
+            <li>Angular (v17–21)</li>
+            <li>TypeScript & JavaScript</li>
+            <li>SQL Server & Relational DBs</li>
+            <li>End-to-End (E2E) Pipelines</li>
+            <li>TFS / Azure DevOps & Git</li>
+            <li>Distributed Systems</li>
+            <li>Docker & Containerization</li>
+            <li>Agile Methodology & CI/CD</li>
+            <li>Postman & System Testing</li>
+        </ul>
+    </div>
+
+    <div class="sidebar-section">
+        <h3 class="sidebar-title">Languages</h3>
+        <div class="lang-item">
+            <span>Hebrew</span>
+            <span class="lang-level">Native</span>
+        </div>
+        <div class="lang-item">
+            <span>English</span>
+            <span class="lang-level">Fluent</span>
+        </div>
+    </div>
+</div>
+
+<div class="main-content">
+    <div class="header-box">
+        <h1 class="candidate-name">Refael Robinov</h1>
+        <div class="candidate-title">Senior Backend & Full Stack Engineer</div>
+        <p class="summary-text">
+            Results-driven Senior Software Engineer with nearly 6 years of production experience architecting high-scale distributed systems, mission-critical Web APIs, and end-to-end enterprise architectures. Deep server-side specialization in C# and modern .NET (8–10), microservices, Redis caching, and core legacy Mainframe (MF/Natural) development, bridged with modern reactive client-facing applications in Angular (v17–21). Proven track record of delivering resilient, high-throughput systems under national-scale workloads with zero-loss data integrity.
+        </p>
+    </div>
+
+    <div class="section-block">
+        <div class="section-heading">
+            <span class="section-icon">💼</span> Experience
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div>
+                    <span class="entry-role">Senior Backend & Full Stack Engineer</span>, 
+                    <span class="entry-company">Israel Tax Authority (Sha'am)</span>
+                </div>
+                <span class="entry-period">2025 – Present</span>
+            </div>
+            <ul class="entry-bullets">
+                <li><strong>E2E Service Architecture:</strong> Architected and deployed enterprise microservices and high-throughput RESTful Web APIs using C#, .NET 8–10, and ASP.NET Core under national-scale workloads.</li>
+                <li><strong>Mainframe (MF) & Data Pipelines:</strong> Authored and optimized core Mainframe (MF / Natural) programs and routines to extract, process, and stream mission-critical data end-to-end directly into modern .NET services and Angular client apps.</li>
+                <li><strong>Distributed Caching & Latency:</strong> Engineered Redis in-memory caching layers and optimized database queries, eliminating processing bottlenecks and slashing latency for national transactions.</li>
+                <li><strong>Modern Reactive Frontend:</strong> Developed intuitive client portals and administrative dashboards using Angular (v17–21) and TypeScript, integrating directly with backend microservices.</li>
+                <li><strong>Quality & CI/CD:</strong> Maintained high code standards, strict peer reviews, and automated release cycles using TFS and Git.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div>
+                    <span class="entry-role">Backend Developer</span>, 
+                    <span class="entry-company">Qualish Ltd, Omer</span>
+                </div>
+                <span class="entry-period">2021 Dec – 2025 Jan</span>
+            </div>
+            <ul class="entry-bullets">
+                <li><strong>Backend Systems:</strong> Architected Web APIs, database schemas, and microservice endpoints in C# .NET Core 6.</li>
+                <li><strong>Integrations:</strong> Integrated multi-provider payment gateways, billing reconciliation, and real-time event notifications.</li>
+                <li><strong>Data Visualization:</strong> Built financial KPI dashboards and data pipelines delivering actionable insights for executive stakeholders.</li>
+                <li><strong>Performance:</strong> Streamlined customer onboarding workflows, cutting query latency and improving UX.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section-block">
+        <div class="section-heading">
+            <span class="section-icon">🎓</span> Education & Professional Training
+        </div>
+        <div class="edu-grid">
+            <div class="edu-item">
+                <div style="display:flex; justify-content:space-between;">
+                    <span class="edu-item-title">B.Sc. in Software Engineering — SCE College of Engineering, Be'er-Sheva</span>
+                    <span class="edu-item-meta">2020 – 2023</span>
+                </div>
+                <div>GPA: <strong>86.7</strong> | Specialization in <strong>Cyber Security</strong> | Graduation Project: Anti-cheating exam management system (C#, Web API).</div>
+            </div>
+            <div class="edu-item">
+                <div style="display:flex; justify-content:space-between;">
+                    <span class="edu-item-title">Advanced Angular 17–21 & .NET 8–10 Masterclasses — John Bryce</span>
+                    <span class="edu-item-meta">2025</span>
+                </div>
+            </div>
+            <div class="edu-item">
+                <div style="display:flex; justify-content:space-between;">
+                    <span class="edu-item-title">Networking & Cyber Security Certification — Net4U College</span>
+                    <span class="edu-item-meta">2019 – 2020</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-block">
+        <div class="section-heading">
+            <span class="section-icon">🎖️</span> Military Service & Leadership
+        </div>
+        <div class="edu-grid">
+            <div class="edu-item">
+                <div style="display:flex; justify-content:space-between;">
+                    <span class="edu-item-title">Fighter & Commander — IDF Paratroopers Brigade (Rank: First Sergeant)</span>
+                    <span class="edu-item-meta">2012 – 2015</span>
+                </div>
+                <div>Led combat troops in high-pressure operational environments, demanding rapid critical decision-making and resilience.</div>
+            </div>
+            <div class="edu-item">
+                <div style="display:flex; justify-content:space-between;">
+                    <span class="edu-item-title">Youth Leadership Mentor — "Aharai!" (Impact Scholarships)</span>
+                    <span class="edu-item-meta">2020 – 2023</span>
+                </div>
+                <div>Mentored youth from socio-economic periphery to foster civic involvement and leadership.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
