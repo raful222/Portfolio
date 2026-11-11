@@ -1096,7 +1096,7 @@ const PORTFOLIO_DATA = {
             "period": "2025 – Present",
             "role": "Senior Backend & Full Stack Engineer",
             "company": "Israel Tax Authority (Sha'am)",
-            "location": "Jerusalem / Hybrid",
+            "location": "Be'er-Sheva, Israel",
             "tag": "Government Scale",
             "highlights": [
                 "Designed and deployed enterprise microservices and REST APIs with C#, .NET 8–10, and ASP.NET Core for national-scale systems, plus Angular/TypeScript portals and admin dashboards.",
@@ -1120,7 +1120,7 @@ const PORTFOLIO_DATA = {
             "he": {
                 "role": "מהנדס תוכנה בכיר — Backend & Full Stack",
                 "company": "רשות המסים בישראל (שע\"מ)",
-                "location": "ירושלים / היברידי",
+                "location": "באר שבע, ישראל",
                 "tag": "מערכות לאומיות",
                 "highlights": [
                     "תכנון ופריסה של מיקרו-שירותים וממשקי REST API ב-C#, ‎.NET 8–10 ו-ASP.NET Core למערכות בהיקף לאומי, לצד פורטלים ודשבורדים ניהוליים ב-Angular וב-TypeScript.",
