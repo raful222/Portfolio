@@ -1,434 +1,175 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
+<title>רפאל רובינוב – קורות חיים</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&family=Assistant:wght@400;500;600;700;800&display=swap');
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #1f2a2e; --muted: #4a5559; --soft: #6b7679;
+    --accent: #0f6b6b; --side: #eef1f0; --rule: #d3dbd9;
+  }
+  html, body { width: 210mm; height: 297mm; }
+  body {
+    font-family: "Heebo", "Segoe UI", Arial, sans-serif;
+    color: var(--ink); font-size: 9.6pt; line-height: 1.32;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  a { color: inherit; text-decoration: none; }
+  bdi, .ltr { unicode-bidi: isolate; direction: ltr; }
+  .page { width: 210mm; height: 297mm; display: grid; grid-template-columns: 62mm 1fr; }
+  /* in RTL, grid column 1 is on the right */
+  main  { grid-column: 2; grid-row: 1; padding: 9mm 8mm 6mm 9mm; }
+  aside { grid-column: 1; grid-row: 1; background: var(--side); padding: 9mm 7mm 6mm 7mm;
+          border-left: 1px solid var(--rule); }
 
-@page {
-    size: A4 portrait;
-    margin: 0;
-}
+  h1 { font-weight: 800; font-size: 29pt; line-height: 1.05; }
+  .role { color: var(--accent); font-weight: 700; font-size: 12pt; margin: 3px 0 5px; }
+  .summary { color: var(--muted); text-align: justify; }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+  h2 { font-weight: 700; font-size: 13pt; margin: 8px 0 5px; padding-bottom: 2px;
+       border-bottom: 1.5px solid var(--rule); }
+  .item { margin-bottom: 5px; }
+  .head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .head .t { font-weight: 700; font-size: 10pt; }
+  .date { color: var(--soft); font-weight: 600; white-space: nowrap; font-size: 9.2pt; }
+  .org { color: var(--accent); font-weight: 600; margin: 0 0 2px; }
+  ul { padding-right: 13px; }
+  li { margin: 1px 0; }
+  li::marker { color: var(--accent); }
+  li b { font-weight: 600; }
+  .desc { color: var(--muted); }
+  .link { color: var(--accent); font-weight: 600; }
+  .stack { color: var(--soft); font-size: 8.8pt; direction: ltr; text-align: right; }
 
-body {
-    width: 210mm;
-    height: 297mm;
-    margin: 0;
-    padding: 0;
-    font-family: 'Assistant', 'Heebo', sans-serif;
-    color: #1e293b;
-    background: #ffffff;
-    display: flex;
-    overflow: hidden;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-}
-
-.sidebar {
-    width: 68mm;
-    height: 297mm;
-    background: #e2e8f0;
-    padding: 22px 17px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    border-left: 1px solid #cbd5e1;
-}
-
-.sidebar-section {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.sidebar-title {
-    font-family: 'Heebo', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: #0f172a;
-    border-bottom: 2px solid #94a3b8;
-    padding-bottom: 3px;
-    letter-spacing: 0.5px;
-}
-
-.contact-item {
-    display: flex;
-    flex-direction: column;
-    font-size: 0.76rem;
-    line-height: 1.25;
-}
-
-.contact-label {
-    font-weight: 700;
-    color: #0f172a;
-    font-size: 0.74rem;
-}
-
-.contact-val {
-    color: #334155;
-    text-decoration: none;
-    word-break: break-all;
-    direction: ltr;
-    text-align: right;
-}
-
-.skills-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-}
-
-.skills-list li {
-    font-size: 0.74rem;
-    color: #1e293b;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-weight: 600;
-    direction: ltr;
-    justify-content: flex-end;
-}
-
-.skills-list li::after {
-    content: "•";
-    color: #2563eb;
-    font-weight: bold;
-    font-size: 0.85rem;
-    margin-right: 4px;
-}
-
-.skills-highlight {
-    background: rgba(37, 99, 235, 0.08);
-    border-radius: 4px;
-    padding: 2px 4px;
-    color: #1d4ed8 !important;
-}
-
-.lang-item {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.78rem;
-    color: #1e293b;
-    font-weight: 600;
-}
-
-.lang-level {
-    color: #64748b;
-    font-weight: 400;
-}
-
-/* MAIN CONTENT */
-.main-content {
-    width: 142mm;
-    height: 297mm;
-    padding: 20px 22px 14px 22px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.header-box {
-    margin-bottom: 2px;
-}
-
-.candidate-name {
-    font-family: 'Heebo', sans-serif;
-    font-size: 2.05rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-    color: #0f172a;
-    line-height: 1.1;
-}
-
-.candidate-title {
-    font-family: 'Heebo', sans-serif;
-    font-size: 0.98rem;
-    font-weight: 800;
-    color: #2563eb;
-    margin-top: 2px;
-    margin-bottom: 4px;
-}
-
-.summary-text {
-    font-size: 0.75rem;
-    line-height: 1.36;
-    color: #475569;
-    text-align: justify;
-}
-
-.section-block {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-}
-
-.section-heading {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-family: 'Heebo', sans-serif;
-    font-size: 1.05rem;
-    font-weight: 800;
-    color: #0f172a;
-    border-bottom: 1.5px solid #cbd5e1;
-    padding-bottom: 2px;
-    margin-bottom: 2px;
-}
-
-.section-icon {
-    font-size: 0.95rem;
-}
-
-.entry {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    margin-bottom: 2px;
-}
-
-.entry-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
-.entry-role {
-    font-size: 0.84rem;
-    font-weight: 700;
-    color: #0f172a;
-}
-
-.entry-company {
-    font-size: 0.82rem;
-    font-weight: 700;
-    color: #2563eb;
-}
-
-.entry-period {
-    font-size: 0.74rem;
-    color: #64748b;
-    font-weight: 600;
-    direction: ltr;
-}
-
-.entry-bullets {
-    list-style: disc;
-    padding-right: 16px;
-    margin-top: 1px;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-}
-
-.entry-bullets li {
-    font-size: 0.72rem;
-    line-height: 1.32;
-    color: #334155;
-}
-
-.entry-bullets li strong {
-    color: #0f172a;
-    font-weight: 700;
-}
-
-.edu-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-}
-
-.edu-item {
-    font-size: 0.73rem;
-    line-height: 1.28;
-    color: #334155;
-}
-
-.edu-item-title {
-    font-weight: 700;
-    color: #0f172a;
-    font-size: 0.77rem;
-}
-
-.edu-item-meta {
-    color: #64748b;
-    font-weight: 600;
-    direction: ltr;
-}
-
+  aside h3 { font-weight: 700; font-size: 13.5pt; padding-bottom: 2px; margin: 0 0 7px;
+             border-bottom: 2px solid var(--accent); }
+  aside h3:not(:first-child) { margin-top: 14px; }
+  .k { font-weight: 700; font-size: 8.8pt; margin-top: 6px; }
+  .v { color: var(--muted); font-size: 9pt; word-break: break-word; }
+  aside ul { padding-right: 12px; }
+  aside li { font-size: 9pt; margin: 3px 0; }
+  .lang { display: flex; justify-content: space-between; font-size: 9.4pt; margin: 4px 0; }
+  .lang span:last-child { color: var(--soft); }
 </style>
 </head>
 <body>
+<div class="page">
 
-<div class="sidebar">
-    <div class="sidebar-section">
-        <h3 class="sidebar-title">פרטי התקשרות</h3>
-        <div class="contact-item">
-            <span class="contact-label">טלפון</span>
-            <span class="contact-val">052-7030595</span>
-        </div>
-        <div class="contact-item">
-            <span class="contact-label">אימייל</span>
-            <span class="contact-val">rafi20080@gmail.com</span>
-        </div>
-        <div class="contact-item">
-            <span class="contact-label">מגורים</span>
-            <span class="contact-val">באר שבע</span>
-        </div>
-        <div class="contact-item">
-            <span class="contact-label">LinkedIn</span>
-            <span class="contact-val">linkedin.com/in/refael-robinov</span>
-        </div>
-        <div class="contact-item">
-            <span class="contact-label">GitHub</span>
-            <span class="contact-val">github.com/raful222</span>
-        </div>
-    </div>
+<main>
+  <h1>רפאל רובינוב</h1>
+  <div class="role">מהנדס תוכנה בכיר – <bdi>Backend &amp; Full Stack</bdi></div>
+  <p class="summary">מהנדס תוכנה בכיר עם ניסיון בסביבות פרודקשן מאז 2021, המתמחה ב-<bdi>C#</bdi> וב-<bdi>.NET</bdi>,
+  במערכות מבוזרות ובאינטגרציות ארגוניות. בונה ממשקי <bdi>API</bdi>, שכבות <bdi>Caching</bdi> מבוססות <bdi>Redis</bdi>
+  וצינורות נתונים המחברים מערכות <bdi>Mainframe / Natural</bdi> לשירותי <bdi>.NET</bdi> ולאפליקציות <bdi>Angular</bdi>.
+  מפתח ומתחזק באופן עצמאי מוצרים חיים מקצה לקצה – מה-<bdi>Backend</bdi> ועד הפריסה.</p>
 
-    <div class="sidebar-section">
-        <h3 class="sidebar-title">כישורים טכנולוגיים</h3>
-        <ul class="skills-list">
-            <li>C# & .NET 8–10</li>
-            <li>ASP.NET Core / Web APIs</li>
-            <li>Microservices Architecture</li>
-            <li>Mainframe (MF) & Natural</li>
-            <li>Redis In-Memory Caching</li>
-            <li>Angular (v17–21)</li>
-            <li class="skills-highlight">AI Velocity (Gemini, Claude, Codex)</li>
-            <li>TypeScript & JavaScript</li>
-            <li>SQL Server & Relational DBs</li>
-            <li>End-to-End (E2E) Pipelines</li>
-            <li>TFS / Azure DevOps & Git</li>
-            <li>Distributed Systems</li>
-            <li>Docker & Containerization</li>
-            <li>Agile Methodology & CI/CD</li>
-            <li>Postman & System Testing</li>
-        </ul>
-    </div>
+  <h2>ניסיון תעסוקתי</h2>
 
-    <div class="sidebar-section">
-        <h3 class="sidebar-title">שפות</h3>
-        <div class="lang-item">
-            <span>עברית</span>
-            <span class="lang-level">שפת אם</span>
-        </div>
-        <div class="lang-item">
-            <span>אנגלית</span>
-            <span class="lang-level">רמה גבוהה (Fluent)</span>
-        </div>
-    </div>
+  <div class="item">
+    <div class="head"><span class="t">מהנדס <bdi>Backend &amp; Full Stack</bdi> בכיר</span><span class="date">2025 – היום</span></div>
+    <div class="org">רשות המסים (שע"מ)</div>
+    <ul>
+      <li><b>ארכיטקטורת שירותים:</b> תכנון ופריסה של מיקרו-שירותים וממשקי <bdi>REST API</bdi> ארגוניים ב-<bdi>C#</bdi>, <bdi>.NET 8–10</bdi> ו-<bdi>ASP.NET Core</bdi> למערכות בהיקף לאומי.</li>
+      <li><b><bdi>Mainframe</bdi> וצינורות נתונים:</b> פיתוח ואופטימיזציה של תוכניות <bdi>Natural</bdi> וצינורות המזרימים נתוני <bdi>Mainframe</bdi> לשירותי <bdi>.NET</bdi> ולאפליקציות <bdi>Angular</bdi>.</li>
+      <li><b><bdi>Caching</bdi> וביצועים:</b> הטמעת <bdi>Redis</bdi> ואופטימיזציה של שאילתות <bdi>SQL</bdi> לפתרון צווארי בקבוק ולשיפור זמני תגובה.</li>
+      <li><b>צד לקוח:</b> פיתוח פורטלים ודשבורדים ניהוליים ב-<bdi>Angular</bdi> וב-<bdi>TypeScript</bdi>, המשולבים עם ממשקי ה-<bdi>Backend</bdi>.</li>
+      <li><b>פיתוח בסיוע <bdi>AI</bdi> ואיכות:</b> שימוש ב-<bdi>Claude Code</bdi>, <bdi>Gemini</bdi> ו-<bdi>Codex</bdi> לצד אימות קוד אוטומטי, <bdi>CI/CD</bdi> על גבי <bdi>TFS/Git</bdi> וסקירות קוד עמיתים.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="head"><span class="t">מפתח <bdi>Backend</bdi></span><span class="date">2021 – 2025</span></div>
+    <div class="org"><bdi>Qualish</bdi> בע"מ, עומר</div>
+    <ul>
+      <li><b>מערכות <bdi>Backend</bdi>:</b> פיתוח ממשקי <bdi>API</bdi> ב-<bdi>C#/.NET 6</bdi>, סכמות מסדי נתונים ונקודות קצה של שירותים.</li>
+      <li><b>אינטגרציות:</b> שילוב ספקי סליקה מרובים, התאמות חיוב והתראות אירועים בזמן אמת.</li>
+      <li><b>ויזואליזציית נתונים:</b> בניית דשבורדי <bdi>KPI</bdi> פיננסיים וצינורות נתונים עבור ההנהלה.</li>
+      <li><b>ביצועים:</b> ייעול תהליכי קליטת לקוחות, קיצור זמני שאילתות ושיפור חוויית המשתמש.</li>
+    </ul>
+  </div>
+
+  <h2>פרויקטים נבחרים</h2>
+
+  <div class="item">
+    <div class="head"><span class="t"><bdi>StocksBattle</bdi> – משחק מסחר מרובה משתתפים בזמן אמת</span><a class="link date" href="https://stocksbattle.com">stocksbattle.com</a></div>
+    <div class="desc">משחק מסחר במניות ובקריפטו עם נתוני שוק חיים, קרבות בין שחקנים וטבלאות דירוג; אפליקציית ווב ואפליקציית <bdi>Android</bdi> נייטיב ב-<bdi>Google Play</bdi>.</div>
+    <div class="stack">Next.js · React · TypeScript · Expo / React Native · CI/CD</div>
+  </div>
+
+  <div class="item">
+    <div class="head"><span class="t"><bdi>TryInvest</bdi> – פלטפורמת תיק השקעות ומס ישראלי</span><a class="link date" href="https://tryinvest.co.il">tryinvest.co.il</a></div>
+    <div class="desc">דשבורד תיק השקעות עם חישוב מס רווחי הון לפי הדין הישראלי, נתוני שוק ממספר ספקים כולל תמחור ניירות הבורסה בתל אביב, והפקת דוחות מס ב-<bdi>PDF</bdi>.</div>
+    <div class="stack">C# · .NET · Angular · SQL Server · Docker</div>
+  </div>
+
+  <div class="item">
+    <div class="head"><span class="t"><bdi>VBook</bdi> – פלטפורמת ספרי ילדים מונפשים</span><a class="link date" href="https://vbookapp.co.il">vbookapp.co.il</a></div>
+    <div class="desc">פלטפורמה חיה עם אתר המרונדר בצד השרת, מערכת ניהול תוכן, חשבונות הורים ויוצר ספרים ב-3 צעדים עם הקראה ואיורים שנוצרים ב-<bdi>AI</bdi>; סרטונים שמועלים מקודדים ברקע עם <bdi>ffmpeg</bdi>.</div>
+    <div class="stack">JavaScript · Vite · Node.js / Express · SQLite · Docker · ffmpeg · ElevenLabs API</div>
+  </div>
+
+  <h2>השכלה והכשרה מקצועית</h2>
+
+  <div class="item">
+    <div class="head"><span class="t"><bdi>B.Sc.</bdi> בהנדסת תוכנה – המכללה האקדמית להנדסה סמי שמעון, באר שבע</span><span class="date">2020 – 2023</span></div>
+    <div class="desc">ממוצע: <b>86.7</b> | התמחות בסייבר | פרויקט גמר: מערכת לניהול מבחנים ומניעת העתקות (<bdi>C#, Web API</bdi>).</div>
+  </div>
+  <div class="item">
+    <div class="head"><span class="t">הסמכת <bdi>Automating Success &amp; AI</bdi> – מכללת <bdi>INT</bdi></span><span class="date">2026</span></div>
+    <div class="desc">תהליכי עבודה מבוססי <bdi>AI</bdi>, הנדסת פרומפטים וארכיטקטורות של סוכנים אוטונומיים.</div>
+  </div>
+  <div class="head item"><span class="t">הכשרה מתקדמת ב-<bdi>Angular</bdi> וב-<bdi>.NET</bdi> – ג'ון ברייס</span><span class="date">2025</span></div>
+  <div class="head item"><span class="t">הסמכת רשתות וסייבר – מכללת <bdi>Net4U</bdi></span><span class="date">2019 – 2020</span></div>
+
+  <h2>שירות צבאי ומנהיגות</h2>
+
+  <div class="item">
+    <div class="head"><span class="t">לוחם ומפקד – חטיבת הצנחנים</span><span class="date">2012 – 2015</span></div>
+    <div class="desc">דרגת סמ"ר. הובלת לוחמים בסביבה מבצעית תובענית הדורשת קבלת החלטות מהירה וחוסן.</div>
+  </div>
+  <div class="item">
+    <div class="head"><span class="t">מנטור מנהיגות לנוער – "אחריי!" (מלגות אימפקט)</span><span class="date">2020 – 2023</span></div>
+    <div class="desc">ליווי בני נוער מהפריפריה החברתית בפיתוח מעורבות אזרחית ומנהיגות.</div>
+  </div>
+</main>
+
+<aside>
+  <h3>פרטי קשר</h3>
+  <div class="k">טלפון</div><div class="v"><a class="ltr" href="tel:+972527030595">052-7030595</a></div>
+  <div class="k">אימייל</div><div class="v"><a class="ltr" href="mailto:rafi20080@gmail.com">rafi20080@gmail.com</a></div>
+  <div class="k">מיקום</div><div class="v">באר שבע</div>
+  <div class="k">LinkedIn</div><div class="v"><a class="ltr" href="https://linkedin.com/in/refael-robinov">linkedin.com/in/refael-robinov</a></div>
+  <div class="k">GitHub</div><div class="v"><a class="ltr" href="https://github.com/raful222">github.com/raful222</a></div>
+  <div class="k">פורטפוליו</div><div class="v"><a class="ltr" href="https://raful222.github.io/Portfolio/">raful222.github.io/Portfolio</a></div>
+
+  <h3>כישורי ליבה</h3>
+  <ul>
+    <li><bdi>C# &amp; .NET 8–10</bdi></li>
+    <li><bdi>ASP.NET Core / Web APIs</bdi></li>
+    <li>ארכיטקטורת מיקרו-שירותים</li>
+    <li><bdi>Mainframe</bdi> ו-<bdi>Natural</bdi></li>
+    <li><bdi>Redis Caching</bdi></li>
+    <li><bdi>SQL Server</bdi> ואופטימיזציית שאילתות</li>
+    <li><bdi>Angular &amp; TypeScript</bdi></li>
+    <li><bdi>JavaScript, Next.js &amp; React</bdi></li>
+    <li>צינורות נתונים ואינטגרציות</li>
+    <li>מערכות מבוזרות</li>
+    <li><bdi>Docker</bdi> וקונטיינרים</li>
+    <li><bdi>TFS / Azure DevOps &amp; Git</bdi></li>
+    <li><bdi>CI/CD</bdi> ו-<bdi>Agile</bdi></li>
+    <li><bdi>Postman</bdi> ובדיקות אוטומטיות</li>
+    <li>פיתוח בסיוע <bdi>AI</bdi> (<bdi>Claude Code, Gemini, Codex</bdi>)</li>
+  </ul>
+
+  <h3>שפות</h3>
+  <div class="lang"><span>עברית</span><span>שפת אם</span></div>
+  <div class="lang"><span>אנגלית</span><span>שוטפת</span></div>
+</aside>
+
 </div>
-
-<div class="main-content">
-    <div class="header-box">
-        <h1 class="candidate-name">רפאל רובינוב</h1>
-        <div class="candidate-title">מהנדס תוכנה בכיר — Backend & Full Stack מועצם AI</div>
-        <p class="summary-text">
-            מהנדס תוכנה בעל קרוב ל-6 שנות ניסיון מעשי בפיתוח מערכות מבוזרות עתירות ביצועים, שירותי Microservices, וצנרות נתונים קריטיות בקנה מידה לאומי. מומחיות מעמיקה בצד שרת ב-C# ו-.NET 8–10, כתיבת תוכניות Mainframe (MF / Natural) ליבתיות והזרמת נתונים מקצה לקצה (End-to-End), שכבות Redis ואינטגרציות מורכבות, לצד ממשקי Angular (גרסאות 17–21). משלב באופן פעיל כלי פיתוח מבוססי AI (כגון Claude Code, Gemini, Codex) להאצת קצב הפיתוח (Velocity), דיוק בריפקטורינג ובדיקות איכות תחת עומסי שיא לאומיים.
-        </p>
-    </div>
-
-    <div class="section-block">
-        <div class="section-heading">
-            <span class="section-icon">💼</span> ניסיון מקצועי
-        </div>
-
-        <div class="entry">
-            <div class="entry-header">
-                <div>
-                    <span class="entry-role">מהנדס תוכנה בכיר — Backend & Full Stack</span>, 
-                    <span class="entry-company">רשות המסים בישראל (שע"מ)</span>
-                </div>
-                <span class="entry-period">2025 – הווה</span>
-            </div>
-            <ul class="entry-bullets">
-                <li><strong>ארכיטקטורת שירותי E2E:</strong> הובלת תכנון ופיתוח שירותי Microservices ו-Web APIs מקצה לקצה ב-C# ו-.NET 8–10 לעומסי תעבורה לאומיים בהיקף נרחב, בזמינות גבוהה (High Availability).</li>
-                <li><strong>כתיבת תוכניות Mainframe וצנרות נתונים:</strong> כתיבה ותחזוקה של תוכניות ליבה ב-Mainframe (MF / Natural) לשליפה, עיבוד והזרמת נתונים פיננסיים קריטיים מקצה לקצה ישירות אל שירותי .NET Core וממשקי Angular.</li>
-                <li><strong>מטמון מבוזר ואופטימיזציה:</strong> הטמעת שכבות In-Memory Caching ב-Redis ואופטימיזציית שאילתות מסדי נתונים לצמצום Latency ומניעת צווארי בקבוק בזמני עומס שיא.</li>
-                <li><strong>פיתוח צד לקוח מתקדם:</strong> פיתוח מסכים ומודולים דינמיים ורספונסיביים עבור פורטלים ודשבורדים פנימיים וחיצוניים ב-Angular (גרסאות 17–21) ו-TypeScript.</li>
-                <li><strong>פיתוח מועצם AI ואיכות קוד:</strong> האצת קצב הפיתוח והבדיקות בעזרת כלי סוכנים ו-AI מתקדמים (Gemini, Claude, Codex) בשילוב CI/CD ב-TFS ו-Git וביקורות עמיתים קפדניות.</li>
-            </ul>
-        </div>
-
-        <div class="entry">
-            <div class="entry-header">
-                <div>
-                    <span class="entry-role">מפתח Backend</span>, 
-                    <span class="entry-company">קואליש בע"מ (Qualish Ltd)</span>
-                </div>
-                <span class="entry-period">2021 – 2025</span>
-            </div>
-            <ul class="entry-bullets">
-                <li><strong>מערכות Backend:</strong> תכנון ופיתוח Web APIs, סכמות מסדי נתונים ומיקרו-סרוויסים ב-C# .NET Core 6.</li>
-                <li><strong>אינטגרציות פיננסיות:</strong> אינטגרציה של ספקי סליקה מרובים, התאמת חיובים והתראות אירועים בזמן אמת.</li>
-                <li><strong>ויזואליזציית נתונים:</strong> בניית צנרות נתונים המציגות גרפי מדדי ביצוע (KPIs) חיים לקבלת החלטות הנהלה.</li>
-                <li><strong>ביצועים:</strong> ייעול תהליכי Onboarding של לקוחות, צמצום זמני השהייה ושיפור חוויית המשתמש.</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="section-block">
-        <div class="section-heading">
-            <span class="section-icon">🎓</span> השכלה והסמכות מקצועיות
-        </div>
-        <div class="edu-grid">
-            <div class="edu-item">
-                <div style="display:flex; justify-content:space-between;">
-                    <span class="edu-item-title">תואר ראשון (B.Sc.) בהנדסת תוכנה — SCE המכללה האקדמית ע"ש סמי שמעון</span>
-                    <span class="edu-item-meta">2020 – 2023</span>
-                </div>
-                <div>ממוצע תואר: <strong>86.7</strong> | התמחות ב-<strong>אבטחת מידע וסייבר (Cyber Security)</strong> | פרויקט גמר: מערכת לניהול בחינות ומניעת העתקות ב-C# ו-Web API.</div>
-            </div>
-            <div class="edu-item">
-                <div style="display:flex; justify-content:space-between;">
-                    <span class="edu-item-title">הסמכת אוטומציה ובינה מלאכותית (AI Certification) — מכללת INT</span>
-                    <span class="edu-item-meta">2026</span>
-                </div>
-                <div>סוכני AI מתקדמים, הנדסת פרומפטים ופיתוח מואץ מבוסס מודלים חכמים.</div>
-            </div>
-            <div class="edu-item">
-                <div style="display:flex; justify-content:space-between;">
-                    <span class="edu-item-title">מאסטר קלאס Angular 17–21 ו-.NET 8–10 מתקדם — ג'ון ברייס (John Bryce)</span>
-                    <span class="edu-item-meta">2025</span>
-                </div>
-            </div>
-            <div class="edu-item">
-                <div style="display:flex; justify-content:space-between;">
-                    <span class="edu-item-title">הסמכת רשתות ואבטחת מידע (Networking & Cyber Security) — מכללת Net4U</span>
-                    <span class="edu-item-meta">2019 – 2020</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="section-block">
-        <div class="section-heading">
-            <span class="section-icon">🎖️</span> שירות צבאי ומנהיגות
-        </div>
-        <div class="edu-grid">
-            <div class="edu-item">
-                <div style="display:flex; justify-content:space-between;">
-                    <span class="edu-item-title">לוחם ומפקד — חטיבת הצנחנים (שחרור בדרגת סמ"ר)</span>
-                    <span class="edu-item-meta">2012 – 2015</span>
-                </div>
-                <div>הובלת צוות לוחמים בפעילות מבצעית במבצע "צוק איתן", קבלת החלטות מהירות ומדויקות תחת תנאי לחץ קיצוניים.</div>
-            </div>
-            <div class="edu-item">
-                <div style="display:flex; justify-content:space-between;">
-                    <span class="edu-item-title">חונך מנהיגות נוער — עמותת "אחריי!" (מלגת אימפקט)</span>
-                    <span class="edu-item-meta">2020 – 2023</span>
-                </div>
-                <div>פיתוח מנהיגות צעירה ומעורבות חברתית בקרב נוער מהפריפריה החברתית-כלכלית.</div>
-            </div>
-        </div>
-    </div>
-</div>
-
 </body>
 </html>
