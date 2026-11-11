@@ -21,18 +21,18 @@
   a { color: inherit; text-decoration: none; }
   .page {
     width: 210mm; height: 297mm; display: grid;
-    grid-template-columns: 64mm 1fr;
+    grid-template-columns: 61mm 1fr;
   }
   /* main is first in the DOM so ATS parsers read name + experience first */
-  main  { grid-column: 2; grid-row: 1; padding: 9mm 9mm 6mm 8mm; }
-  aside { grid-column: 1; grid-row: 1; background: var(--side); padding: 9mm 7mm 6mm 7mm;
+  main  { grid-column: 2; grid-row: 1; padding: 9mm 8mm 6mm 7mm; }
+  aside { grid-column: 1; grid-row: 1; background: var(--side); padding: 9mm 6mm 6mm 7mm;
           border-right: 1px solid var(--rule); }
 
   h1 { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-weight: 800;
        font-size: 27pt; letter-spacing: .5px; line-height: 1.05; }
   .role { color: var(--accent); font-weight: 700; font-size: 11pt; letter-spacing: .6px;
           margin: 2px 0 5px; }
-  .summary { color: var(--muted); text-align: justify; }
+  .summary { color: var(--muted); text-align: left; }
 
   h2 { font-family: "Plus Jakarta Sans", "Inter", sans-serif; font-weight: 700;
        font-size: 12pt; margin: 10px 0 5px; padding-bottom: 3px;
@@ -69,7 +69,7 @@
 <main>
   <h1>REFAEL ROBINOV</h1>
   <div class="role">SENIOR BACKEND &amp; FULL STACK ENGINEER</div>
-  <p class="summary">Senior software engineer since 2021, specializing in C#, .NET, distributed systems, and enterprise integrations, from Mainframe / Natural data pipelines to Angular front ends. Independently builds and runs live products end to end.</p>
+  <p class="summary">Senior software engineer with professional experience since 2021, specializing in C#, .NET, distributed systems, and enterprise integrations, from Mainframe / Natural data pipelines to Angular front ends. Independently builds and runs live products end to end.</p>
 
   <h2>Experience</h2>
 
@@ -89,8 +89,8 @@
     <div class="org">Qualish Ltd, Omer</div>
     <ul>
       <li><b>Backend Systems:</b> Developed C#/.NET 6 APIs, database schemas, and endpoints.</li>
-      <li><b>Integrations:</b> Payment gateways, billing reconciliation, real-time notifications.</li>
-      <li><b>Data Visualization:</b> Financial KPI dashboards and data pipelines for executives.</li>
+      <li><b>Integrations:</b> Integrated payment gateways, billing reconciliation, and real-time notifications.</li>
+      <li><b>Data Visualization:</b> Built financial KPI dashboards and data pipelines for executives.</li>
       <li><b>Performance:</b> Streamlined customer onboarding and reduced query latency.</li>
     </ul>
   </div>

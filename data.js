@@ -33,16 +33,16 @@ const TRANSLATIONS = {
                 "label": "Building Since"
             },
             {
-                "value": "8+",
-                "label": "Live Cloud Platforms"
+                "value": "8",
+                "label": "Live Products in Production"
             },
             {
-                "value": "10M+",
-                "label": "Daily Data Transactions"
+                "value": "1",
+                "label": "Native App on Google Play"
             },
             {
-                "value": "19+",
-                "label": "Production & AI Systems"
+                "value": "20",
+                "label": "Projects Built"
             }
         ],
         "projectsHeader": {
@@ -70,35 +70,35 @@ const TRANSLATIONS = {
         },
         "architecture": {
             "subtitle": "// DISTRIBUTED SYSTEMS & SYSTEM DESIGN",
-            "title": "High-Throughput Architecture & Production Scale",
+            "title": "How I Build Production Systems",
             "layer1Title": "Client & Edge Presentation",
-            "layer1Desc": "Angular 19, Next.js 15, PWA offline-first, Three.js WebGL rendering, and sub-second reactive views.",
+            "layer1Desc": "Angular, Next.js / React, offline-first PWAs, and Three.js WebGL rendering.",
             "layer1Pill": "Client Tier",
             "layer2Title": "High-Scale API Gateway",
             "layer2Desc": "ASP.NET Core & .NET 10 microservices, JWT authentication, rate limiting, and RESTful routing.",
             "layer2Pill": "Gateway & Ingestion",
             "layer3Title": "Distributed Cache & Events",
-            "layer3Desc": "Redis In-Memory caching, Pub/Sub event streaming, WebSockets broadcast, and sub-5ms latency pipelines.",
+            "layer3Desc": "Redis in-memory caching, Pub/Sub events, and WebSockets / SSE real-time updates.",
             "layer3Pill": "Low-Latency Memory",
             "layer4Title": "Enterprise Persistence & Bridges",
             "layer4Desc": "SQL Server with optimized indexed queries, Mainframe / Natural legacy connectors, and background AI workers.",
             "layer4Pill": "Persistence & Bridges",
             "metrics": [
                 {
-                    "val": "<50ms",
-                    "label": "Mean API Response Latency"
+                    "val": "C# / .NET",
+                    "label": "Core Backend Stack"
                 },
                 {
-                    "val": "99.99%",
-                    "label": "Production System Uptime"
+                    "val": "Mainframe ↔ .NET",
+                    "label": "Legacy-to-Modern Data Bridges"
                 },
                 {
-                    "val": "10M+",
-                    "label": "Daily Data Records Processed"
+                    "val": "Docker + CI/CD",
+                    "label": "Containerized, Automated Releases"
                 },
                 {
-                    "val": "Zero-Loss",
-                    "label": "Fault-Tolerant Failover & Audits"
+                    "val": "AI-Assisted",
+                    "label": "Claude Code · Codex · Gemini"
                 }
             ]
         },
@@ -152,16 +152,16 @@ const TRANSLATIONS = {
                 "label": "ניסיון מעשי מאז"
             },
             {
-                "value": "8+",
-                "label": "פלטפורמות ענן פעילות"
+                "value": "8",
+                "label": "מוצרים חיים בפרודקשן"
             },
             {
-                "value": "10M+",
-                "label": "טרנזקציות יומיות מעובדות"
+                "value": "1",
+                "label": "אפליקציית Android ב-Google Play"
             },
             {
-                "value": "19+",
-                "label": "מערכות פרודקשן ו-AI"
+                "value": "20",
+                "label": "פרויקטים שנבנו"
             }
         ],
         "projectsHeader": {
@@ -189,35 +189,35 @@ const TRANSLATIONS = {
         },
         "architecture": {
             "subtitle": "// מערכות מבוזרות ו-SYSTEM DESIGN",
-            "title": "ארכיטקטורה ב-High-Throughput וסביבות ייצור",
+            "title": "איך אני בונה מערכות פרודקשן",
             "layer1Title": "שכבת לקוח ותצוגת קצה",
-            "layer1Desc": "Angular 19, Next.js 15, PWA offline-first, רינדור WebGL תלת-ממדי ב-Three.js ותגובתיות מיידית.",
+            "layer1Desc": "Angular, Next.js / React, אפליקציות PWA שעובדות אופליין ורינדור WebGL תלת-ממדי ב-Three.js.",
             "layer1Pill": "שכבת לקוח (Client Tier)",
             "layer2Title": "API Gateway ב-Scale גבוה",
             "layer2Desc": "מיקרו-סרוויסים ב-ASP.NET Core ו-.NET 10, אימות JWT מאובטח, Rate Limiting וניתוב RESTful מהיר.",
             "layer2Pill": "שער כניסה וניתוב",
             "layer3Title": "זיכרון מטמון מבוזר ואירועים",
-            "layer3Desc": "שכבת In-Memory ב-Redis, הזרמת אירועי Pub/Sub, שידור חי ב-WebSockets וצנרות ב-Latency של פחות מ-5ms.",
+            "layer3Desc": "שכבת In-Memory ב-Redis, אירועי Pub/Sub ועדכונים בזמן אמת ב-WebSockets / SSE.",
             "layer3Pill": "זיכרון מהיר ואירועים",
             "layer4Title": "שכבת נתונים וגשרים ארגוניים",
             "layer4Desc": "SQL Server עם אינדוקס ושאילתות מותאמות, מחברי Mainframe / Natural מדור קודם וסוכני AI ברקע.",
             "layer4Pill": "שמירת נתונים ואינטגרציות",
             "metrics": [
                 {
-                    "val": "<50ms",
-                    "label": "זמן תגובה ממוצע ב-API"
+                    "val": "C# / .NET",
+                    "label": "סטאק ה-Backend המרכזי"
                 },
                 {
-                    "val": "99.99%",
-                    "label": "זמינות מערכת בייצור (Uptime)"
+                    "val": "Mainframe ↔ .NET",
+                    "label": "גשרי נתונים ממערכות ליבה"
                 },
                 {
-                    "val": "10M+",
-                    "label": "רשומות מעובדות מדי יום"
+                    "val": "Docker + CI/CD",
+                    "label": "פריסה בקונטיינרים ושחרור אוטומטי"
                 },
                 {
-                    "val": "Zero-Loss",
-                    "label": "התאוששות חסינת תקלות וגיבוי"
+                    "val": "AI-Assisted",
+                    "label": "Claude Code · Codex · Gemini"
                 }
             ]
         },
@@ -269,16 +269,16 @@ const PORTFOLIO_DATA = {
             "label": "Building Since"
         },
         {
-            "value": "8+",
-            "label": "Live Cloud Platforms"
+            "value": "8",
+            "label": "Live Products in Production"
         },
         {
-            "value": "10M+",
-            "label": "Daily Data Transactions"
+            "value": "1",
+            "label": "Native App on Google Play"
         },
         {
-            "value": "19+",
-            "label": "Production & AI Systems"
+            "value": "20",
+            "label": "Projects Built"
         }
     ],
     "skillCategories": [
@@ -351,7 +351,7 @@ const PORTFOLIO_DATA = {
             "icon": "layout",
             "skills": [
                 {
-                    "name": "Angular (v17-19+)",
+                    "name": "Angular",
                     "level": 92
                 },
                 {
@@ -426,27 +426,28 @@ const PORTFOLIO_DATA = {
             "category": ["games", "ai"],
             "tag": "Real-Time PvP Trading Arena",
             "featured": true,
-            "description": "Next-generation real-time PvP stock & crypto trading arena live at stocksbattle.com. Features live market feeds, dynamic leverage (up to 100x Degen Mode), real-time leaderboards, Clan Wars, and sub-50ms execution latency.",
+            "description": "Real-time PvP stock & crypto trading game, live at stocksbattle.com and as a native Android app on Google Play. Live market feeds, dynamic leverage (up to 100x Degen Mode), real-time leaderboards, and Clan Wars.",
             "longDesc": "StocksBattle transforms financial markets into an adrenaline-fueled competitive multiplayer arena, live in production at stocksbattle.com. Built on Next.js 16 App Router, React 19, TypeScript, and Tailwind CSS v4, the platform integrates live market feeds (Yahoo Finance & live providers), high-leverage dynamic risk engines (up to 100x Degen Mode), real-time WebSockets / SSE game tick loops, Clan Wars territory diplomacy, interactive podium settlement ceremonies with XP/trophy economies, and sound effects.",
             "tech": [
                 "Next.js 16",
                 "React 19",
                 "TypeScript",
                 "Tailwind CSS v4",
-                "WebSockets / SSE",
-                "Real-Time Orderbook",
+                "Expo / React Native",
+                "Google Play",
                 "Dynamic Leverage (Up to 100x)",
                 "Clan Wars Engine",
-                "Live Financial APIs"
+                "Live Financial APIs",
+                "CI/CD"
             ],
-            "github": "https://github.com/raful222",
+            "github": "",
             "demo": "https://stocksbattle.com",
             "status": "Live in Production (stocksbattle.com)",
             "badge": "Premier Flagship (stocksbattle.com)",
             "icon": "swords",
             "he": {
                 "title": "StocksBattle — זירת מסחר PvP מרובת משתתפים בזמן אמת",
-                "description": "זירת מסחר תחרותית (PvP) בזמן אמת במניות וקריפטו — פעילה באוויר ב-stocksbattle.com. מנוע מינוף דינמי של עד פי 100 (Degen Mode), נתוני שוק חיים, לוחות תוצאות חיים, מלחמת שבטים (Clan Wars) וביצועים מהירים במיוחד.",
+                "description": "משחק מסחר תחרותי (PvP) בזמן אמת במניות וקריפטו — פעיל ב-stocksbattle.com וכאפליקציית Android נייטיב ב-Google Play. מינוף דינמי של עד פי 100 (Degen Mode), נתוני שוק חיים, טבלאות דירוג חיות ומלחמת שבטים (Clan Wars).",
                 "longDesc": "פלטפורמת הדגל StocksBattle הופכת את שוק ההון לזירת קרבות מרובת משתתפים מהירה וממכרת, פעילה רשמית ב-stocksbattle.com. המערכת מבוססת Next.js 16, React 19, TypeScript ו-Tailwind CSS v4, ומשלבת נתוני שוק פיננסיים חיים (מניות וקריפטו), מנוע מינוף דינמי של עד פי 100, תקשורת WebSockets / SSE בזמן אמת, מערכת מלחמת שבטים (Clans), טקסי הכרזת מנצחים על פודיום מונפש עם חלוקת XP וגביעים, ואפקטים קוליים עשירים.",
                 "badge": "פרויקט הדגל המוביל (stocksbattle.com)",
                 "tag": "זירת מסחר תחרותית PvP",
@@ -483,19 +484,20 @@ const PORTFOLIO_DATA = {
         },
         {
             "id": "try-invest",
-            "title": "TryInvest — Professional Investment & Portfolio Platform",
+            "title": "TryInvest — Investment Portfolio & Israeli Tax Platform",
             "category": "ai",
-            "tag": "FinTech & Investment",
+            "tag": "FinTech & Tax",
             "featured": true,
-            "description": "Advanced investment and portfolio management platform offering market analysis, real-time portfolio tracking, risk-adjusted metrics, and automated strategy simulation.",
-            "longDesc": "TryInvest is an end-to-end investment ecosystem providing retail and institutional users with advanced financial modeling, real-time PnL tracking, asset allocation backtesting, and automated risk management.",
+            "description": "Portfolio dashboard for Israeli investors: tracks holdings across brokers, prices TASE and US securities from multiple data providers, and calculates Israeli capital-gains tax with generated PDF reports.",
+            "longDesc": "Built with C# .NET 10 Web API, Angular, and SQL Server, deployed with Docker through a CI/CD pipeline. Includes a multi-provider quote and price-history chain, CPI-linked tax calculations, PDF tax reports (QuestPDF), encrypted broker tokens, and subscription tiers.",
             "tech": [
                 "C# .NET 10",
                 "Angular",
                 "Web API",
-                "Chart.js",
                 "SQL Server",
-                "Financial Modeling"
+                "Docker",
+                "CI/CD",
+                "QuestPDF"
             ],
             "github": "",
             "demo": "https://tryinvest.co.il/",
@@ -503,11 +505,11 @@ const PORTFOLIO_DATA = {
             "badge": "Flagship FinTech (tryinvest.co.il)",
             "icon": "dollar-sign",
             "he": {
-                "title": "TryInvest — פלטפורמת השקעות וניהול תיקים מקצועית",
-                "description": "פלטפורמה מתקדמת לניתוח שווקים, מעקב בזמן אמת אחר תיקי השקעות, מדדי תשואה מותאמי-סיכון וסימולציות אלגוריתמיות.",
-                "longDesc": "מערכת השקעות וניהול תיקים מקצועית מקצה לקצה. מספקת למשקיעים ניתוח מעמיק של ביצועים, מעקב PnL חי, בדיקות עבר (Backtesting) של הקצאת נכסים וניהול סיכונים אוטומטי.",
+                "title": "TryInvest — פלטפורמת תיק השקעות ומס ישראלי",
+                "description": "דשבורד תיק השקעות למשקיעים ישראלים: מעקב אחר החזקות בכמה ברוקרים, תמחור ניירות בורסת תל אביב וארה\"ב ממספר ספקי נתונים, וחישוב מס רווחי הון לפי הדין הישראלי עם הפקת דוחות PDF.",
+                "longDesc": "נבנה ב-C# .NET 10 Web API, Angular ו-SQL Server, ונפרס ב-Docker דרך צינור CI/CD. כולל שרשרת ספקי מחירים והיסטוריה, חישובי מס צמודי מדד, דוחות מס ב-PDF (QuestPDF), הצפנת טוקנים של ברוקרים ומסלולי מנוי.",
                 "badge": "ספינת דגל בפינטק (tryinvest.co.il)",
-                "tag": "פינטק והשקעות"
+                "tag": "פינטק ומס"
             },
             "image": "assets/projects/tryinvest/dashboard.png",
             "images": [
@@ -545,7 +547,7 @@ const PORTFOLIO_DATA = {
                 "Unity Engine Parity",
                 "Audio FX"
             ],
-            "github": "https://github.com/raful222",
+            "github": "",
             "demo": "#",
             "status": "Complete 3D RTS Game",
             "badge": "3D RTS Game Engine",
@@ -598,7 +600,7 @@ const PORTFOLIO_DATA = {
                 "Viral Sharing",
                 "Animations"
             ],
-            "github": "https://github.com/raful222",
+            "github": "",
             "demo": "#riddle-modal",
             "isPlayable": true,
             "status": "Flutter & Web App",
@@ -631,7 +633,7 @@ const PORTFOLIO_DATA = {
                 "WebSockets",
                 "RTL / i18n (6 Languages)"
             ],
-            "github": "https://github.com/raful222",
+            "github": "",
             "demo": "#",
             "status": "Complete MMO Strategy Game",
             "badge": "Medieval MMO Strategy",
@@ -683,8 +685,8 @@ const PORTFOLIO_DATA = {
                 "Docker",
                 "Autonomous Agents"
             ],
-            "github": "https://github.com/raful222/discord-qa-bot",
-            "demo": "https://github.com/raful222/discord-qa-bot",
+            "github": "",
+            "demo": "",
             "status": "Autonomous Agent System",
             "badge": "CrewAI & Gemini Autonomous Agent",
             "icon": "bot",
@@ -699,25 +701,34 @@ const PORTFOLIO_DATA = {
         },
         {
             "id": "vbook",
-            "title": "VBOOK — Smart Booking & Appointment System",
+            "title": "VBook — Animated Children's Books Platform",
             "category": "web",
-            "tag": "Live SaaS Platform",
+            "tag": "Live Product & CMS",
             "featured": true,
-            "description": "Production calendar and appointment reservation web application with sub-second page loads, real-time availability sync, conflict prevention, and automated reminder webhooks.",
-            "longDesc": "Full-scale booking SaaS platform engineered with modern reactive architecture, high concurrency calendar synchronization, and automated notification pipelines.",
+            "description": "Live platform that turns children's books into animated digital books. Server-rendered site, admin CMS, parent accounts, and a 3-step book maker with AI-generated narration and illustrations.",
+            "longDesc": "Dockerized Node.js / Express backend with SQLite and a Vite frontend, served with server-side rendering for SEO. Includes an admin panel with video uploads (asynchronously transcoded to streamable 1080p MP4 with ffmpeg), parent accounts, built-in analytics, nightly verified database backups, and a book maker narrated through the ElevenLabs API.",
             "tech": [
+                "JavaScript",
                 "Vite",
-                "Modern JavaScript",
-                "REST API",
+                "Node.js / Express",
+                "SQLite",
+                "SSR",
                 "Docker",
-                "Responsive UI",
-                "SaaS"
+                "ffmpeg",
+                "ElevenLabs API"
             ],
             "github": "",
             "demo": "https://vbookapp.co.il/",
             "status": "Live in Production",
-            "badge": "Live SaaS (vbookapp.co.il)",
-            "icon": "calendar",
+            "badge": "Live Product (vbookapp.co.il)",
+            "icon": "book-open",
+            "he": {
+                "title": "VBook — פלטפורמת ספרי ילדים מונפשים",
+                "description": "פלטפורמה חיה שהופכת ספרי ילדים לספרים דיגיטליים מונפשים. אתר המרונדר בצד השרת, מערכת ניהול תוכן, חשבונות הורים ויוצר ספרים ב-3 צעדים עם הקראה ואיורים שנוצרים ב-AI.",
+                "longDesc": "שרת Node.js / Express עם SQLite וצד לקוח ב-Vite, בקונטיינר Docker ועם רינדור בצד השרת לטובת SEO. כולל פאנל ניהול עם העלאת סרטונים (קידוד אסינכרוני ל-MP4 ב-1080p עם ffmpeg), חשבונות הורים, אנליטיקה מובנית, גיבויי מסד נתונים ליליים מאומתים ויוצר ספרים עם הקראה דרך ElevenLabs API.",
+                "badge": "מוצר חי (vbookapp.co.il)",
+                "tag": "מוצר חי ו-CMS"
+            },
             "image": "assets/projects/vbook.jpg"
         },
         {
@@ -743,10 +754,10 @@ const PORTFOLIO_DATA = {
             "badge": "Live Cloud (mtalgo.duckdns.org)",
             "icon": "trending-up",
             "he": {
-                "title": "MT-Algo — מנוע מסחר כמותי ואינדיקטורים פיננסיים",
-                "description": "סוויטת אינדיקטורים כמותיים מותאמת אישית ל-MetaTrader ו-TradingView. חישוב פערי מחיר בזמן אמת, איתור תבניות מחיר מבוססות רשתות עצביות והתראות מסחר אוטומטיות.",
-                "longDesc": "אלגוריתמי מסחר מונחי סטטיסטיקה ו-Machine Learning. מספקת מודלי נזילות, התראות קוליות/ויזואליות בזמן אמת, וחישוב מומנטום עבור סוחרי אופציות ומניות.",
-                "badge": "מנוע מסחר כמותי",
+                "title": "MT-Algo — מערכת מסחר אוטומטית מבוססת ML",
+                "description": "מנוע מסחר אוטומטי שמשלב Backend ב-C# .NET 10 עם מיקרו-שירות ראייה ממוחשבת ב-Python. מזהה מבני שוק באמצעות CNN (תבנית Cup & Handle) ומבצע עסקאות דרך אינטגרציה עם Interactive Brokers.",
+                "longDesc": "ארכיטקטורת מסחר אוטומטית מלאה: ‎.NET 10 מנהל את תזמור העסקאות והביצוע מול IBKR, ו-Python מעבד תמונות גרף במודלי CNN כדי לאשר תבניות לפני ביצוע. כולל דשבורד Angular והתראות Discord.",
+                "badge": "ענן חי (mtalgo.duckdns.org)",
                 "tag": "מסחר אלגוריתמי"
             },
             "image": "assets/projects/mt-algo.jpg"
@@ -780,8 +791,8 @@ const PORTFOLIO_DATA = {
             "category": "games",
             "tag": "Educational PWA & Audio",
             "featured": true,
-            "description": "Production offline-first PWA for kids aged 3–6 with 193 recorded Hebrew voice tracks, interactive phonics challenges, letter tracing with canvas coverage calculation, and zero-latency performance.",
-            "longDesc": "A zero-latency, offline Progressive Web App with custom synthesized Hebrew voice recognition prompts, parental analytics dashboard, and kid-friendly gamified progression.",
+            "description": "Offline-first PWA for kids aged 3–6 that teaches the Hebrew alphabet, with AI-generated Hebrew narration (ElevenLabs), phonics challenges, and letter tracing scored by canvas coverage.",
+            "longDesc": "Vanilla JavaScript Progressive Web App that works fully offline through a versioned service worker. Every spoken phrase is generated with ElevenLabs and cached as audio, including personalized clips that say the child's name, with gamified progression built for small children.",
             "tech": [
                 "PWA",
                 "JavaScript",
@@ -821,31 +832,31 @@ const PORTFOLIO_DATA = {
         },
         {
             "id": "pulsebe",
-            "title": "PulseBE — High-Throughput Microservice Bus",
-            "category": "backend",
-            "tag": "High-Scale Backend",
+            "title": "Pulse&Be — Business Website with Built-in CMS",
+            "category": "web",
+            "tag": "Business Site & CMS",
             "featured": true,
-            "description": "High-performance backend event engine and microservice gateway designed for low-latency message routing, async caching pipelines, and distributed queue handling.",
-            "longDesc": "Engineered to deliver high throughput, Redis cache hydration, and ultra-fast RESTful API endpoints under high concurrency.",
+            "description": "Live business website for a people- and organizational-development practice: services, workshops, testimonials, and articles, all editable through a built-in CMS.",
+            "longDesc": "Hebrew RTL site built on vinext (a Next.js-compatible framework on Vite) with React Server Components and a SQLite (D1) content store. Every section, including the theme colors, is managed from the CMS. Runs in Docker on a shared production server.",
             "tech": [
-                ".NET 10",
-                "Redis",
-                "C#",
-                "Microservices Architecture",
-                "Docker",
-                "REST API"
+                "vinext (Next.js on Vite)",
+                "React",
+                "SQLite / D1",
+                "CMS",
+                "RTL / Hebrew",
+                "Docker"
             ],
             "github": "",
             "demo": "https://pulsebe.duckdns.org",
-            "status": "Live Microservice",
-            "badge": "Live Backend (pulsebe.duckdns.org)",
-            "icon": "zap",
+            "status": "Live in Production",
+            "badge": "Live Site (pulsebe.duckdns.org)",
+            "icon": "globe",
             "he": {
-                "title": "PulseBE — אפיק מיקרו-סרוויסים בעומסים גבוהים",
-                "description": "מנוע אירועים ושער מיקרו-סרוויסים בעל ביצועים גבוהים. מיועד לניתוב הודעות ב-Latency נמוך במיוחד, צנרות Cache אסינכרוניות וניהול תורים מבוזרים.",
-                "longDesc": "נבנה לעמידה בעומסים כבדים, עדכון מהיר של שכבת Redis ותגובתיות מיידית בממשקי REST תחת תעבורה בו-זמנית גבוהה.",
-                "badge": "מיקרו-סרוויס בייצור",
-                "tag": "תשתיות בקאנד ו-Scale"
+                "title": "Pulse&Be — אתר תדמית עם מערכת ניהול תוכן",
+                "description": "אתר תדמית חי לעסק בתחום פיתוח אנשים וארגונים: שירותים, סדנאות, המלצות ומאמרים – הכול ניתן לעריכה דרך מערכת ניהול תוכן מובנית.",
+                "longDesc": "אתר עברי (RTL) שנבנה על vinext (פריימוורק תואם Next.js על Vite) עם React Server Components ומאגר תוכן ב-SQLite (D1). כל סקשן, כולל צבעי העיצוב, מנוהל מה-CMS. רץ ב-Docker על שרת פרודקשן משותף.",
+                "badge": "אתר חי (pulsebe.duckdns.org)",
+                "tag": "אתר תדמית ו-CMS"
             },
             "image": "assets/projects/pulsebe.jpg"
         },
@@ -884,24 +895,24 @@ const PORTFOLIO_DATA = {
             "category": "games",
             "tag": "3D Game Engine & Sim",
             "featured": true,
-            "description": "Deep incremental tower economy simulation game. Features multi-tier business progression, automated worker AI, custom 3D low-poly character rendering, and mathematical economic balance modeled in Python.",
-            "longDesc": "Features custom 3D WebGL scenes, procedural floor upgrades, automated offline revenue calculations, and balanced pacing modeled through Python Monte-Carlo economic simulations.",
+            "description": "3D idle tower game where players grow a multi-floor restaurant business. Worker AI, floor-by-floor upgrades, offline earnings, and an economy balanced with Python simulations. Prototyped in Godot, now ported to Unity for Android.",
+            "longDesc": "Started as a Godot 4 prototype and ported to Unity (C#) for mobile, tested on real Android devices. Features worker and customer AI, floor upgrades, offline revenue, player XP levels, a procedural sound layer, and pacing tuned through Python economy simulations.",
             "tech": [
-                "Three.js",
-                "WebGL",
-                "Python (Sim Engine)",
-                "JavaScript ES6+",
-                "HTML5 Canvas"
+                "Unity",
+                "C#",
+                "Godot 4 (prototype)",
+                "Python (economy sim)",
+                "Android"
             ],
-            "github": "https://github.com/raful222/IdleForYou",
+            "github": "",
             "demo": "#",
             "status": "In Active Development",
             "badge": "3D Game Engine",
             "icon": "gamepad-2",
             "he": {
                 "title": "IdleForYou — משחק סימולציה כלכלית בתלת-ממד",
-                "description": "משחק סימולציה כלכלית של מגדל עסקים אינקרמנטלי. התקדמות עסקים רב-שלבית, בינה מלאכותית של עובדים, מודלים תלת-ממדיים ואיזון כלכלי מתמטי שנבדק ב-Python.",
-                "longDesc": "סצנות WebGL תלת-ממדיות ייחודיות, שדרוג קומות פרוצדורלי, חישוב רווחים במצב לא מקוון ומודל כלכלי מבוסס סימולציות מונטה-קרלו.",
+                "description": "משחק Idle תלת-ממדי שבו השחקן מגדל מגדל מסעדות רב-קומתי. בינה מלאכותית של עובדים, שדרוג קומה אחר קומה, רווחים במצב לא מקוון וכלכלה שאוזנה בסימולציות Python. אב-טיפוס ב-Godot, והגרסה הנוכחית ב-Unity ל-Android.",
+                "longDesc": "התחיל כאב-טיפוס ב-Godot 4 והועבר ל-Unity (C#) למובייל, עם בדיקות על מכשירי Android אמיתיים. כולל בינה מלאכותית של עובדים ולקוחות, שדרוגי קומות, הכנסה במצב לא מקוון, רמות שחקן, שכבת סאונד פרוצדורלית וקצב משחק שכויל בסימולציות כלכליות ב-Python.",
                 "badge": "מנוע משחק תלת-ממד",
                 "tag": "מנוע משחק תלת-ממדי"
             },
@@ -1088,12 +1099,10 @@ const PORTFOLIO_DATA = {
             "location": "Jerusalem / Hybrid",
             "tag": "Government Scale",
             "highlights": [
-                "Architected and deployed end-to-end enterprise microservices and high-throughput RESTful Web APIs using C#, .NET 8–10, and ASP.NET Core under national-scale workloads.",
-                "Authored and optimized core Mainframe (MF / Natural) programs and data routines, establishing full end-to-end data pipelines that seamlessly stream national tax data into modern .NET services and Angular client apps.",
-                "Engineered robust integration middleware bridging modern .NET microservices, Redis distributed caching, and legacy Mainframe layers with zero-loss data integrity.",
-                "Spearheaded server-side performance tuning, query optimization, and Redis caching strategies to eliminate latency bottlenecks and handle mission-critical transactions.",
-                "Developed rich, reactive client-side interfaces and management dashboards using Angular (versions 17–21) and TypeScript, integrating directly with backend APIs.",
-                "Enforced enterprise-grade code quality, comprehensive automated testing, and agile CI/CD release cycles utilizing TFS and Git."
+                "Designed and deployed enterprise microservices and REST APIs with C#, .NET 8–10, and ASP.NET Core for national-scale systems, plus Angular/TypeScript portals and admin dashboards.",
+                "Developed and optimized Natural programs and pipelines feeding mainframe data into .NET services and Angular apps.",
+                "Implemented Redis caching and optimized SQL queries to address processing bottlenecks and improve response times.",
+                "Used Claude Code, Gemini, and Codex alongside automated code verification, TFS/Git CI/CD, and peer reviews."
             ],
             "tech": [
                 "C#",
@@ -1103,10 +1112,10 @@ const PORTFOLIO_DATA = {
                 "ASP.NET Core",
                 "Microservices",
                 "Redis",
-                "Angular 17–21",
+                "Angular",
                 "SQL Server",
                 "TFS / Git",
-                "E2E Architecture"
+                "Data Pipelines"
             ],
             "he": {
                 "role": "מהנדס תוכנה בכיר — Backend & Full Stack",
@@ -1114,12 +1123,10 @@ const PORTFOLIO_DATA = {
                 "location": "ירושלים / היברידי",
                 "tag": "מערכות לאומיות",
                 "highlights": [
-                    "הובלת ארכיטקטורה ופיתוח שירותי Microservices ו-Web APIs מקצה לקצה (End-to-End) ב-C# ו-.NET 8–10 לעומסי תעבורה לאומיים בהיקף נרחב.",
-                    "כתיבה ותחזוקה של תוכניות Mainframe (MF / Natural) ליבתיות לשליפה, עיבוד והזרמת נתונים מקצה לקצה — החל משכבת הליבה במיינפריים ועד למיקרו-סרוויסים ב-.NET וממשקי המשתמש.",
-                    "פיתוח מודולי גישור ואינטגרציה עתירי ביצועים בין מיקרו-סרוויסים מודרניים ושכבות מטמון Redis לבין מערכות Mainframe ליבתיות, תוך הבטחת שלמות נתונים מקסימלית.",
-                    "הטמעת שכבות In-Memory Caching ב-Redis ואופטימיזציית ביצועי שרת ומסדי נתונים לצמצום Latency ומניעת צווארי בקבוק בזמני עומס שיא.",
-                    "פיתוח ממשקי משתמש ומודולי ניהול דינמיים ורספונסיביים בצד לקוח ב-Angular (גרסאות 17–21) ו-TypeScript בחיבור ישיר לשירותי ה-Backend.",
-                    "הובלת סטנדרטים גבוהים של איכות קוד, סקירות קוד (Code Reviews) ותהליכי CI/CD וניהול גרסאות ב-TFS ו-Git."
+                    "תכנון ופריסה של מיקרו-שירותים וממשקי REST API ב-C#, ‎.NET 8–10 ו-ASP.NET Core למערכות בהיקף לאומי, לצד פורטלים ודשבורדים ניהוליים ב-Angular וב-TypeScript.",
+                    "פיתוח ואופטימיזציה של תוכניות Natural וצינורות המזרימים נתוני Mainframe לשירותי ‎.NET ולאפליקציות Angular.",
+                    "הטמעת Redis ואופטימיזציה של שאילתות SQL לפתרון צווארי בקבוק ולשיפור זמני תגובה.",
+                    "שימוש ב-Claude Code, ‏Gemini ו-Codex לצד אימות קוד אוטומטי, CI/CD על גבי TFS/Git וסקירות קוד עמיתים."
                 ]
             }
         },
@@ -1130,10 +1137,10 @@ const PORTFOLIO_DATA = {
             "location": "Omer, Israel",
             "tag": "Enterprise SaaS",
             "highlights": [
-                "Architected end-to-end Web APIs, database schemas, and microservice endpoints in C# .NET 6.",
-                "Integrated multi-provider payment gateways, billing reconciliation, and real-time event notifications.",
-                "Engineered dynamic data visualization pipelines presenting live financial KPI charts to executive stakeholders.",
-                "Streamlined customer onboarding workflows, cutting database latency and improving UX."
+                "Developed C#/.NET 6 APIs, database schemas, and endpoints.",
+                "Integrated payment gateways, billing reconciliation, and real-time notifications.",
+                "Built financial KPI dashboards and data pipelines for executives.",
+                "Streamlined customer onboarding and reduced query latency."
             ],
             "tech": [
                 "C#",
@@ -1149,10 +1156,10 @@ const PORTFOLIO_DATA = {
                 "location": "עומר, ישראל",
                 "tag": "Enterprise SaaS",
                 "highlights": [
-                    "תכנון ופיתוח ארכיטקטורת Web APIs מקצה לקצה, סכמות מסדי נתונים ונקודות קצה של מיקרו-סרוויסים ב-C# .NET 6.",
-                    "אינטגרציה של ספקי סליקה מרובים, התאמת חיובים פיננסיים והתראות אירועים בזמן אמת.",
-                    "בניית צנרות ויזואליזציית נתונים דינמיות המציגות גרפי מדדי ביצוע (KPIs) חיים להנהלה הבכירה.",
-                    "ייעול תהליכי Onboarding של לקוחות, צמצום זמני השהייה במסדי נתונים ושיפור חוויית המשתמש."
+                    "פיתוח ממשקי API ב-C#/.NET 6, סכמות מסדי נתונים ונקודות קצה.",
+                    "שילוב ספקי סליקה מרובים, התאמות חיוב והתראות אירועים בזמן אמת.",
+                    "בניית דשבורדי KPI פיננסיים וצינורות נתונים עבור ההנהלה.",
+                    "ייעול קליטת לקוחות וקיצור זמני שאילתות."
                 ]
             }
         }
@@ -1163,12 +1170,12 @@ const PORTFOLIO_DATA = {
             "institution": "SCE - Shamoon College of Engineering, Be'er-Sheva",
             "period": "2020 – 2023",
             "note": "GPA: 86.7 | Specialization in Cyber Security",
-            "badge": "Academic Honors (86.7 GPA)",
+            "badge": "GPA 86.7",
             "he": {
                 "degree": "תואר ראשון (B.Sc.) בהנדסת תוכנה",
                 "institution": "SCE - המכללה האקדמית להנדסה ע\"ש סמי שמעון, באר שבע",
                 "note": "ממוצע: 86.7 | התמחות באבטחת מידע וסייבר (Cyber Security)",
-                "badge": "הצטיינות אקדמית (ממוצע 86.7)"
+                "badge": "ממוצע 86.7"
             }
         },
         {
@@ -1185,12 +1192,12 @@ const PORTFOLIO_DATA = {
             }
         },
         {
-            "degree": "Advanced Angular 19 & .NET 8-10 Masterclasses",
+            "degree": "Advanced Angular & .NET Training",
             "institution": "John Bryce",
             "period": "2025",
-            "note": "Cutting-edge Enterprise Full Stack Patterns & Architecture",
+            "note": "Enterprise full-stack patterns and architecture",
             "he": {
-                "degree": "מאסטר קלאס Angular 19 ו-.NET 8-10 מתקדם",
+                "degree": "הכשרה מתקדמת ב-Angular וב-‎.NET",
                 "institution": "ג'ון ברייס (John Bryce)",
                 "note": "דפוסי ארכיטקטורה ו-Full Stack ארגוני מתקדם"
             }

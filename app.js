@@ -62,7 +62,7 @@ window.applyLanguage = function(lang) {
 
     const heroCvBtn = document.getElementById("hero-cta-cv");
     if (heroCvBtn) {
-        heroCvBtn.href = isHe ? "cv/Refael_Robinov_CV_HE.pdf?v=20261111r4" : "cv/Refael_Robinov_CV_EN.pdf?v=20261111r4";
+        heroCvBtn.href = isHe ? "cv/Refael_Robinov_CV_HE.pdf?v=20261111r5" : "cv/Refael_Robinov_CV_EN.pdf?v=20261111r5";
     }
 
     // Projects Header & Search
@@ -338,11 +338,7 @@ function renderSkills() {
                 ${cat.skills.map(s => `
                     <div class="skill-item">
                         <div class="skill-item-header">
-                            <span>${s.name}</span>
-                            <span class="skill-pct">${s.level}%</span>
-                        </div>
-                        <div class="progress-track">
-                            <div class="progress-bar" style="width: ${s.level}%;"></div>
+                            <span dir="auto">${s.name}</span>
                         </div>
                     </div>
                 `).join("")}
