@@ -1,5 +1,5 @@
 // Portfolio Data Configuration — Refael Robinov
-// Cutting-Edge .NET 10, Agentic AI & Modern Full-Stack Showcase
+// .NET, AI-assisted development & full-stack projects
 
 const TRANSLATIONS = {
     "en": {
@@ -21,7 +21,7 @@ const TRANSLATIONS = {
             "greeting": "Hi, I'm",
             "name": "Refael Robinov",
             "subtitle": "Senior Backend & Full Stack Engineer",
-            "bio": "Architecting high-scale distributed systems, high-throughput APIs, and intelligent web applications. Production experience since 2021 in mission-critical environments.",
+            "bio": "Building backend services, APIs, and data pipelines for national-scale systems at the Israel Tax Authority, and shipping my own live products end to end. Professional experience since 2021.",
             "btnExplore": "Explore Projects & Games",
             "btnCv": "Download CV (PDF)",
             "btnContact": "Get In Touch",
@@ -114,12 +114,12 @@ const TRANSLATIONS = {
         },
         "contactHeader": {
             "subtitle": "// GET IN TOUCH",
-            "title": "Let's build something exceptional.",
-            "desc": "Whether you are looking for a senior backend architect, high-throughput systems developer, or exploring innovative tech partnerships — feel free to reach out directly.",
+            "title": "Let's talk.",
+            "desc": "Open to senior backend and full-stack roles. Feel free to reach out directly by email or phone.",
             "sendEmail": "Send Direct Email",
             "callPhone": "Call Directly"
         },
-        "footer": "© 2026 Refael Robinov. Engineered with precision, modern WebGL, and clean code."
+        "footer": "© 2026 Refael Robinov. Built with vanilla JavaScript and WebGL."
     },
     "he": {
         "nav": {
@@ -136,11 +136,11 @@ const TRANSLATIONS = {
             "langBtn": "English"
         },
         "hero": {
-            "status": "פתוח להזדמנויות Senior / Staff ופרויקטים בעלי אימפקט",
+            "status": "פתוח להזדמנויות Senior ולפרויקטים מעניינים",
             "greeting": "שלום, אני",
             "name": "רפאל רובינוב",
-            "subtitle": "מהנדס תוכנה בכיר — Backend & Full-Stack מועצם AI",
-            "bio": "מומחה בארכיטקטורת מערכות מבוזרות ב-Scale גבוה, ממשקי API מהירים ויישומי Web ו-AI מתקדמים. ניסיון מעשי מאז 2021 בפיתוח סביבות ייצור קריטיות (Mission-Critical).",
+            "subtitle": "מהנדס תוכנה בכיר — Backend & Full Stack",
+            "bio": "פיתוח שירותי Backend, ממשקי API וצינורות נתונים למערכות בהיקף לאומי ברשות המסים, ובנייה של מוצרים חיים משלי מקצה לקצה. ניסיון מקצועי מאז 2021.",
             "btnExplore": "צפה בפרויקטים ובמשחקים",
             "btnCv": "הורד קורות חיים (PDF)",
             "btnContact": "יצירת קשר ישירה",
@@ -233,34 +233,34 @@ const TRANSLATIONS = {
         },
         "contactHeader": {
             "subtitle": "// צור קשר",
-            "title": "בואו נבנה משהו יוצא דופן ביחד.",
-            "desc": "בין אם אתם מחפשים ארכיטקט בקאנד בכיר, מפתח מערכות בעומסים גבוהים, או פתוחים לשיתופי פעולה טכנולוגיים — אשמח לשוחח.",
+            "title": "בואו נדבר.",
+            "desc": "פתוח לתפקידי Backend ו-Full Stack בכירים. אפשר לפנות ישירות במייל או בטלפון.",
             "sendEmail": "שליחת מייל ישיר",
             "callPhone": "חיוג טלפוני ישיר"
         },
-        "footer": "© 2026 רפאל רובינוב. פותח בדיוק הנדסי, WebGL מודרני וקוד נקי."
+        "footer": "© 2026 רפאל רובינוב. נבנה ב-JavaScript ו-WebGL."
     }
 };
 
 const PORTFOLIO_DATA = {
     "profile": {
         "name": "Refael Robinov",
-        "title": "Senior Backend & AI-Augmented Full Stack Engineer",
-        "subtitle": "Architecting high-scale distributed systems, .NET 10 microservices, AI agentic workflows, and high-performance cloud platforms.",
-        "bio": "Senior Software Engineer with production experience since 2021 engineering robust backend architectures, distributed microservices, and modern web applications. Championing cutting-edge .NET 10, full-stack reactive design, and AI-augmented velocity using Claude Code, Codex, and Antigravity Agents.",
+        "title": "Senior Backend & Full Stack Engineer",
+        "subtitle": "Backend services, APIs, and data pipelines in C# / .NET, plus live products built end to end.",
+        "bio": "Senior software engineer with professional experience since 2021 in C#, .NET, distributed systems, and enterprise integrations. Uses AI-assisted development (Claude Code, Codex, Gemini) alongside automated testing and peer review.",
         "location": "Be'er-Sheva, Israel",
         "email": "rafi20080@gmail.com",
         "phone": "052-7030595",
         "github": "https://github.com/raful222",
         "linkedin": "https://linkedin.com/in/refael-robinov",
-        "status": "Open to Senior Roles & High-Impact Opportunities",
+        "status": "Open to Senior Roles",
         "gpa": "86.7 (BSc Software Engineering)",
         "he": {
             "name": "רפאל רובינוב",
-            "title": "מהנדס תוכנה בכיר — Backend & Full-Stack מועצם AI",
-            "subtitle": "מומחה בארכיטקטורת מערכות מבוזרות, מיקרו-סרוויסים ב-.NET 10, סוכני AI ופלטפורמות ענן בעלות ביצועים גבוהים.",
-            "bio": "מהנדס תוכנה בכיר עם ניסיון מעשי מאז 2021 בפיתוח ארכיטקטורות Backend עמידות, מיקרו-סרוויסים מבוזרים ויישומי Web מתקדמים. מוביל אימוץ טכנולוגיות חדשניות (.NET 8–10, Angular 17–21) ופרדיגמות פיתוח מועצמות AI בעזרת Claude Code, Codex וסוכני Antigravity.",
-            "status": "פתוח להזדמנויות Senior / Staff ופרויקטים בעלי אימפקט גבוה"
+            "title": "מהנדס תוכנה בכיר — Backend & Full Stack",
+            "subtitle": "שירותי Backend, ממשקי API וצינורות נתונים ב-C# / .NET, לצד מוצרים חיים שנבנו מקצה לקצה.",
+            "bio": "מהנדס תוכנה בכיר עם ניסיון מקצועי מאז 2021 ב-C#, ‏.NET, מערכות מבוזרות ואינטגרציות ארגוניות. עובד עם כלי פיתוח בסיוע AI (Claude Code, ‏Codex, ‏Gemini) לצד בדיקות אוטומטיות וסקירות קוד.",
+            "status": "פתוח להזדמנויות Senior"
         }
     },
     "stats": [
@@ -325,7 +325,7 @@ const PORTFOLIO_DATA = {
                     "level": 96
                 },
                 {
-                    "name": "Antigravity Autonomous Pair Programming",
+                    "name": "Gemini & Multi-Model AI Workflows",
                     "level": 95
                 },
                 {
@@ -380,22 +380,22 @@ const PORTFOLIO_DATA = {
     "aiWorkflows": [
         {
             "title": "Agentic Software Engineering",
-            "tech": "Claude Code, Antigravity AI, Codex",
-            "desc": "Leveraging multi-agent systems and pair-programming autonomous agents for rapid prototyping, architecture refactoring, and sub-second bug triaging.",
+            "tech": "Claude Code, Codex, Gemini",
+            "desc": "Using AI coding agents for prototyping, refactoring, and debugging, with every change verified by tests and code review.",
             "icon": "sparkles",
             "he": {
                 "title": "הנדסת תוכנה מבוססת סוכנים אוטונומיים (Agentic SE)",
-                "desc": "שימוש במערכות מרובות סוכנים וסוכני Pair-Programming אוטונומיים לפיתוח מהיר של אבות-טיפוס, ריפקטורינג ארכיטקטוני ואיתור באגים מהיר."
+                "desc": "שימוש בסוכני קוד מבוססי AI לאבות-טיפוס, ריפקטורינג ואיתור באגים, כשכל שינוי עובר בדיקות וסקירת קוד."
             }
         },
         {
             "title": "Multi-Agent Systems & Autonomous QA",
             "tech": "CrewAI, Gemini 3.1 Flash, Discord Automation",
-            "desc": "Architecting autonomous multi-agent teams for self-healing software, live website diagnostic probes, automated test generation, and pull request patching.",
+            "desc": "Built a multi-agent QA bot that audits live sites, generates test reports, and proposes code fixes with rollback safeguards.",
             "icon": "bot",
             "he": {
                 "title": "מערכות מרובות סוכנים ו-QA אוטונומי",
-                "desc": "תכנון צוותי סוכנים אוטונומיים לריפוי עצמי של תוכנה, בדיקות עומק של אתרים בזמן אמת, יצירת בדיקות אוטומטיות ושליחת תיקונים בקוד."
+                "desc": "בניית בוט QA מרובה סוכנים שבודק אתרים חיים, מפיק דוחות בדיקה ומציע תיקוני קוד עם אפשרות שחזור."
             }
         },
         {
@@ -529,6 +529,91 @@ const PORTFOLIO_DATA = {
                     "captionHe": "סריקת מניות, מודל הערכת שווי DCF ומומנטום טכני"
                 }
             ]
+        },
+        {
+            "id": "vbook",
+            "title": "VBook — Animated Children's Books Platform",
+            "category": "web",
+            "tag": "Live Product & CMS",
+            "featured": true,
+            "description": "Live platform that turns children's books into animated digital books. Server-rendered site, admin CMS, parent accounts, and a 3-step book maker with AI-generated narration and illustrations.",
+            "longDesc": "Dockerized Node.js / Express backend with SQLite and a Vite frontend, served with server-side rendering for SEO. Includes an admin panel with video uploads (asynchronously transcoded to streamable 1080p MP4 with ffmpeg), parent accounts, built-in analytics, nightly verified database backups, and a book maker narrated through the ElevenLabs API.",
+            "tech": [
+                "JavaScript",
+                "Vite",
+                "Node.js / Express",
+                "SQLite",
+                "SSR",
+                "Docker",
+                "ffmpeg",
+                "ElevenLabs API"
+            ],
+            "github": "",
+            "demo": "https://vbookapp.co.il/",
+            "status": "Live in Production",
+            "badge": "Live Product (vbookapp.co.il)",
+            "icon": "book-open",
+            "he": {
+                "title": "VBook — פלטפורמת ספרי ילדים מונפשים",
+                "description": "פלטפורמה חיה שהופכת ספרי ילדים לספרים דיגיטליים מונפשים. אתר המרונדר בצד השרת, מערכת ניהול תוכן, חשבונות הורים ויוצר ספרים ב-3 צעדים עם הקראה ואיורים שנוצרים ב-AI.",
+                "longDesc": "שרת Node.js / Express עם SQLite וצד לקוח ב-Vite, בקונטיינר Docker ועם רינדור בצד השרת לטובת SEO. כולל פאנל ניהול עם העלאת סרטונים (קידוד אסינכרוני ל-MP4 ב-1080p עם ffmpeg), חשבונות הורים, אנליטיקה מובנית, גיבויי מסד נתונים ליליים מאומתים ויוצר ספרים עם הקראה דרך ElevenLabs API.",
+                "badge": "מוצר חי (vbookapp.co.il)",
+                "tag": "מוצר חי ו-CMS"
+            },
+            "image": "assets/projects/vbook.jpg"
+        },
+        {
+            "id": "mt-algo",
+            "title": "MT-Algo — Autonomous ML Trading System",
+            "category": "ai",
+            "tag": "AI & Algorithmic Trading",
+            "featured": true,
+            "description": "Autonomous trading engine combining a C# .NET 10 backend with a Python AI computer vision microservice. Detects market structures using CNNs (Cup & Handle pattern) and K-Means/GMM clustering for dynamic Support & Resistance discovery with real-time IBKR integration.",
+            "longDesc": "A complete autonomous trading architecture: .NET 10 manages trade orchestration and IBKR execution, while Python handles 2D chart tensor processing with Deep Learning CNN models to confirm geometric setups before execution.",
+            "tech": [
+                "C#",
+                ".NET 10",
+                "Python",
+                "Computer Vision (CNN)",
+                "SQL Server",
+                "Angular",
+                "WebSockets"
+            ],
+            "github": "",
+            "demo": "https://mtalgo.duckdns.org",
+            "status": "Live Cloud Service",
+            "badge": "Live Cloud (mtalgo.duckdns.org)",
+            "icon": "trending-up",
+            "he": {
+                "title": "MT-Algo — מערכת מסחר אוטומטית מבוססת ML",
+                "description": "מנוע מסחר אוטומטי שמשלב Backend ב-C# .NET 10 עם מיקרו-שירות ראייה ממוחשבת ב-Python. מזהה מבני שוק באמצעות CNN (תבנית Cup & Handle) ומבצע עסקאות דרך אינטגרציה עם Interactive Brokers.",
+                "longDesc": "ארכיטקטורת מסחר אוטומטית מלאה: ‎.NET 10 מנהל את תזמור העסקאות והביצוע מול IBKR, ו-Python מעבד תמונות גרף במודלי CNN כדי לאשר תבניות לפני ביצוע. כולל דשבורד Angular והתראות Discord.",
+                "badge": "ענן חי (mtalgo.duckdns.org)",
+                "tag": "מסחר אלגוריתמי"
+            },
+            "image": "assets/projects/mt-algo.jpg"
+        },
+        {
+            "id": "beiknishta",
+            "title": "Beiknishta (בי כנישתא) — Community Management SaaS",
+            "category": "systems",
+            "tag": "Cloud Community Platform",
+            "featured": true,
+            "description": "Comprehensive cloud management and engagement platform designed for community centers and synagogues, managing members, recurring pledges, event schedules, and digital aliyot.",
+            "longDesc": "Full-scale multi-tenant management system featuring automated donation billing, prayer time scheduling algorithms, member directory, and financial audit reports.",
+            "tech": [
+                "C# .NET 10",
+                "Angular",
+                "SQL Server",
+                "REST API",
+                "Payment Integration"
+            ],
+            "github": "",
+            "demo": "https://beiknishta.duckdns.org",
+            "status": "Live Cloud Platform",
+            "badge": "Live Cloud (beiknishta.duckdns.org)",
+            "icon": "building",
+            "image": "assets/projects/beiknishta.jpg"
         },
         {
             "id": "chess-td-3d",
@@ -700,69 +785,6 @@ const PORTFOLIO_DATA = {
             "image": "assets/projects/discord-qa-bot.jpg"
         },
         {
-            "id": "vbook",
-            "title": "VBook — Animated Children's Books Platform",
-            "category": "web",
-            "tag": "Live Product & CMS",
-            "featured": true,
-            "description": "Live platform that turns children's books into animated digital books. Server-rendered site, admin CMS, parent accounts, and a 3-step book maker with AI-generated narration and illustrations.",
-            "longDesc": "Dockerized Node.js / Express backend with SQLite and a Vite frontend, served with server-side rendering for SEO. Includes an admin panel with video uploads (asynchronously transcoded to streamable 1080p MP4 with ffmpeg), parent accounts, built-in analytics, nightly verified database backups, and a book maker narrated through the ElevenLabs API.",
-            "tech": [
-                "JavaScript",
-                "Vite",
-                "Node.js / Express",
-                "SQLite",
-                "SSR",
-                "Docker",
-                "ffmpeg",
-                "ElevenLabs API"
-            ],
-            "github": "",
-            "demo": "https://vbookapp.co.il/",
-            "status": "Live in Production",
-            "badge": "Live Product (vbookapp.co.il)",
-            "icon": "book-open",
-            "he": {
-                "title": "VBook — פלטפורמת ספרי ילדים מונפשים",
-                "description": "פלטפורמה חיה שהופכת ספרי ילדים לספרים דיגיטליים מונפשים. אתר המרונדר בצד השרת, מערכת ניהול תוכן, חשבונות הורים ויוצר ספרים ב-3 צעדים עם הקראה ואיורים שנוצרים ב-AI.",
-                "longDesc": "שרת Node.js / Express עם SQLite וצד לקוח ב-Vite, בקונטיינר Docker ועם רינדור בצד השרת לטובת SEO. כולל פאנל ניהול עם העלאת סרטונים (קידוד אסינכרוני ל-MP4 ב-1080p עם ffmpeg), חשבונות הורים, אנליטיקה מובנית, גיבויי מסד נתונים ליליים מאומתים ויוצר ספרים עם הקראה דרך ElevenLabs API.",
-                "badge": "מוצר חי (vbookapp.co.il)",
-                "tag": "מוצר חי ו-CMS"
-            },
-            "image": "assets/projects/vbook.jpg"
-        },
-        {
-            "id": "mt-algo",
-            "title": "MT-Algo — Autonomous ML Trading System",
-            "category": "ai",
-            "tag": "AI & Algorithmic Trading",
-            "featured": true,
-            "description": "Autonomous trading engine combining a C# .NET 10 backend with a Python AI computer vision microservice. Detects market structures using CNNs (Cup & Handle pattern) and K-Means/GMM clustering for dynamic Support & Resistance discovery with real-time IBKR integration.",
-            "longDesc": "A complete autonomous trading architecture: .NET 10 manages trade orchestration and IBKR execution, while Python handles 2D chart tensor processing with Deep Learning CNN models to confirm geometric setups before execution.",
-            "tech": [
-                "C#",
-                ".NET 10",
-                "Python",
-                "Computer Vision (CNN)",
-                "SQL Server",
-                "Angular",
-                "WebSockets"
-            ],
-            "github": "",
-            "demo": "https://mtalgo.duckdns.org",
-            "status": "Live Cloud Service",
-            "badge": "Live Cloud (mtalgo.duckdns.org)",
-            "icon": "trending-up",
-            "he": {
-                "title": "MT-Algo — מערכת מסחר אוטומטית מבוססת ML",
-                "description": "מנוע מסחר אוטומטי שמשלב Backend ב-C# .NET 10 עם מיקרו-שירות ראייה ממוחשבת ב-Python. מזהה מבני שוק באמצעות CNN (תבנית Cup & Handle) ומבצע עסקאות דרך אינטגרציה עם Interactive Brokers.",
-                "longDesc": "ארכיטקטורת מסחר אוטומטית מלאה: ‎.NET 10 מנהל את תזמור העסקאות והביצוע מול IBKR, ו-Python מעבד תמונות גרף במודלי CNN כדי לאשר תבניות לפני ביצוע. כולל דשבורד Angular והתראות Discord.",
-                "badge": "ענן חי (mtalgo.duckdns.org)",
-                "tag": "מסחר אלגוריתמי"
-            },
-            "image": "assets/projects/mt-algo.jpg"
-        },
-        {
             "id": "ai-ml-learning-hub",
             "title": "AI & Machine Learning Interactive Learning Hub",
             "category": "ai",
@@ -809,28 +831,6 @@ const PORTFOLIO_DATA = {
             "image": "assets/projects/alefbet.jpg"
         },
         {
-            "id": "beiknishta",
-            "title": "Beiknishta (בי כנישתא) — Community Management SaaS",
-            "category": "systems",
-            "tag": "Cloud Community Platform",
-            "featured": true,
-            "description": "Comprehensive cloud management and engagement platform designed for community centers and synagogues, managing members, recurring pledges, event schedules, and digital aliyot.",
-            "longDesc": "Full-scale multi-tenant management system featuring automated donation billing, prayer time scheduling algorithms, member directory, and financial audit reports.",
-            "tech": [
-                "C# .NET 10",
-                "Angular",
-                "SQL Server",
-                "REST API",
-                "Payment Integration"
-            ],
-            "github": "",
-            "demo": "https://beiknishta.duckdns.org",
-            "status": "Live Cloud Platform",
-            "badge": "Live Cloud (beiknishta.duckdns.org)",
-            "icon": "building",
-            "image": "assets/projects/beiknishta.jpg"
-        },
-        {
             "id": "pulsebe",
             "title": "Pulse&Be — Business Website with Built-in CMS",
             "category": "web",
@@ -859,35 +859,6 @@ const PORTFOLIO_DATA = {
                 "tag": "אתר תדמית ו-CMS"
             },
             "image": "assets/projects/pulsebe.jpg"
-        },
-        {
-            "id": "report-stock-analysis",
-            "title": "ReportStockAnalysis — Financial Intelligence Engine",
-            "category": "ai",
-            "tag": "Financial Analytics",
-            "featured": true,
-            "description": "Automated equities analysis and reporting platform pulling live market feeds, computing fundamental DCF & technical momentum indicators, and generating executive investment summaries.",
-            "longDesc": "Automated equities screening pipeline computing DCF estimations, valuation ratios, momentum indicators, and generating structured financial reports for institutional and private investors.",
-            "tech": [
-                "Python",
-                "Pandas",
-                "FastAPI",
-                "Financial APIs",
-                "Data Visualization"
-            ],
-            "github": "",
-            "demo": "#",
-            "status": "Analytics Microservice (Offline)",
-            "badge": "Equities Analytics Engine",
-            "icon": "bar-chart-2",
-            "image": "assets/projects/report-stock-analysis.jpg",
-            "he": {
-                "title": "ReportStockAnalysis — מנוע מודיעין פיננסי ואנליטיקה",
-                "description": "פלטפורמת סריקה וניתוח מניות אוטומטית המושכת נתוני שוק חיים, מחשבת מודלי DCF ומדדי מומנטום טכניים, ומפיקה דוחות השקעה למנהלים.",
-                "longDesc": "צנרת סריקה אוטומטית של שווקי הון המחשבת הערכות שווי, יחסי תמחור, ומייצרת דוחות השקעה מובנים עבור משקיעים מוסדיים ופרטיים.",
-                "badge": "מנוע אנליטיקת מניות",
-                "tag": "אנליטיקה פיננסית"
-            }
         },
         {
             "id": "idle-for-you",
@@ -976,6 +947,92 @@ const PORTFOLIO_DATA = {
             }
         },
         {
+            "id": "do-not-copy",
+            "title": "DoNotCopy — Exam Security & Anti-Plagiarism System",
+            "category": "systems",
+            "tag": "Cyber Security & Web API",
+            "featured": false,
+            "description": "Academic examination management and plagiarism prevention platform built as B.Sc. graduation project at SCE, leveraging C# Web API to monitor integrity and eliminate unauthorized copying.",
+            "longDesc": "Engineered with ASP.NET Core Web API, entity relationship integrity checks, automated submission diffing, and audit logging to maintain exam confidentiality and prevent student collusion.",
+            "tech": [
+                "C#",
+                "ASP.NET Core Web API",
+                "SQL Server",
+                "Cyber Security",
+                "RESTful API"
+            ],
+            "github": "https://github.com/raful222/DoNotCopy",
+            "demo": "https://do-not-copy.vercel.app",
+            "status": "B.Sc. Graduation Project",
+            "badge": "Exam Security System",
+            "icon": "shield-check",
+            "image": "assets/projects/do-not-copy.jpg",
+            "he": {
+                "title": "DoNotCopy — מערכת אבטחת בחינות ומניעת העתקות",
+                "description": "פרויקט הגמר לתואר ראשון בהנדסת תוכנה ב-SCE. פלטפורמה לניהול בחינות ואבטחת יושרה אקדמית באמצעות C# Web API למניעת העתקות ושמירה על סודיות המבחנים.",
+                "longDesc": "פותח ב-ASP.NET Core Web API, בדיקת שלמות ישויות, השוואת הגשות אוטומטית ויומני ביקורת לשמירה על טוהר הבחינות.",
+                "badge": "פרויקט גמר הנדסה",
+                "tag": "סייבר ו-Web API"
+            }
+        },
+        {
+            "id": "cyber-recon-game",
+            "title": "Cyber Defense: Terminal Defense",
+            "category": "games",
+            "tag": "Playable Canvas Game",
+            "featured": false,
+            "description": "Interactive in-browser cybersecurity tactical game where players defend simulated server firewalls against DDoS, SQL injections, and XSS exploits.",
+            "longDesc": "Play directly in the browser! Real-time collision detection, particle explosions, dynamic threat waves, and retro synth design.",
+            "tech": [
+                "JavaScript (ES6+)",
+                "HTML5 Canvas",
+                "WebGL 3D Background",
+                "Web Audio API"
+            ],
+            "github": "",
+            "demo": "#game-modal",
+            "isPlayable": true,
+            "status": "Playable Right Now",
+            "badge": "Interactive Mini-Game",
+            "icon": "swords",
+            "he": {
+                "title": "Cyber Defense: Terminal Defense",
+                "description": "משחק טקטי אינטראקטיבי בדפדפן שבו השחקנים מגנים על חומת האש של השרת מפני התקפות DDoS, הזרקות SQL ונוזקות.",
+                "longDesc": "משחק ישירות בדפדפן! זיהוי פגיעות בזמן אמת, פיצוצי חלקיקים, גלי תקיפה דינמיים ועיצוב ניאון רטרו.",
+                "badge": "מיני-משחק אינטראקטיבי",
+                "tag": "מיני-משחק Canvas"
+            }
+        },
+        {
+            "id": "report-stock-analysis",
+            "title": "ReportStockAnalysis — Financial Intelligence Engine",
+            "category": "ai",
+            "tag": "Financial Analytics",
+            "featured": true,
+            "description": "Automated equities analysis and reporting platform pulling live market feeds, computing fundamental DCF & technical momentum indicators, and generating executive investment summaries.",
+            "longDesc": "Automated equities screening pipeline computing DCF estimations, valuation ratios, momentum indicators, and generating structured financial reports for institutional and private investors.",
+            "tech": [
+                "Python",
+                "Pandas",
+                "FastAPI",
+                "Financial APIs",
+                "Data Visualization"
+            ],
+            "github": "",
+            "demo": "#",
+            "status": "Analytics Microservice (Offline)",
+            "badge": "Equities Analytics Engine",
+            "icon": "bar-chart-2",
+            "image": "assets/projects/report-stock-analysis.jpg",
+            "he": {
+                "title": "ReportStockAnalysis — מנוע מודיעין פיננסי ואנליטיקה",
+                "description": "פלטפורמת סריקה וניתוח מניות אוטומטית המושכת נתוני שוק חיים, מחשבת מודלי DCF ומדדי מומנטום טכניים, ומפיקה דוחות השקעה למנהלים.",
+                "longDesc": "צנרת סריקה אוטומטית של שווקי הון המחשבת הערכות שווי, יחסי תמחור, ומייצרת דוחות השקעה מובנים עבור משקיעים מוסדיים ופרטיים.",
+                "badge": "מנוע אנליטיקת מניות",
+                "tag": "אנליטיקה פיננסית"
+            }
+        },
+        {
             "id": "logical-math-study-hub",
             "title": "Logical Math & Reasoning Hub — פורטל חשיבה לוגית",
             "category": "web",
@@ -1031,63 +1088,6 @@ const PORTFOLIO_DATA = {
                 "longDesc": "נבנה על Next.js 15 App Router, React 19, Tailwind CSS ו-TypeScript. פירוט עלויות שקוף, גלריית תצוגה ברזולוציה גבוהה והגדרת אבני חן דינמית.",
                 "badge": "סטודיו Next.js 15 יוקרתי",
                 "tag": "סטודיו Next.js 15 & AI"
-            }
-        },
-        {
-            "id": "do-not-copy",
-            "title": "DoNotCopy — Exam Security & Anti-Plagiarism System",
-            "category": "systems",
-            "tag": "Cyber Security & Web API",
-            "featured": false,
-            "description": "Academic examination management and plagiarism prevention platform built as B.Sc. graduation project at SCE, leveraging C# Web API to monitor integrity and eliminate unauthorized copying.",
-            "longDesc": "Engineered with ASP.NET Core Web API, entity relationship integrity checks, automated submission diffing, and audit logging to maintain exam confidentiality and prevent student collusion.",
-            "tech": [
-                "C#",
-                "ASP.NET Core Web API",
-                "SQL Server",
-                "Cyber Security",
-                "RESTful API"
-            ],
-            "github": "https://github.com/raful222/DoNotCopy",
-            "demo": "https://do-not-copy.vercel.app",
-            "status": "B.Sc. Graduation Project",
-            "badge": "Exam Security System",
-            "icon": "shield-check",
-            "image": "assets/projects/do-not-copy.jpg",
-            "he": {
-                "title": "DoNotCopy — מערכת אבטחת בחינות ומניעת העתקות",
-                "description": "פרויקט הגמר לתואר ראשון בהנדסת תוכנה ב-SCE. פלטפורמה לניהול בחינות ואבטחת יושרה אקדמית באמצעות C# Web API למניעת העתקות ושמירה על סודיות המבחנים.",
-                "longDesc": "פותח ב-ASP.NET Core Web API, בדיקת שלמות ישויות, השוואת הגשות אוטומטית ויומני ביקורת לשמירה על טוהר הבחינות.",
-                "badge": "פרויקט גמר הנדסה",
-                "tag": "סייבר ו-Web API"
-            }
-        },
-        {
-            "id": "cyber-recon-game",
-            "title": "Cyber Defense: Terminal Defense",
-            "category": "games",
-            "tag": "Playable Canvas Game",
-            "featured": false,
-            "description": "Interactive in-browser cybersecurity tactical game where players defend simulated server firewalls against DDoS, SQL injections, and XSS exploits.",
-            "longDesc": "Play directly in the browser! Real-time collision detection, particle explosions, dynamic threat waves, and retro synth design.",
-            "tech": [
-                "JavaScript (ES6+)",
-                "HTML5 Canvas",
-                "WebGL 3D Background",
-                "Web Audio API"
-            ],
-            "github": "",
-            "demo": "#game-modal",
-            "isPlayable": true,
-            "status": "Playable Right Now",
-            "badge": "Interactive Mini-Game",
-            "icon": "swords",
-            "he": {
-                "title": "Cyber Defense: Terminal Defense",
-                "description": "משחק טקטי אינטראקטיבי בדפדפן שבו השחקנים מגנים על חומת האש של השרת מפני התקפות DDoS, הזרקות SQL ונוזקות.",
-                "longDesc": "משחק ישירות בדפדפן! זיהוי פגיעות בזמן אמת, פיצוצי חלקיקים, גלי תקיפה דינמיים ועיצוב ניאון רטרו.",
-                "badge": "מיני-משחק אינטראקטיבי",
-                "tag": "מיני-משחק Canvas"
             }
         }
     ],

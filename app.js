@@ -28,7 +28,7 @@ window.applyLanguage = function(lang) {
     document.documentElement.lang = lang;
     document.documentElement.dir = isHe ? "rtl" : "ltr";
     document.title = isHe
-        ? "רפאל רובינוב | מהנדס תוכנה בכיר — Backend & Full-Stack מועצם AI"
+        ? "רפאל רובינוב | מהנדס תוכנה בכיר — Backend & Full Stack"
         : "Refael Robinov | Senior Backend & Full Stack Engineer";
 
     // Language Toggle Button Label
