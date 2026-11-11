@@ -34,22 +34,22 @@ body {
     width: 68mm;
     height: 297mm;
     background: #e2e8f0;
-    padding: 24px 18px;
+    padding: 22px 17px;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 12px;
     border-right: 1px solid #cbd5e1;
 }
 
 .sidebar-section {
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 6px;
 }
 
 .sidebar-title {
     font-family: 'Outfit', sans-serif;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: #0f172a;
     border-bottom: 2px solid #94a3b8;
@@ -61,14 +61,14 @@ body {
 .contact-item {
     display: flex;
     flex-direction: column;
-    font-size: 0.76rem;
+    font-size: 0.74rem;
     line-height: 1.25;
 }
 
 .contact-label {
     font-weight: 700;
     color: #0f172a;
-    font-size: 0.74rem;
+    font-size: 0.72rem;
     text-transform: uppercase;
     letter-spacing: 0.4px;
 }
@@ -83,11 +83,11 @@ body {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 3.5px;
+    gap: 3px;
 }
 
 .skills-list li {
-    font-size: 0.74rem;
+    font-size: 0.72rem;
     color: #1e293b;
     display: flex;
     align-items: center;
@@ -99,13 +99,21 @@ body {
     content: "•";
     color: #2563eb;
     font-weight: bold;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
+}
+
+.skills-highlight {
+    background: rgba(37, 99, 235, 0.08);
+    border-radius: 4px;
+    padding: 2px 4px;
+    font-weight: 600 !important;
+    color: #1d4ed8 !important;
 }
 
 .lang-item {
     display: flex;
     justify-content: space-between;
-    font-size: 0.77rem;
+    font-size: 0.76rem;
     color: #1e293b;
     font-weight: 500;
 }
@@ -119,10 +127,10 @@ body {
 .main-content {
     width: 142mm;
     height: 297mm;
-    padding: 22px 22px 16px 22px;
+    padding: 20px 22px 14px 22px;
     display: flex;
     flex-direction: column;
-    gap: 9px;
+    gap: 8px;
 }
 
 .header-box {
@@ -141,18 +149,18 @@ body {
 
 .candidate-title {
     font-family: 'Outfit', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 600;
+    font-size: 0.93rem;
+    font-weight: 700;
     color: #2563eb;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
     text-transform: uppercase;
     margin-top: 3px;
     margin-bottom: 5px;
 }
 
 .summary-text {
-    font-size: 0.74rem;
-    line-height: 1.35;
+    font-size: 0.73rem;
+    line-height: 1.34;
     color: #475569;
     text-align: justify;
 }
@@ -160,7 +168,7 @@ body {
 .section-block {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 3px;
 }
 
 .section-heading {
@@ -168,23 +176,23 @@ body {
     align-items: center;
     gap: 6px;
     font-family: 'Outfit', sans-serif;
-    font-size: 1.05rem;
+    font-size: 1.02rem;
     font-weight: 700;
     color: #0f172a;
     border-bottom: 1.5px solid #cbd5e1;
     padding-bottom: 2px;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
 }
 
 .section-icon {
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 .entry {
     display: flex;
     flex-direction: column;
     gap: 2px;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
 }
 
 .entry-header {
@@ -194,19 +202,19 @@ body {
 }
 
 .entry-role {
-    font-size: 0.83rem;
+    font-size: 0.82rem;
     font-weight: 700;
     color: #0f172a;
 }
 
 .entry-company {
-    font-size: 0.81rem;
+    font-size: 0.80rem;
     font-weight: 600;
     color: #2563eb;
 }
 
 .entry-period {
-    font-size: 0.73rem;
+    font-size: 0.72rem;
     color: #64748b;
     font-weight: 600;
     font-family: 'Inter', sans-serif;
@@ -222,8 +230,8 @@ body {
 }
 
 .entry-bullets li {
-    font-size: 0.71rem;
-    line-height: 1.32;
+    font-size: 0.70rem;
+    line-height: 1.30;
     color: #334155;
 }
 
@@ -235,30 +243,24 @@ body {
 .edu-grid {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 3px;
 }
 
 .edu-item {
-    font-size: 0.72rem;
-    line-height: 1.3;
+    font-size: 0.71rem;
+    line-height: 1.28;
     color: #334155;
 }
 
 .edu-item-title {
     font-weight: 700;
     color: #0f172a;
-    font-size: 0.76rem;
+    font-size: 0.75rem;
 }
 
 .edu-item-meta {
     color: #64748b;
     font-weight: 500;
-}
-
-.edu-badge {
-    color: #059669;
-    font-weight: 700;
-    font-size: 0.72rem;
 }
 
 </style>
@@ -299,6 +301,7 @@ body {
             <li>Mainframe (MF) & Natural</li>
             <li>Redis In-Memory Caching</li>
             <li>Angular (v17–21)</li>
+            <li class="skills-highlight">AI Velocity (Claude, Gemini, Codex)</li>
             <li>TypeScript & JavaScript</li>
             <li>SQL Server & Relational DBs</li>
             <li>End-to-End (E2E) Pipelines</li>
@@ -326,9 +329,9 @@ body {
 <div class="main-content">
     <div class="header-box">
         <h1 class="candidate-name">Refael Robinov</h1>
-        <div class="candidate-title">Senior Backend & Full Stack Engineer</div>
+        <div class="candidate-title">Senior Backend & Full Stack Engineer — AI-Augmented</div>
         <p class="summary-text">
-            Results-driven Senior Software Engineer with nearly 6 years of production experience architecting high-scale distributed systems, mission-critical Web APIs, and end-to-end enterprise architectures. Deep server-side specialization in C# and modern .NET (8–10), microservices, Redis caching, and core legacy Mainframe (MF/Natural) development, bridged with modern reactive client-facing applications in Angular (v17–21). Proven track record of delivering resilient, high-throughput systems under national-scale workloads with zero-loss data integrity.
+            Results-driven Senior Software Engineer with nearly 6 years of production experience architecting high-scale distributed systems, mission-critical Web APIs, and end-to-end enterprise architectures. Deep server-side specialization in C# and modern .NET (8–10), microservices, Redis caching, and core legacy Mainframe (MF/Natural) development, bridged with modern reactive client-facing applications in Angular (v17–21). Actively leverages advanced AI-assisted workflows (Claude Code, Gemini, Codex) to maximize development velocity, refactoring accuracy, and unit test coverage under national-scale workloads.
         </p>
     </div>
 
@@ -350,7 +353,7 @@ body {
                 <li><strong>Mainframe (MF) & Data Pipelines:</strong> Authored and optimized core Mainframe (MF / Natural) programs and routines to extract, process, and stream mission-critical data end-to-end directly into modern .NET services and Angular client apps.</li>
                 <li><strong>Distributed Caching & Latency:</strong> Engineered Redis in-memory caching layers and optimized database queries, eliminating processing bottlenecks and slashing latency for national transactions.</li>
                 <li><strong>Modern Reactive Frontend:</strong> Developed intuitive client portals and administrative dashboards using Angular (v17–21) and TypeScript, integrating directly with backend microservices.</li>
-                <li><strong>Quality & CI/CD:</strong> Maintained high code standards, strict peer reviews, and automated release cycles using TFS and Git.</li>
+                <li><strong>AI-Augmented Engineering & Quality:</strong> Accelerated delivery speed and automated code verification by leveraging modern AI paradigms (Gemini, Claude, Codex) alongside TFS/Git CI/CD and strict peer reviews.</li>
             </ul>
         </div>
 
@@ -382,6 +385,13 @@ body {
                     <span class="edu-item-meta">2020 – 2023</span>
                 </div>
                 <div>GPA: <strong>86.7</strong> | Specialization in <strong>Cyber Security</strong> | Graduation Project: Anti-cheating exam management system (C#, Web API).</div>
+            </div>
+            <div class="edu-item">
+                <div style="display:flex; justify-content:space-between;">
+                    <span class="edu-item-title">Automating Success & AI Certification — INT College</span>
+                    <span class="edu-item-meta">2026</span>
+                </div>
+                <div>Advanced AI workflows, Prompt Engineering & Autonomous Agent architectures.</div>
             </div>
             <div class="edu-item">
                 <div style="display:flex; justify-content:space-between;">
