@@ -62,7 +62,7 @@ window.applyLanguage = function(lang) {
 
     const heroCvBtn = document.getElementById("hero-cta-cv");
     if (heroCvBtn) {
-        heroCvBtn.href = isHe ? "cv/Refael_Robinov_CV_HE.pdf" : "cv/Refael_Robinov_CV_EN.pdf";
+        heroCvBtn.href = isHe ? "cv/Refael_Robinov_CV_HE.pdf" : "cv/Refael_Robinov_CV_EN.pdf?v=20261111";
     }
 
     // Projects Header & Search
@@ -664,12 +664,16 @@ window.toggleMobileMenu = function() {
 
     hamburger.classList.toggle("active");
     links.classList.toggle("mobile-open");
+    hamburger.setAttribute("aria-expanded", String(links.classList.contains("mobile-open")));
 };
 
 function closeMobileMenu() {
     const hamburger = document.getElementById("nav-hamburger");
     const links = document.getElementById("nav-links");
-    if (hamburger) hamburger.classList.remove("active");
+    if (hamburger) {
+        hamburger.classList.remove("active");
+        hamburger.setAttribute("aria-expanded", "false");
+    }
     if (links) links.classList.remove("mobile-open");
 }
 
@@ -1075,4 +1079,3 @@ window.loadNextRiddle = function() {
     renderCurrentRiddle();
     startRiddleTimer();
 };
-

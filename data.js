@@ -21,7 +21,7 @@ const TRANSLATIONS = {
             "greeting": "Hi, I'm",
             "name": "Refael Robinov",
             "subtitle": "Senior Backend & Full Stack Engineer",
-            "bio": "Architecting high-scale distributed systems, high-throughput APIs, and intelligent web applications. 5+ years of production experience in mission-critical environments.",
+            "bio": "Architecting high-scale distributed systems, high-throughput APIs, and intelligent web applications. Production experience since 2021 in mission-critical environments.",
             "btnExplore": "Explore Projects & Games",
             "btnCv": "Download CV (PDF)",
             "btnContact": "Get In Touch",
@@ -29,8 +29,8 @@ const TRANSLATIONS = {
         },
         "stats": [
             {
-                "value": "5+",
-                "label": "Years Experience"
+                "value": "2021",
+                "label": "Building Since"
             },
             {
                 "value": "8+",
@@ -140,7 +140,7 @@ const TRANSLATIONS = {
             "greeting": "שלום, אני",
             "name": "רפאל רובינוב",
             "subtitle": "מהנדס תוכנה בכיר — Backend & Full-Stack מועצם AI",
-            "bio": "מומחה בארכיטקטורת מערכות מבוזרות ב-Scale גבוה, ממשקי API מהירים ויישומי Web ו-AI מתקדמים. 5+ שנות ניסיון מעשי בפיתוח סביבות ייצור קריטיות (Mission-Critical).",
+            "bio": "מומחה בארכיטקטורת מערכות מבוזרות ב-Scale גבוה, ממשקי API מהירים ויישומי Web ו-AI מתקדמים. ניסיון מעשי מאז 2021 בפיתוח סביבות ייצור קריטיות (Mission-Critical).",
             "btnExplore": "צפה בפרויקטים ובמשחקים",
             "btnCv": "הורד קורות חיים (PDF)",
             "btnContact": "יצירת קשר ישירה",
@@ -148,8 +148,8 @@ const TRANSLATIONS = {
         },
         "stats": [
             {
-                "value": "5+",
-                "label": "שנות ניסיון מעשי בהייטק"
+                "value": "2021",
+                "label": "ניסיון מעשי מאז"
             },
             {
                 "value": "8+",
@@ -247,7 +247,7 @@ const PORTFOLIO_DATA = {
         "name": "Refael Robinov",
         "title": "Senior Backend & AI-Augmented Full Stack Engineer",
         "subtitle": "Architecting high-scale distributed systems, .NET 10 microservices, AI agentic workflows, and high-performance cloud platforms.",
-        "bio": "Senior Software Engineer with 5+ years of production experience engineering robust backend architectures, distributed microservices, and modern web applications. Championing cutting-edge .NET 10, full-stack reactive design, and AI-augmented velocity using Claude Code, Codex, and Antigravity Agents.",
+        "bio": "Senior Software Engineer with production experience since 2021 engineering robust backend architectures, distributed microservices, and modern web applications. Championing cutting-edge .NET 10, full-stack reactive design, and AI-augmented velocity using Claude Code, Codex, and Antigravity Agents.",
         "location": "Be'er-Sheva, Israel",
         "email": "rafi20080@gmail.com",
         "phone": "052-7030595",
@@ -259,14 +259,14 @@ const PORTFOLIO_DATA = {
             "name": "רפאל רובינוב",
             "title": "מהנדס תוכנה בכיר — Backend & Full-Stack מועצם AI",
             "subtitle": "מומחה בארכיטקטורת מערכות מבוזרות, מיקרו-סרוויסים ב-.NET 10, סוכני AI ופלטפורמות ענן בעלות ביצועים גבוהים.",
-            "bio": "מהנדס תוכנה בכיר עם 5+ שנות ניסיון מעשי בפיתוח ארכיטקטורות Backend עמידות, מיקרו-סרוויסים מבוזרים ויישומי Web מתקדמים. מוביל אימוץ טכנולוגיות חדשניות (.NET 8–10, Angular 17–21) ופרדיגמות פיתוח מועצמות AI בעזרת Claude Code, Codex וסוכני Antigravity.",
+            "bio": "מהנדס תוכנה בכיר עם ניסיון מעשי מאז 2021 בפיתוח ארכיטקטורות Backend עמידות, מיקרו-סרוויסים מבוזרים ויישומי Web מתקדמים. מוביל אימוץ טכנולוגיות חדשניות (.NET 8–10, Angular 17–21) ופרדיגמות פיתוח מועצמות AI בעזרת Claude Code, Codex וסוכני Antigravity.",
             "status": "פתוח להזדמנויות Senior / Staff ופרויקטים בעלי אימפקט גבוה"
         }
     },
     "stats": [
         {
-            "value": "5+",
-            "label": "Years Experience"
+            "value": "2021",
+            "label": "Building Since"
         },
         {
             "value": "8+",
@@ -291,7 +291,7 @@ const PORTFOLIO_DATA = {
                     "level": 96
                 },
                 {
-                    "name": ".NET Core 6-10 / ASP.NET",
+                    "name": ".NET 6-10 / ASP.NET",
                     "level": 96
                 },
                 {
@@ -1124,20 +1124,20 @@ const PORTFOLIO_DATA = {
             }
         },
         {
-            "period": "2021 – Jan 2025",
+            "period": "2021 – 2025",
             "role": "Backend Developer",
             "company": "Qualish Ltd",
             "location": "Omer, Israel",
             "tag": "Enterprise SaaS",
             "highlights": [
-                "Architected end-to-end Web APIs, database schemas, and microservice endpoints in C# .NET Core 6.",
+                "Architected end-to-end Web APIs, database schemas, and microservice endpoints in C# .NET 6.",
                 "Integrated multi-provider payment gateways, billing reconciliation, and real-time event notifications.",
                 "Engineered dynamic data visualization pipelines presenting live financial KPI charts to executive stakeholders.",
                 "Streamlined customer onboarding workflows, cutting database latency and improving UX."
             ],
             "tech": [
                 "C#",
-                ".NET Core 6",
+                ".NET 6",
                 "RESTful Web APIs",
                 "SQL Server",
                 "Payment Systems",
@@ -1149,7 +1149,7 @@ const PORTFOLIO_DATA = {
                 "location": "עומר, ישראל",
                 "tag": "Enterprise SaaS",
                 "highlights": [
-                    "תכנון ופיתוח ארכיטקטורת Web APIs מקצה לקצה, סכמות מסדי נתונים ונקודות קצה של מיקרו-סרוויסים ב-C# .NET Core 6.",
+                    "תכנון ופיתוח ארכיטקטורת Web APIs מקצה לקצה, סכמות מסדי נתונים ונקודות קצה של מיקרו-סרוויסים ב-C# .NET 6.",
                     "אינטגרציה של ספקי סליקה מרובים, התאמת חיובים פיננסיים והתראות אירועים בזמן אמת.",
                     "בניית צנרות ויזואליזציית נתונים דינמיות המציגות גרפי מדדי ביצוע (KPIs) חיים להנהלה הבכירה.",
                     "ייעול תהליכי Onboarding של לקוחות, צמצום זמני השהייה במסדי נתונים ושיפור חוויית המשתמש."

@@ -82,7 +82,7 @@ body {
     height: 100vh;
     z-index: 0;
     pointer-events: none;
-    opacity: 0.85;
+    opacity: 0.35;
 }
 
 /* Base Wrapper */
@@ -1803,3 +1803,20 @@ html[dir="rtl"] .lang-toggle-btn {
     background: rgba(56, 189, 248, 0.1);
 }
 
+
+
+/* Keep primary navigation and CV downloads within narrow phone screens. */
+@media (max-width: 600px) {
+    .navbar { padding: 0 0.65rem; gap: 0.35rem; }
+    .nav-actions { gap: 0.3rem; }
+    .nav-actions .btn { padding: 0 0.55rem; font-size: 0.78rem; gap: 0.3rem; }
+    .nav-actions .nav-btn-github,
+    .nav-actions .nav-btn-talk { display: none; }
+    .nav-hamburger { flex-shrink: 0; }
+}
+@media (max-width: 380px) {
+    .nav-actions .lang-toggle-btn span { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+    #three-canvas-container { display: none; }
+}
