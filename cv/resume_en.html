@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>Refael Robinov - CV</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
@@ -263,6 +264,9 @@ body {
     font-weight: 500;
 }
 
+a { color: inherit; text-decoration: none; }
+.project-link { color: #2563eb; font-weight: 600; }
+.entry-period { flex-shrink: 0; margin-left: 8px; white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -272,11 +276,11 @@ body {
         <h3 class="sidebar-title">Contact</h3>
         <div class="contact-item">
             <span class="contact-label">Phone</span>
-            <span class="contact-val">052-7030595</span>
+            <a class="contact-val" href="tel:+972527030595">052-7030595</a>
         </div>
         <div class="contact-item">
             <span class="contact-label">Email</span>
-            <span class="contact-val">rafi20080@gmail.com</span>
+            <a class="contact-val" href="mailto:rafi20080@gmail.com">rafi20080@gmail.com</a>
         </div>
         <div class="contact-item">
             <span class="contact-label">Location</span>
@@ -284,11 +288,15 @@ body {
         </div>
         <div class="contact-item">
             <span class="contact-label">LinkedIn</span>
-            <span class="contact-val">linkedin.com/in/refael-robinov</span>
+            <a class="contact-val" href="https://www.linkedin.com/in/refael-robinov">linkedin.com/in/refael-robinov</a>
         </div>
         <div class="contact-item">
             <span class="contact-label">GitHub</span>
-            <span class="contact-val">github.com/raful222</span>
+            <a class="contact-val" href="https://github.com/raful222">github.com/raful222</a>
+        </div>
+        <div class="contact-item">
+            <span class="contact-label">Portfolio</span>
+            <a class="contact-val" href="https://raful222.github.io/Portfolio/">raful222.github.io/Portfolio/</a>
         </div>
     </div>
 
@@ -301,7 +309,7 @@ body {
             <li>Mainframe (MF) & Natural</li>
             <li>Redis In-Memory Caching</li>
             <li>Angular (v17–21)</li>
-            <li class="skills-highlight">AI Velocity (Claude, Gemini, Codex)</li>
+            <li class="skills-highlight">AI-Assisted Development</li>
             <li>TypeScript & JavaScript</li>
             <li>SQL Server & Relational DBs</li>
             <li>End-to-End (E2E) Pipelines</li>
@@ -329,9 +337,9 @@ body {
 <div class="main-content">
     <div class="header-box">
         <h1 class="candidate-name">Refael Robinov</h1>
-        <div class="candidate-title">Senior Backend & Full Stack Engineer — AI-Augmented</div>
+        <div class="candidate-title">Senior Backend & Full Stack Engineer</div>
         <p class="summary-text">
-            Results-driven Senior Software Engineer with nearly 6 years of production experience architecting high-scale distributed systems, mission-critical Web APIs, and end-to-end enterprise architectures. Deep server-side specialization in C# and modern .NET (8–10), microservices, Redis caching, and core legacy Mainframe (MF/Natural) development, bridged with modern reactive client-facing applications in Angular (v17–21). Actively leverages advanced AI-assisted workflows (Claude Code, Gemini, Codex) to maximize development velocity, refactoring accuracy, and unit test coverage under national-scale workloads.
+            Senior Software Engineer with production experience since 2021, specializing in C#, .NET, distributed systems, and enterprise integrations. Builds high-throughput APIs, Redis caching layers, and data pipelines connecting Mainframe / Natural systems with .NET services and Angular applications. Uses AI-assisted development tools alongside automated testing and peer review.
         </p>
     </div>
 
@@ -346,14 +354,14 @@ body {
                     <span class="entry-role">Senior Backend & Full Stack Engineer</span>, 
                     <span class="entry-company">Israel Tax Authority (Sha'am)</span>
                 </div>
-                <span class="entry-period">2025 – Present</span>
+                <span class="entry-period">2025 - Present</span>
             </div>
             <ul class="entry-bullets">
-                <li><strong>E2E Service Architecture:</strong> Architected and deployed enterprise microservices and high-throughput RESTful Web APIs using C#, .NET 8–10, and ASP.NET Core under national-scale workloads.</li>
-                <li><strong>Mainframe (MF) & Data Pipelines:</strong> Authored and optimized core Mainframe (MF / Natural) programs and routines to extract, process, and stream mission-critical data end-to-end directly into modern .NET services and Angular client apps.</li>
-                <li><strong>Distributed Caching & Latency:</strong> Engineered Redis in-memory caching layers and optimized database queries, eliminating processing bottlenecks and slashing latency for national transactions.</li>
-                <li><strong>Modern Reactive Frontend:</strong> Developed intuitive client portals and administrative dashboards using Angular (v17–21) and TypeScript, integrating directly with backend microservices.</li>
-                <li><strong>AI-Augmented Engineering & Quality:</strong> Accelerated delivery speed and automated code verification by leveraging modern AI paradigms (Gemini, Claude, Codex) alongside TFS/Git CI/CD and strict peer reviews.</li>
+                <li><strong>E2E Service Architecture:</strong> Designed and deployed enterprise microservices and REST APIs using C#, .NET 8-10, and ASP.NET Core for national-scale systems.</li>
+                <li><strong>Mainframe (MF) & Data Pipelines:</strong> Developed and optimized Natural programs and data pipelines connecting mainframe systems with .NET services and Angular applications.</li>
+                <li><strong>Distributed Caching & Latency:</strong> Implemented Redis caching and optimized SQL queries to address processing bottlenecks and improve response times.</li>
+                <li><strong>Modern Reactive Frontend:</strong> Built Angular and TypeScript portals and administrative dashboards integrated with backend APIs.</li>
+                <li><strong>AI-Assisted Development & Quality:</strong> Used Claude Code, Gemini, and Codex alongside automated code verification, TFS/Git CI/CD, and peer reviews.</li>
             </ul>
         </div>
 
@@ -363,14 +371,30 @@ body {
                     <span class="entry-role">Backend Developer</span>, 
                     <span class="entry-company">Qualish Ltd, Omer</span>
                 </div>
-                <span class="entry-period">2021 Dec – 2025 Jan</span>
+                <span class="entry-period">2021 - 2025</span>
             </div>
             <ul class="entry-bullets">
-                <li><strong>Backend Systems:</strong> Architected Web APIs, database schemas, and microservice endpoints in C# .NET Core 6.</li>
+                <li><strong>Backend Systems:</strong> Developed C#/.NET 6 APIs, database schemas, and backend service endpoints.</li>
                 <li><strong>Integrations:</strong> Integrated multi-provider payment gateways, billing reconciliation, and real-time event notifications.</li>
-                <li><strong>Data Visualization:</strong> Built financial KPI dashboards and data pipelines delivering actionable insights for executive stakeholders.</li>
+                <li><strong>Data Visualization:</strong> Built financial KPI dashboards and data pipelines for executive stakeholders.</li>
                 <li><strong>Performance:</strong> Streamlined customer onboarding workflows, cutting query latency and improving UX.</li>
             </ul>
+        </div>
+    </div>
+
+    <div class="section-block">
+        <div class="section-heading">
+            <span class="section-icon">🚀</span> Selected Projects
+        </div>
+        <div class="edu-grid">
+            <div class="edu-item">
+                <div class="edu-item-title">StocksBattle - Real-Time Multiplayer Trading Arena</div>
+                <div>Stock and crypto trading game with live market feeds, multiplayer competitions, and real-time leaderboards. Next.js, React, TypeScript, WebSockets / SSE. <a class="project-link" href="https://stocksbattle.com/">stocksbattle.com</a></div>
+            </div>
+            <div class="edu-item">
+                <div class="edu-item-title">TryInvest - Investment & Portfolio Management Platform</div>
+                <div>Investment platform with portfolio tracking, market analysis, risk metrics, and strategy simulation. C#, .NET, Angular, SQL Server. <a class="project-link" href="https://tryinvest.co.il/">tryinvest.co.il</a></div>
+            </div>
         </div>
     </div>
 
@@ -415,17 +439,17 @@ body {
         <div class="edu-grid">
             <div class="edu-item">
                 <div style="display:flex; justify-content:space-between;">
-                    <span class="edu-item-title">Fighter & Commander — IDF Paratroopers Brigade (Rank: First Sergeant)</span>
+                    <span class="edu-item-title">Combat Soldier & Commander — IDF Paratroopers Brigade (Rank: First Sergeant)</span>
                     <span class="edu-item-meta">2012 – 2015</span>
                 </div>
-                <div>Led combat troops in high-pressure operational environments, demanding rapid critical decision-making and resilience.</div>
+                <div>Led combat troops in high-pressure environments requiring rapid decision-making and resilience.</div>
             </div>
             <div class="edu-item">
                 <div style="display:flex; justify-content:space-between;">
                     <span class="edu-item-title">Youth Leadership Mentor — "Aharai!" (Impact Scholarships)</span>
                     <span class="edu-item-meta">2020 – 2023</span>
                 </div>
-                <div>Mentored youth from socio-economic periphery to foster civic involvement and leadership.</div>
+                <div>Mentored young people from underserved communities, supporting civic involvement and leadership.</div>
             </div>
         </div>
     </div>
