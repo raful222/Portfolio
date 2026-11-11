@@ -62,7 +62,7 @@ window.applyLanguage = function(lang) {
 
     const heroCvBtn = document.getElementById("hero-cta-cv");
     if (heroCvBtn) {
-        heroCvBtn.href = isHe ? "cv/Refael_Robinov_CV_HE.pdf?v=20261111r3" : "cv/Refael_Robinov_CV_EN.pdf?v=20261111r3";
+        heroCvBtn.href = isHe ? "cv/Refael_Robinov_CV_HE.pdf?v=20261111r4" : "cv/Refael_Robinov_CV_EN.pdf?v=20261111r4";
     }
 
     // Projects Header & Search

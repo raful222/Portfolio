@@ -15,11 +15,12 @@
   html, body { width: 210mm; height: 297mm; }
   body {
     font-family: "Heebo", "Segoe UI", Arial, sans-serif;
-    color: var(--ink); font-size: 9.6pt; line-height: 1.32;
+    color: var(--ink); font-size: 9.8pt; line-height: 1.34;
     -webkit-print-color-adjust: exact; print-color-adjust: exact;
   }
   a { color: inherit; text-decoration: none; }
   bdi, .ltr { unicode-bidi: isolate; direction: ltr; }
+  bdi { white-space: nowrap; }
   .page { width: 210mm; height: 297mm; display: grid; grid-template-columns: 62mm 1fr; }
   /* in RTL, grid column 1 is on the right */
   main  { grid-column: 2; grid-row: 1; padding: 9mm 8mm 6mm 9mm; }
@@ -30,9 +31,9 @@
   .role { color: var(--accent); font-weight: 700; font-size: 12pt; margin: 3px 0 5px; }
   .summary { color: var(--muted); text-align: justify; }
 
-  h2 { font-weight: 700; font-size: 13pt; margin: 8px 0 5px; padding-bottom: 2px;
+  h2 { font-weight: 700; font-size: 13pt; margin: 10px 0 5px; padding-bottom: 2px;
        border-bottom: 1.5px solid var(--rule); }
-  .item { margin-bottom: 5px; }
+  .item { margin-bottom: 6px; }
   .head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
   .head .t { font-weight: 700; font-size: 10pt; }
   .date { color: var(--soft); font-weight: 600; white-space: nowrap; font-size: 9.2pt; }
@@ -62,10 +63,7 @@
 <main>
   <h1>רפאל רובינוב</h1>
   <div class="role">מהנדס תוכנה בכיר – <bdi>Backend &amp; Full Stack</bdi></div>
-  <p class="summary">מהנדס תוכנה בכיר עם ניסיון בסביבות פרודקשן מאז 2021, המתמחה ב-<bdi>C#</bdi> וב-<bdi>.NET</bdi>,
-  במערכות מבוזרות ובאינטגרציות ארגוניות. בונה ממשקי <bdi>API</bdi>, שכבות <bdi>Caching</bdi> מבוססות <bdi>Redis</bdi>
-  וצינורות נתונים המחברים מערכות <bdi>Mainframe / Natural</bdi> לשירותי <bdi>.NET</bdi> ולאפליקציות <bdi>Angular</bdi>.
-  מפתח ומתחזק באופן עצמאי מוצרים חיים מקצה לקצה – מה-<bdi>Backend</bdi> ועד הפריסה.</p>
+  <p class="summary">מהנדס תוכנה בכיר (מאז 2021) המתמחה ב-<bdi>C#</bdi> וב-<bdi>.NET</bdi>, במערכות מבוזרות ובאינטגרציות ארגוניות – מצינורות נתונים מ-<bdi>Mainframe / Natural</bdi> ועד ממשקי <bdi>Angular</bdi>. מפתח ומתחזק באופן עצמאי מוצרים חיים מקצה לקצה.</p>
 
   <h2>ניסיון תעסוקתי</h2>
 
@@ -73,10 +71,9 @@
     <div class="head"><span class="t">מהנדס <bdi>Backend &amp; Full Stack</bdi> בכיר</span><span class="date">2025 – היום</span></div>
     <div class="org">רשות המסים (שע"מ)</div>
     <ul>
-      <li><b>ארכיטקטורת שירותים:</b> תכנון ופריסה של מיקרו-שירותים וממשקי <bdi>REST API</bdi> ארגוניים ב-<bdi>C#</bdi>, <bdi>.NET 8–10</bdi> ו-<bdi>ASP.NET Core</bdi> למערכות בהיקף לאומי.</li>
+      <li><b>שירותים ופורטלים:</b> תכנון ופריסה של מיקרו-שירותים וממשקי <bdi>REST API</bdi> ב-<bdi>C#</bdi>, <bdi>.NET 8–10</bdi> ו-<bdi>ASP.NET Core</bdi> למערכות בהיקף לאומי, לצד פורטלים ודשבורדים ניהוליים ב-<bdi>Angular</bdi> וב-<bdi>TypeScript</bdi>.</li>
       <li><b><bdi>Mainframe</bdi> וצינורות נתונים:</b> פיתוח ואופטימיזציה של תוכניות <bdi>Natural</bdi> וצינורות המזרימים נתוני <bdi>Mainframe</bdi> לשירותי <bdi>.NET</bdi> ולאפליקציות <bdi>Angular</bdi>.</li>
       <li><b><bdi>Caching</bdi> וביצועים:</b> הטמעת <bdi>Redis</bdi> ואופטימיזציה של שאילתות <bdi>SQL</bdi> לפתרון צווארי בקבוק ולשיפור זמני תגובה.</li>
-      <li><b>צד לקוח:</b> פיתוח פורטלים ודשבורדים ניהוליים ב-<bdi>Angular</bdi> וב-<bdi>TypeScript</bdi>, המשולבים עם ממשקי ה-<bdi>Backend</bdi>.</li>
       <li><b>פיתוח בסיוע <bdi>AI</bdi> ואיכות:</b> שימוש ב-<bdi>Claude Code</bdi>, <bdi>Gemini</bdi> ו-<bdi>Codex</bdi> לצד אימות קוד אוטומטי, <bdi>CI/CD</bdi> על גבי <bdi>TFS/Git</bdi> וסקירות קוד עמיתים.</li>
     </ul>
   </div>
@@ -85,10 +82,10 @@
     <div class="head"><span class="t">מפתח <bdi>Backend</bdi></span><span class="date">2021 – 2025</span></div>
     <div class="org"><bdi>Qualish</bdi> בע"מ, עומר</div>
     <ul>
-      <li><b>מערכות <bdi>Backend</bdi>:</b> פיתוח ממשקי <bdi>API</bdi> ב-<bdi>C#/.NET 6</bdi>, סכמות מסדי נתונים ונקודות קצה של שירותים.</li>
+      <li><b>מערכות <bdi>Backend</bdi>:</b> פיתוח ממשקי <bdi>API</bdi> ב-<bdi>C#/.NET 6</bdi>, סכמות מסדי נתונים ונקודות קצה.</li>
       <li><b>אינטגרציות:</b> שילוב ספקי סליקה מרובים, התאמות חיוב והתראות אירועים בזמן אמת.</li>
       <li><b>ויזואליזציית נתונים:</b> בניית דשבורדי <bdi>KPI</bdi> פיננסיים וצינורות נתונים עבור ההנהלה.</li>
-      <li><b>ביצועים:</b> ייעול תהליכי קליטת לקוחות, קיצור זמני שאילתות ושיפור חוויית המשתמש.</li>
+      <li><b>ביצועים:</b> ייעול קליטת לקוחות וקיצור זמני שאילתות.</li>
     </ul>
   </div>
 
@@ -108,7 +105,7 @@
 
   <div class="item">
     <div class="head"><span class="t"><bdi>VBook</bdi> – פלטפורמת ספרי ילדים מונפשים</span><a class="link date" href="https://vbookapp.co.il">vbookapp.co.il</a></div>
-    <div class="desc">פלטפורמה חיה עם אתר המרונדר בצד השרת, מערכת ניהול תוכן, חשבונות הורים ויוצר ספרים ב-3 צעדים עם הקראה ואיורים שנוצרים ב-<bdi>AI</bdi>; סרטונים שמועלים מקודדים ברקע עם <bdi>ffmpeg</bdi>.</div>
+    <div class="desc">פלטפורמה חיה עם רינדור בצד השרת, מערכת ניהול תוכן, חשבונות הורים, יוצר ספרים עם הקראה ואיורים ב-<bdi>AI</bdi> וקידוד וידאו ברקע ב-<bdi>ffmpeg</bdi>.</div>
     <div class="stack">JavaScript · Vite · Node.js / Express · SQLite · Docker · ffmpeg · ElevenLabs API</div>
   </div>
 
@@ -129,11 +126,11 @@
 
   <div class="item">
     <div class="head"><span class="t">לוחם ומפקד – חטיבת הצנחנים</span><span class="date">2012 – 2015</span></div>
-    <div class="desc">דרגת סמ"ר. הובלת לוחמים בסביבה מבצעית תובענית הדורשת קבלת החלטות מהירה וחוסן.</div>
+    <div class="desc">דרגת סמ"ר; הובלת לוחמים בסביבה מבצעית תובענית.</div>
   </div>
   <div class="item">
     <div class="head"><span class="t">מנטור מנהיגות לנוער – "אחריי!" (מלגות אימפקט)</span><span class="date">2020 – 2023</span></div>
-    <div class="desc">ליווי בני נוער מהפריפריה החברתית בפיתוח מעורבות אזרחית ומנהיגות.</div>
+    <div class="desc">ליווי בני נוער מהפריפריה החברתית בפיתוח מנהיגות ומעורבות אזרחית.</div>
   </div>
 </main>
 
@@ -150,19 +147,15 @@
   <ul>
     <li><bdi>C# &amp; .NET 8–10</bdi></li>
     <li><bdi>ASP.NET Core / Web APIs</bdi></li>
-    <li>ארכיטקטורת מיקרו-שירותים</li>
+    <li>מיקרו-שירותים ומערכות מבוזרות</li>
     <li><bdi>Mainframe</bdi> ו-<bdi>Natural</bdi></li>
     <li><bdi>Redis Caching</bdi></li>
     <li><bdi>SQL Server</bdi> ואופטימיזציית שאילתות</li>
     <li><bdi>Angular &amp; TypeScript</bdi></li>
-    <li><bdi>JavaScript, Next.js &amp; React</bdi></li>
-    <li>צינורות נתונים ואינטגרציות</li>
-    <li>מערכות מבוזרות</li>
-    <li><bdi>Docker</bdi> וקונטיינרים</li>
+    <li><bdi>Docker</bdi> ו-<bdi>CI/CD</bdi></li>
     <li><bdi>TFS / Azure DevOps &amp; Git</bdi></li>
-    <li><bdi>CI/CD</bdi> ו-<bdi>Agile</bdi></li>
-    <li><bdi>Postman</bdi> ובדיקות אוטומטיות</li>
-    <li>פיתוח בסיוע <bdi>AI</bdi> (<bdi>Claude Code, Gemini, Codex</bdi>)</li>
+    <li>בדיקות אוטומטיות ו-<bdi>Postman</bdi></li>
+    <li>פיתוח בסיוע <bdi>AI</bdi></li>
   </ul>
 
   <h3>שפות</h3>
